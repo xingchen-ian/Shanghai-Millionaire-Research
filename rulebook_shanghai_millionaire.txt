@@ -1,0 +1,741 @@
+
+
+--- Page 1 ---
+规则书原文
+THE GAME OF
+SHANGHAI MILLIONAIRE
+BRIEF IDEA OF THE GAME
+THE IDEA OF THE GAME is to BUY and RENT or SELL properties so profitably that one
+becomes the wealthesst player and eventual Millionaire.
+According to throw of Dice. When a Player's Token lands on a space NOT already
+owned, he may Buy it from the BANK; otherwise it is Auctioned off to the Hightest
+Bidder. The Object of owning property is to Collect Rents from Opponents stopping
+there. Rentals are greatly increased by the creation of Houses and Hotels, so it is wise
+to build them on some of your Building Sites. To raise more money Building Sites may
+be mortgaged to the Bank. Community Chest and Chance spaces give the draw of a
+Card, instructions on which must be followed. Sometimes players land in Jail! The
+game is one of shrewd and amusing trading and excitement, often contributed to by the
+Banker-Auctioneer.
+这款游戏的核心目标是通过明智地买卖和租赁房产，最终成为场上最富有的玩家，赢得"百
+万富翁"的称号。游戏进程由掷骰子决定，玩家根据骰子点数移动自己的棋子。
+当玩家的棋子落在未被占有的地块时，可以选择从银行购买该地块。如果地块已有主人，
+则会进行公开拍卖，由出价最高的玩家获得。拥有地块的主要优势是可以向停在此处的其
+他玩家收取租金。玩家可以通过在地块上建造房屋和酒店来显著提高租金收入，因此合理
+规划建筑升级是获胜的重要策略。
+
+--- Page 2 ---
+如果急需资金，玩家可以选择将名下的地块抵押给银行换取现金。游戏中设有"社区福利"和
+"机会"两种特殊格子，当玩家停在这些格子上时，需要抽取相应的卡片并执行上面的指令。
+此外，游戏中还设置了"监狱"机制，玩家有时会因为某些原因被关进监狱。
+这款游戏融合了精明的商业策略和轻松有趣的互动元素，其中银行家兼任拍卖师的角色设
+计为游戏增添了不少乐趣和变数。玩家需要在资产购置、租金收取、资金周转等方面做出明
+智决策，才能在竞争中脱颖而出，最终成为真正的"上海大富翁"。
+RULES
+For from Three to Seven Players
+## EQUIPMENT
+MILLIONAIRE, Equipment consists of the BOARD with spaces indicating Building Sites, Railway
+Stations, Utilities, Rewards and Penalties over which the players' pieces are moved. There are
+Two DICE, TOKENS of various designs for playing pieces, thirty-two green HOUSES and
+Twelve red HOTELS and Two sets of Cards for CHANGE and COMMUNITY CHEST spaces.
+There are Title Deed Cards for every property and Scrip representing MONEY of various
+denominations.
+（注：完全保留原文拼写和格式，包括"CHANGE"而非"CHANCE"的拼写，以及"COMMUNITY
+CHEST"的空格格式）
+# 游戏规则
+**适合三至七位玩家**
+
+--- Page 3 ---
+## 游戏配件
+《百万富翁》游戏配件包括：一块游戏版图，上面标有建筑用地、火车站、公用事业、奖励和惩罚区
+域，玩家的棋子将在这些区域上移动。游戏包含两枚骰子、多种不同设计的玩家代币、三十二栋
+绿色房屋和十二栋红色酒店、两套分别用于"机会"和"公益金"区域的卡牌。此外还有每处房产对应
+的地契卡，以及代表各种面值的游戏纸币。
+（注：完全按照原文段落结构翻译，保留所有专业术语和数量表述，如"三十二栋绿色房屋"等具体
+数字；"CHANGE"译为"机会"，"COMMUNITY CHEST"译为"公益金"，均采用经典大富翁中文版标
+准译法）
+# PREPARATION
+PLACE the Board on a good sized table, putting the Chance Cards and
+Community Chest Cards face-down on their allotted spaces on the board.
+Each player is provided with One TOKEN (Hat, Shoe, etc.) to represent
+him on his travels around the board. Each player is given $1,500. All other
+equipment goes to the BANK. One of the players is elected BANKER. (See
+BANK and BANKER.)
+（注：完全保留原文格式，包括换行、标点、大小写和术语使用）
+# 准备阶段
+将游戏版图平铺在足够大的桌面上，将机会卡和
+公益金卡牌面朝下放置在版图上对应的指定区域。
+每位玩家获得一个代表自己的代币（如帽子、鞋子等），
+用于在版图上移动。每位玩家初始资金为1,500美元。其余
+游戏配件均由银行保管。由一位玩家担任银行家。（详见
+银行与银行家规则说明。）
+（注：严格保持原文段落格式和换行位置；"Chance Cards"译为"机会卡"，"Community Chest
+Cards"译为"公益金卡"，沿用经典大富翁中文版译法）
+
+--- Page 4 ---
+# MONEY
+EACH PLAYER is given $1,500 divided as follows: One $500—Six $100—
+Four $50—Three $20—Ten $10—Seven $5—Five $1's. All remaining money
+goes to the Bank. (If Seven play, one of the players waits until all others
+receive their Money, then accepts his in denominations convenient for the
+Bank.)
+（注：完全保留原文格式，包括货币符号、数字格式、换行和标点）
+# 资金分配
+每位玩家初始资金为1,500元，分配方式如下：一张500元、六张100元、
+四张50元、三张20元、十张10元、七张5元以及五张1元。剩余所有资金
+归银行所有。（若七人游戏，其中一位玩家需等待其他玩家分配完毕，
+然后领取银行便于提供的相应面额组合。）
+（注：严格保持原文段落格式和换行位置；货币单位转换为"元"；保留原文所有数字和面额分配细节
+；括号内说明文字完整保留）
+
+--- Page 5 ---
+# TO START THE GAME
+STARTING with the Banker each player in turn throws the dice. The
+Player with the highest total starts the play. He places his token on the
+corner marked "GO," throws the two dice and moves his TOKEN in the
+direction of the ARROW the number of spaces indicated by the Dice. After
+he has completed his play, the Turn to play passes to the Left. The TOKENS
+remain on the spaces occupied and proceed from that point on the Player's
+next turn. One or more tokens may rest on the same space at the same
+time.
+ACCORDING TO THE SPACE which his Token reaches, a Player
+may be entitled to buy Building Sites or other properties—or be obliged to
+pay Rent (if another owns the property), pay Taxes, draw a Chance or a
+Community Chest Card, "Go to Jail," etc.
+In the course of the game, Players will encircle the board several times.
+（注：完全保留原文格式，包括大小写、标点符号、换行和特殊术语如"GO"、"ARROW"等）
+# 游戏开始方式
+从银行家开始，每位玩家依次掷骰子。
+点数总和最大的玩家获得首轮行动权。该玩家将代币放在
+标有"起点"的角落，掷两枚骰子并根据骰子点数，沿箭头
+方向移动相应格数。完成行动后，轮到左侧玩家行动。代币
+将停留在当前格，并在下一回合继续从此处出发。同一格上
+可同时停留一个或多个代币。
+
+--- Page 6 ---
+根据代币停留的格子类型，玩家
+可能获得购买建筑用地或其他资产的权利——或需要
+支付租金（若该地产属他人所有）、缴纳税金、抽取机会卡或
+公益金卡、"入狱"等。
+游戏过程中，玩家们将多次绕行版图。
+（注：严格保持原文格式，包括换行和段落间距；专业术语如"GO"译为"起点"，"ARROW"保留为"箭
+头"；"Chance Card"和"Community Chest Card"沿用标准译法"机会卡"和"公益金卡"）
+# 英文原文提取：
+# BELLING PROPERTY
+UNDEVELOPED SITES. RAILWAY STATIONS AND UTILITIES
+(but not buildings thereon) may be sold to any player as a private
+transaction for any amount that the Owner can get.No Site,however,can
+be sold to another player if buildings are standing on any Sites of that
+Colour-Group. Any Buildings so attuned must be sold back to the Bank
+before the owner can sell any Site of that Colour-Group.
+HOUSES AND HOTELS may be resold by Players to the Bank only,
+but this may be done at any time and the Bank will pay one-half the price
+paid for them.In the case of Hotels,the Bank will pay one-half the cash
+price of the Hotel plus one-half the price of the four Houses which were
+given in the purchase of the Hotel.
+# 中文翻译：
+# 房产交易
+未开发地块、火车站及公共事业
+（不包括地上建筑）可由业主以任意议定价格
+
+--- Page 7 ---
+私下转让给其他玩家。但若某色系地块上
+存有建筑，则禁止交易该色系任何地块。业主必须
+先将该色系所有建筑回售给银行，
+方可出售该色系地块。
+房屋与酒店仅可回售给银行，
+交易可随时进行，银行将按原价
+50%回购。酒店回购价为现金价值50%
+另加当初购买酒店时抵换的4栋房屋价值的50%。
+（注：完整保留原文段落格式与换行；修正原文拼写错误"RAILWAY STATIONS"；"Colour-Group"译
+为"色系"以符合大富翁术语；数字表达统一使用中文格式）
+# 英文原文提取：
+# MORTGAGES
+MORTGAGING PROPERTIES can be done through the Bank only.
+The mortgage value is printed on each Title Read. The rate of interest
+10 per cent, payable when the mortgage is lifted. If any property is
+transferred which is mortgaged, the new owner may lift the mortgage at
+once if he wishes, but must pay 10 per cent interest. If he fails to lift the
+mortgage he still pays 10 per cent interest and if he lifts the mortgage later
+he pays an additional 10 per cent interest as well as the principal.
+House or Hotels Cannot be Mortgaged.All Buildings on the Site
+Must Its Sold back to the Bank before any Property can be Mortgaged.
+The Bank will pay one-half of what was paid for them.
+In order to rebuild a house on mortgaged property the owner must pay
+the Bank the amount of the mortgage, plus the 10 per cent interest charge
+
+--- Page 8 ---
+and buy the house back from the Bank at its FULL PRICE.
+# 中文翻译：
+# 抵押规则
+房产抵押仅可通过银行进行。
+抵押价值印于每张地契上。利息为
+10%，需在解除抵押时支付。若已抵押
+房产被转让，新业主可选择立即解除抵押，
+但需支付10%利息。若未解除抵押，仍需支付
+10%利息；若后续解除抵押，除本金外还需
+额外支付10%利息。
+房屋与酒店不可抵押。地块上所有建筑
+必须全部回售给银行后，方可抵押该地产。
+银行将按建筑原价的50%回购。
+若要在抵押地产上重建房屋，业主必须
+向银行偿还抵押金额及10%利息，
+并以全价从银行购回房屋。
+（注：完全保留原文段落格式；修正明显拼写错误"Title Read"为"Title Deed"；"per cent"统一译为
+"%"，专业术语如"lift the mortgage"译为"解除抵押"；数字表达统一使用中文格式）
+# 英文原文提取：
+# BANKRUPTCY
+A player who is bankrupt, that is, one who owes more than he can
+
+--- Page 9 ---
+pay, must turn over to his Creditor all that he has of value, and retire from
+the game. In making this settlement, however, if he owns Houses or Hotels,
+these are returned to the Bank in exchange for Money, to the extent of one-
+half their cost as printed on the Title Deeds, and this cash is given to the
+Creditor. If a bankrupt player turns over to his Creditor property that has
+been mortgaged, the new owner must at once pay the Bank the 10 per cent
+interest on the loan. At the same time he may at his option lift the mortgage
+by paying the principal.
+In case a Player is unable to raise money enough to pay his Taxes or
+penalties, even by selling his Buildings and mortgaging his property, the
+Bank will take over all his assets and sell by auction to the Highest Bidder
+everything so taken excepting the Buildings.The Player must then remove
+his Token.The Last Player left in the game WINS.
+# 中文翻译：
+# 破产规则
+破产玩家（即负债超过偿还能力者）必须
+将所有有价值资产移交给债权人，并退出
+游戏。清算时，若破产玩家拥有房屋或酒店，
+需将其返还银行以换取地契上标价
+一半的现金，该款项将支付给
+债权人。若破产玩家移交的资产已被抵押，
+新业主必须立即向银行支付10%
+贷款利息。同时可选择通过偿还本金
+来解除抵押。
+若玩家即便出售建筑并抵押资产仍无法
+筹集足够资金缴纳税金或罚金，
+银行将接管其所有资产并通过拍卖
+出售（建筑除外），价高者得。
+该玩家必须移除游戏代币。
+最后留在游戏中的玩家获胜。
+（注：完全保留原文段落格式；专业术语如"Title Deeds"译为"地契"，"lift the mortgage"译为"解除抵
+押"；数字表达统一使用中文格式；保留原文关键表述如"Highest Bidder"译为"价高者得"）
+
+--- Page 10 ---
+# 英文原文提取：
+# MISCELLANEOUS
+If a player owes more rent than he can pay in CASH he may pay his
+creditor part in cash and part in property. In this case, the creditor will
+often accept certain property far in excess of its mortgage value so as to
+obtain additional property for buildings or to block another player from
+obtaining control of that property.
+PROPERTY OWNERS MUST WATCH OUT FOR RENTS DUE. DO
+NOT HELP OTHER PLAYERS TO WATCH THEIR PROPERTIES.
+The Bank loans Money only on mortgage security. Players may not
+borrow money or property from each other.
+# 中文翻译：
+# 其他规则
+若玩家无法用现金支付全部租金，可以
+部分现金加部分资产的方式偿还。此时，债权人
+常会接受某些价值远超抵押价的资产，
+以获取更多建筑用地或阻止其他玩家
+控制该资产。
+房产所有者必须自行留意应收租金。
+不得协助其他玩家照看其房产。
+银行仅提供抵押贷款。玩家之间
+不得互相借贷资金或资产。
+（注：完全保留原文段落格式；专业术语如"mortgage value"译为"抵押价"；保留原文警示语的大写
+格式；修正原文拼写错误"Ioans"为"loans"）
+
+--- Page 11 ---
+# 英文原文提取：
+# TO MAKE A SHORTER GAME:
+Banker shuffles and deals two
+Title Deed Cards to EACH PLAYER at the start. This quickens the
+action and immediate expenditure for rents, and puts the game forward.
+Players on receiving Title-Deads pay the Bank the Price of the properties.
+# 中文翻译：
+# 快速游戏规则：
+游戏开始时，银行家需洗混并给每位玩家
+分发两张地契卡。此举可加快游戏节奏，
+促使租金立即支付，推动游戏进程。
+玩家在获得地契卡时需向银行支付该地产的
+购买价格。
+（注：完全保留原文段落格式；专业术语如"Title Deed Cards"译为"地契卡"；修正原文拼写错误
+"Title-Deads"为"Title Deeds"；保持原文大写字母的使用）
+# 英文原文提取：
+Before starting game players agree at what hour game shall end. At
+end of game Richest Player Wins.
+At start, Banker shuffles Title Deed Cards and after pack is cut he
+
+--- Page 12 ---
+deals two cards to each player. Players immediately pay to the Bank the
+price of the Property thus dealt to them. At the first stroke of the Hour
+agreed upon, the game ends. No further trading may be concluded, but
+if a player is in actual play, he completes his move and any action connected
+with it. Each player then values his property: (1) Cash on hand (2) Price
+of Building Sites, Utilities or Railway Stations owned by him. (3) One-half
+of Price printed on board, of any mortgaged property owned by him. (4)
+Cost of Houses. (5) Hotels valued at cost of five houses. Highest Total Wins.
+# 中文翻译：
+游戏开始前，玩家需共同商定结束时间。游戏
+结束时，最富有者获胜。
+开局时，银行家需洗混地契卡，切牌后向
+每位玩家分发两张。玩家须立即向银行支付所获
+地产的标价。当约定时间到达时，游戏立即结束。
+不得再进行任何交易，但若玩家正处于行动回合，
+可完成当前移动及相关操作。随后每位玩家需评估资产：
+(1) 手持现金 (2) 所拥有的建筑用地、公用事业或火车站
+的标价 (3) 名下抵押地产板上标价的半数 (4)
+房屋造价 (5) 酒店按五栋房屋造价计算。
+资产总值最高者获胜。
+（注：完全保留原文段落格式；专业术语如"Title Deed Cards"译为"地契卡"；数字编号列表格式与原
+文完全一致；"Richest Player Wins"等关键表述保留原文语序）
+================= the other side 另一面 =====================
+# 英文原文提取：
+IF A PLAYER THROWS DOUBLES he moves his Token as usual, the
+sum of the two dice, and the Space thus reached is effective. (i.e. The player
+is subject to any privileges or penalties pertaining to that Space.) Retaining
+the dice he throws again and moves his Token as before, and again, the Space
+
+--- Page 13 ---
+thus reached is effective. If, however, he throws three doubles in succession,
+he does not move his Token on his third throw but immediately "GOES
+TO JAIL." (See JAIL.)
+# 中文翻译：
+若玩家掷出相同点数（双骰），则按常规移动代币，
+移动步数为两骰总和，所抵达格子的效果立即生效。（即玩家
+需承担该格所有特权或惩罚。）玩家可保留骰子
+再次投掷并如前移动代币，新抵达格子的效果
+同样立即生效。但若连续三次掷出双骰，
+则第三次不得移动代币，而需立即"入狱"。
+（详见"监狱"规则）
+（注：完全保留原文段落格式；专业术语如"DOUBLES"译为"相同点数（双骰）"；"GOES TO JAIL"保
+留中文版标准译法"入狱"；括号内说明文字与原文保持相同格式）
+# 英文原文提取：
+# SALARY
+Every time that a Player's Token either lands on or passes over "GO," while going in the
+direction of the Arrow, the Banker pays him $200 "Salary."
+# 中文翻译：
+# 薪资规则
+每当玩家的代币沿箭头方向经过或停留在"起点"格时，银行需支付其200元"薪资"。
+（注：完全保留原文段落格式；专业术语如"GO"译为"起点"；"Arrow"保留为"箭头方向"；货币单位转
+换为"元"；保留原文引号使用规范）
+
+--- Page 14 ---
+# 英文原文提取：
+# LANDING ON UNOWNED PROPERTY
+When a Player lands on an unowned property (i.e., of a Building Site
+for which no other player holds the title deed) whether by a throw of dice
+or by a move forced by the Draw of a Chance or Community Chest Card,
+the Player has the Option of Buying that property from the Bank at its
+printed price. If a Player elects to Buy, he pays the Bank for that property
+and receives the Title Deed Card showing Ownership, which he places
+face up in front of him. If the Player declines this option, the Banker must
+immediately offer this property for sale by AUCTION and must sell it to
+the Highest Bidder, accepting Money in payment and giving the buyer the
+proper Title Deed Card as evidence of Ownership. Any Player, including
+the one who declined the option of buying at the printed price, may bid.
+Bidding may start at any price.
+# 中文翻译：
+# 停留于无主地产
+当玩家通过掷骰或抽取机会卡/公益金卡
+而停留于无主地产（即其他玩家未持有
+地契的建筑用地）时，玩家可选择以
+标价向银行购买该地产。若选择购买，
+则向银行支付价款并获得地契卡作为
+所有权凭证，正面朝上置于面前。若玩家
+放弃购买，银行家须立即对该地产进行
+拍卖，必须售给出价最高者，接受现金
+支付并向买家提供对应地契卡作为所有权
+证明。任何玩家（包括放弃按标价购买者）
+均可参与竞拍。起拍价不限。
+
+--- Page 15 ---
+（注：完全保留原文段落格式；专业术语如"Title Deed Card"译为"地契卡"；"AUCTION"保留为"拍卖
+"；保留原文括号和大小写使用规范）
+# 英文原文提取：
+# LANDING ON OWNED PROPERTY
+When a player lands on owned property either by throw of Dice, or by
+a move forced by a Chance or Community Chest Card, the Owner collects
+RENT from him in accordance with the list printed on the Title Deed Card
+applying to it. Note: If the Site contains a House or Houses, the rent is
+larger than it would be for an unimproved Site. If the Site is Mortgaged, no
+rent can be collected. Mortgaged property is designated by turning face-
+down the Title Deed representing that property.
+Note: If the owner fails to ask for his rent before the next throw of the
+dice, the rent is not collectible.
+# 中文翻译：
+# 停留于已拥有地产
+当玩家通过掷骰或抽取机会卡/公益金卡
+而停留于他人拥有的地产时，地主可按照
+该地产地契卡上列明的标准向其收取
+租金。注意：若该地块建有房屋，租金将
+高于未开发地块。若地块已被抵押，则
+不得收取租金。抵押地产通过将对应
+地契卡反面朝上来标示。
+注意：若地主在下一次掷骰前未提出
+收取租金，则视为放弃收取权利。
+
+--- Page 16 ---
+（注：完全保留原文段落格式；专业术语如"Title Deed Card"译为"地契卡"；"unimproved Site"译为"
+未开发地块"；保留原文大小写和标点规范）
+# 英文原文提取：
+# ADVANTAGES FOR OWNERS
+It is an advantage to hold Title Deeds for ALL SITES of a complete
+Colour-Group (for example: The Bund and Nanking-or Peking Road,
+Yu Ya Ching Road and 'the Avenue Road) because the owner may then
+charge Double Rent for unimproved Sites of that property. See "Title
+Deed" Cards.)
+House can only be built on Sites of a complete Colour-Group owned
+(see Houses).
+The advantage of owning Houses and Hotels rather than unimproved
+property is that Rentals are very much Higher than for Unimproved
+Sites and profit the owner immensely.
+# 中文翻译：
+# 业主优势
+持有完整色系所有地块的地契
+（例如：外滩与南京路或北京路、
+愚园路与静安寺路）具有优势，业主可对
+该色系未开发地块收取双倍租金。（参见
+"地契卡"说明）。
+房屋仅可在完整色系的已拥有地块上
+建造（见"房屋规则"）。
+
+--- Page 17 ---
+拥有房屋和酒店相比未开发地产的
+优势在于：租金收益远高于未开发
+地块，能为业主带来丰厚利润。
+（注：完全保留原文段落格式；专业术语如"Colour-Group"译为"色系"；地名保留原译法；保留原文
+括号和引号使用规范）
+# 英文原文提取：
+# LANDING ON "CHANGE" OR "COMMUNITY CHEST"
+A player takes the top card from the pack indicated and after following
+the Instructions printed thereon, returns the card face down to the bottom
+of the pack. The "Get Out of Jail Free" Card, however, is retained until
+used. After being used, it is returned to the bottom of the pack. This card
+may be Sold by a player to another player at a price agreeable to both.
+LANDING ON TAX SPACES pay the Bank.
+# 中文翻译：
+# 停留于"机会"或"公益金"格
+玩家需从指定牌堆顶部抽取一张卡牌，执行
+卡面印制的指令后，将该卡牌面朝下放回
+牌堆底部。但"免狱卡"可保留至使用时，
+使用后同样需放回牌堆底部。此卡可由玩家
+以双方认可的价格转让给其他玩家。
+停留于"税务"格需向银行缴纳税金。
+（注：完全保留原文段落格式；专业术语如"Get Out of Jail Free"译为"免狱卡"；修正原文拼写错误
+"COMMUNITY"；保留原文引号和大写格式）
+
+--- Page 18 ---
+# 英文原文提取：
+# BANKER
+Select as BANKER a player who will also make a good Auctioneer. If, as
+is customary, the Banker also plays in the game, he must, of course, keep his
+personal funds separate from those of the Bank. When more than five persons
+play, the Banker sometimes elects to act only as Banker and Auctioneer.
+# THE BANK
+THE BANKER preferably uses for the BANK a small side-table placed
+at his elbow and the Game Box, or a good sized container. The Bank holds
+besides the Bank's Money the Title Deed Cards and Houses and Hotels prior
+to purchase and use by the Players.
+# 中文翻译：
+# 银行家
+选择一位同时能胜任拍卖师角色的玩家担任银行家。若按惯例，
+银行家也参与游戏时，必须将其个人资金与银行资金
+严格区分。当游戏人数超过五人时，银行家有时可选择
+仅担任银行家和拍卖师角色。
+# 银行
+银行家最好使用置于手边的小边桌或游戏盒，
+或一个足够大的容器作为银行。银行除持有
+银行资金外，还保管着地契卡以及玩家购买和使用前的
+房屋与酒店。
+
+--- Page 19 ---
+（注：完全保留原文段落格式；专业术语如"Banker"译为"银行家"，"Auctioneer"译为"拍卖师"；保留
+原文大写和标点规范）
+# 英文原文提取：
+THE BANK PAYS Salaries and Bonuses. Sells properties to the Players
+and Delivers the proper Title Deed Cards therefor, Auctions Sites, sells
+Houses and Hotels to the Players, loans money when required on Mortgage
+of property at the Mortgage Value which is one-half of the Site-value printed
+on the board. The Bank will at any time buy back Houses and Hotels from
+Building Sites at half price.
+PAY TO THE BANK the price of all properties you buy from it, taxes,
+fines, money penalties, loans and interest.
+# 中文翻译：
+银行负责支付薪资与奖金。向玩家出售地产
+并交付对应的地契卡，拍卖地块，向玩家
+出售房屋与酒店，在玩家需要时以地产抵押
+价值（即版图上标注地块价值的一半）提供贷款。
+银行随时可按半价回购建筑用地上的
+房屋与酒店。
+向银行支付所有购置地产的费用、税款、
+罚金、违约金、贷款及利息。
+（注：完全保留原文段落格式；修正原文拼写错误"Sails"为"Sells"；专业术语如"Title Deed Cards"译
+为"地契卡"；保留原文大写和标点规范）
+
+--- Page 20 ---
+# 英文原文提取：
+# JAIL
+A PLAYER LANDS IN JAIL—1) If his token lands on space marked
+"GO TO JAIL." (2) If he draws a card marked "GO TO JAIL." (3) If he
+throws Doubles three times in succession.
+NOTE: When a player is sent to Jail he cannot collect $200 salary in
+that move since regardless of where his token is or of the path of the board,
+he must move his token DIRECTLY into Jail.
+VISITING JAIL. If a player is not "sent to Jail" but in the ordinary
+course of play reaches that space, he is "Just visiting," incurs no penalty,
+and moves ahead in the usual manner on his next turn.
+A PLAYER GETS OUT OF JAIL—1) By throwing Doubles on any
+of his next three turns after landing in Jail. If he succeeds in doing this he
+immediately moves forward the number of spaces shown by his Doubles
+throw. (2) By purchasing a "GET OUT OF JAIL FREE" Card from
+another player, at a price agreeable to both (unless he already owns such a
+card by having on a previous turn drawn it from Chance or Community Chest).
+(3) By paying a $50 fine BEFORE he throws the dice for either his next turn
+or succeeding turn to play. (4) A player MUST NOT remain in Jail after his
+third turn (ie, not longer than having three turns to play after being sent to
+
+--- Page 21 ---
+Jail). Immediately AFTER throwing the dice for his third turn he must pay a
+$50 fine unless he throws Doubles. He then comes out and immediately
+moves forward from the Jail the number of spaces shown by his throw.
+A player may buy and erect a house, sell or buy property, and collect
+Rentals, even though he is in Jail.
+# 中文翻译：
+# 监狱规则
+玩家入狱情况—1) 棋子停留在"入狱"格；
+2) 抽到"入狱"卡；3) 连续三次掷出双骰。
+注意：玩家被送进监狱时，该回合不得领取
+200元薪资，因为无论棋子原先位置或移动路径如何，
+都必须直接移入监狱。
+探监规则。若玩家非被"送进监狱"，而是正常
+游戏过程中停留在该格，则视为"探监"，不受惩罚，
+下回合可正常移动。
+出狱方式—1) 入狱后接下来三回合内掷出双骰。
+成功后可立即按双骰点数移动；2) 以双方认可的价格
+向其他玩家购买"免狱卡"（若已通过机会卡或公益金卡
+持有则无需购买）；3) 在掷骰前支付50元罚金；
+4) 玩家在第三回合结束后必须出狱（即入狱后最多
+停留三个回合）。第三回合掷骰后若未掷出双骰，
+必须支付50元罚金方可出狱，并按骰子点数移动。
+玩家在狱期间仍可买卖房产、建造房屋及收取租金。
+（注：完全保留原文段落格式；专业术语如"GET OUT OF JAIL FREE"译为"免狱卡"；货币单位转换
+为"元"；保留原文编号列表格式）
+
+--- Page 22 ---
+# 英文原文提取：
+# HOUSES
+HOUSES can be bought only from the Bank and can only be erected on
+Sites of a COMPLETE COLOUR-GROUP which the Player owns.
+(Example: If one player succeeds in owning Peking Road, Yu Ya Ching Road
+and Avenue Road ie., a complete Colour-Group, he may at any period of
+his Ownership Buy a House or Houses from the Bank to erect thereon.
+If he Buys one House, he may put it on any one of these three Sites. The
+next House he buys and erects must be put on one of the unoccupied
+Sites of this or of any other complete Colour-Group he may own. The
+Price he must pay the Bank for each House is shown on his Title Deed
+of the Site. On the unimproved Sites of his complete Colour-Group, he
+can collect Double Rental from an opponent landing thereon.)
+A Player may Buy and Erect in accordance with the above rules, at any
+time, as many Houses as his judgment and financial standing will allow, but
+he must build EVENLY (ie., you cannot erect more than one House on any
+one Site of any Colour-Group until you have built one House on every Site
+of that Group. You may then begin on the second row of Houses and so on
+up to a limit of not exceeding Four Houses to a Site. But, you cannot Build,
+for example, three houses on one site if you have only one house on another
+site of that group).
+# 中文翻译：
+
+--- Page 23 ---
+# 房屋规则
+房屋仅可从银行购买，且仅可建造在玩家
+拥有的完整色系地块上。（例如：若某玩家成功拥有
+北京路、愚园路和静安寺路即一个完整色系，则可在
+持有期间的任何时候从银行购买房屋建造。若购买一栋
+房屋，可任选这三地块之一建造。后续购买的房屋必须
+建造在该色系或其他完整色系的未建房地块上。每栋房屋
+的购买价格标注于该地块的地契上。在其完整色系的未开发
+地块上，可向停留的对手收取双倍租金。）
+玩家可随时根据上述规则，在资金允许范围内购买建造
+任意数量房屋，但必须均匀建造（即：不能在某个色系
+的任一块地上建造第二栋房屋，除非该色系每块地都已
+建有一栋房屋。之后可开始建造第二排房屋，以此类推，
+但每地块不得超过四栋房屋。例如：不能在该色系某地块
+建三栋房屋，而同色系另一地块仅建一栋）。
+（注：完全保留原文段落格式；专业术语如"COLOUR-GROUP"译为"色系"；保留原文括号内说明文
+字；地名采用标准译法；保持原文编号和强调格式）
+# 英文原文提取：
+# HOTELS
+A Player must have Four Houses on each site of a complete Colour-
+Group before he can buy a Hotel building. He may then Buy a Hotel from
+the Bank to be erected on any site of that Colour-Group, delivering to the
+
+--- Page 24 ---
+Bank therefor the Four Houses from that Site together with the Money
+price shown on Title Deed. (It is very desirable to erect Hotels on account
+of the very large Rental which may be charged. Only one Hotel may
+be Erected on any One Site.)
+# BUILDING SHORTAGE
+When the Bank has no Houses to sell, players wishing to build must
+wait for some player to turn back or to sell his houses to the Bank before
+building. If there are a limited number of Houses and Hotels available, and
+two or more players wish to buy more than the Bank has, the Houses or
+Hotels must be sold by auction to the highest bidder.
+# 中文翻译：
+# 酒店规则
+玩家必须在完整色系的每个地块上拥有四栋房屋后，
+方可购买酒店建筑。随后可从银行购买酒店，
+建造在该色系的任一块地上，同时需向银行交还
+该地块的四栋房屋并支付地契上标明的金额。
+（由于酒店可收取极高租金，建议尽早建造。
+每个地块限建一栋酒店。）
+# 建筑短缺规则
+当银行无房屋可售时，想建造的玩家必须等待
+其他玩家将房屋回售给银行。若房屋或酒店数量有限，
+而两名及以上玩家想购买的数量超过银行库存，
+则需通过拍卖售给出价最高者。
+（注：完全保留原文段落格式；专业术语如"Colour-Group"译为"色系"；保留原文括号内说明文字；
+"highest bidder"译为"出价最高者"；保持原文编号和强调格式）
+
+--- Page 25 ---
+SELLING PROPERTY
+UNDEVELOPED SITES, RAILWAY STATIONS AND UTILITIES
+(but not buildings thereon) may be sold to any Player as a private transaction for any amount
+that the Owner can get. No Site, however, can be sold to another player if buildings are standing
+on any Sites of that Colour-Group. Any Buildings so situated must be sold back to the Bank
+before the owner can sell any Site of that Colour-Group.
+HOUSES AND HOTELS may be resold by Players to the Bank only, but this may be done at
+any time and the Bank will pay one-half the price paid for them. In the case of Hotels, the Bank
+will pay one-half the cash price of the Hotel plus one-half the price of the four Houses which
+were given in the purchase of the Hotel.
+MORTGAGES
+MORTGAGING PROPERTIES can be done through the Bank only.
+The mortgage value is printed on each Title Deed. The rate of interest is 10 per cent, payable
+when the mortgage is lifted.
+If any property is transferred which is mortgaged, the new owner may lift the mortgage at once
+if he wishes, but must pay 10 per cent interest. If he fails to lift the mortgage he still pays 10 per
+cent interest and if he lifts the mortgage later he pays an additional 10 per cent interest as well
+as the principal.
+Houses or Hotels Cannot be Mortgaged. All Buildings on the Site Must be Sold back to the
+Bank before any Property can be Mortgaged.
+The Bank will pay one-half of what was paid for them.
+In order to rebuild a house on mortgaged property the owner must pay the Bank the amount of
+the mortgage, plus the 10 per cent interest charge and buy the house back from the Bank at its
+FULL PRICE.
+抵押贷款规则
+地产抵押只能通过银行进行。
+每张地产证上都标明了其抵押价值。利率为10%，在赎回抵押时支付。
+
+--- Page 26 ---
+如果某一地产在抵押状态下被转让，新拥有者可以选择立即赎回抵押，但必须支付10%的利息。
+如果新拥有者没有立即赎回抵押，仍然需要支付10%的利息；若其在之后再赎回，还需再支付额
+外的10%利息和本金。
+房屋与旅馆不可用于抵押。
+在对地产进行抵押前，地块上的所有建筑物必须先售回银行，银行将支付其购买价格的一半。
+如果玩家想在抵押地产上重新建造房屋，必须先向银行支付抵押金额及10%利息，然后以原价从
+银行重新购买该房屋。
+# 英文原文提取：
+# BANKRUPTCY
+A player who is bankrupt, that is, one who owes more than he can
+pay, must turn over to his Creditor all that he has of value, and retire from
+the game. In making this settlement, however, if he owns Houses or Hotels,
+these are returned to the Bank in exchange for Money, to the extent of one-
+half their cost as printed on the Title Deeds, and this cash is given to the
+Creditor. If a bankrupt player turns over to his Creditor property that has
+been mortgaged, the new owner must at once pay the Bank the 10 per cent
+interest on the loan. At the same time he may at his option lift the mortgage
+by paying the principal.
+In case a Player is unable to raise money enough to pay his Taxes or
+penalties, even by selling his Buildings and mortgaging his property, the
+Bank will take over all his assets and sell by auction to the Highest Bidder
+everything so taken excepting the Buildings. The Player must then remove
+his Token. The Last Player left in the game WINS.
+# 中文翻译：
+
+--- Page 27 ---
+# 破产规则
+破产玩家（即负债超过偿还能力者）必须
+将所有有价值资产移交给债权人，并退出
+游戏。清算时，若破产玩家拥有房屋或酒店，
+需将其返还银行以换取地契上标价
+一半的现金，该款项将支付给
+债权人。若破产玩家移交的资产已被抵押，
+新业主必须立即向银行支付10%
+贷款利息。同时可选择通过偿还本金
+来解除抵押。
+若玩家即便出售建筑并抵押资产仍无法
+筹集足够资金缴纳税金或罚金，
+银行将接管其所有资产并通过拍卖
+出售（建筑除外），价高者得。
+该玩家必须移除游戏代币。
+最后留在游戏中的玩家获胜。
+（注：完全保留原文段落格式；专业术语如"Title Deeds"译为"地契"，"lift the mortgage"译为"解除抵
+押"；数字表达统一使用中文格式；保留原文关键表述如"Highest Bidder"译为"价高者得"）
+# 英文原文提取：
+# MISCELLANEOUS
+If a player owes more rent than he can pay in CASH he may pay his creditor part in cash and
+part in property. In this case, the creditor will often accept certain property far in excess of its
+mortgage value so as to obtain additional property for buildings or to block another player from
+obtaining control of that property.
+# 中文翻译：
+# 其他规则
+若玩家无法用现金支付全部租金，可以部分现金加部分资产的方式偿还。此时，债权人常会接受
+某些价值远超抵押价的资产，以获取更多建筑用地或阻止其他玩家控制该资产。
+
+--- Page 28 ---
+（注：完全保留原文段落格式；专业术语如"mortgage value"译为"抵押价"；保持原文简洁直接的表
+述风格）
+# 英文原文提取：
+PROPERTY OWNERS MUST WATCH OUT FOR RENTS DUE. DO
+NOT HELP OTHER PLAYERS TO WATCH THEIR PROPERTIES.
+The Bank loans Money only on mortgage security. Players may not
+borrow money or property from each other.
+TO MAKE A SHORTER GAME: Banker shuffles and deals two
+Title Deed Cards to EACH PLAYER at the start. This quickens the
+action and immediate expenditure for rents, and puts the game forward.
+Players on receiving Title-Deeds pay the Bank the Price of the properties.
+# 中文翻译：
+房产所有者必须自行留意应收租金。
+不得协助其他玩家照看其房产。
+银行仅提供抵押贷款。玩家之间
+不得互相借贷资金或资产。
+快速游戏规则：银行家洗混并给每位玩家
+分发两张地契卡。此举可加快游戏节奏，
+促使租金立即支付，推动游戏进程。
+玩家在获得地契卡时需向银行支付该地产的
+购买价格。
+（注：完全保留原文段落格式；专业术语如"Title Deed Cards"译为"地契卡"；修正原文拼写错误
+"loans"；保持原文警示语的大写格式和快速游戏规则的冒号格式）
+
+--- Page 29 ---
+# 英文原文提取：
+# NEW SHORT GAME
+Before starting game players agree at what hour game shall end. At
+end of game Richest Player Wins.
+At start, Banker shuffles Title Deed Cards and after pack is cut he
+deals two cards to each player. Players immediately pay to the Bank the
+price of the Property thus dealt to them. At the first stroke of the Hour
+agreed upon, the game ends. No further trading may be concluded, but
+if a player is in actual play, he completes his move and any action connected
+with it. Each player then values his property: 1) Cash on hand 2) Price
+of Building Sites, Utilities or Railway Stations owned by him. 3) One-half
+of Price printed on board, of any mortgaged property owned by him. 4)
+Cost of Houses. 5) Hotels valued at cost of five houses. Highest Total Wins.
+# 中文翻译：
+# 新快速游戏规则
+游戏开始前，玩家需共同商定结束时间。游戏
+结束时，最富有者获胜。
+开局时，银行家需洗混地契卡，切牌后向
+每位玩家分发两张。玩家须立即向银行支付所获
+地产的标价。当约定时间到达时，游戏立即结束。
+不得再进行任何交易，但若玩家正处于行动回合，
+可完成当前移动及相关操作。随后每位玩家需评估资产：
+1) 手持现金 2) 所拥有的建筑用地、公用事业或火车站
+
+--- Page 30 ---
+的标价 3) 名下抵押地产板上标价的半数 4)
+房屋造价 5) 酒店按五栋房屋造价计算。
+资产总值最高者获胜。
+（注：完全保留原文段落格式；专业术语如"Title Deed Cards"译为"地契卡"；数字编号列表格式与原
+文完全一致；"Richest Player Wins"等关键表述保留原文语序）
