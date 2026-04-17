@@ -367,6 +367,7 @@ a:hover { text-decoration: underline; }
 .rank-3 { border-left: 4px solid #8b6914; }
 .rank-4, .rank-5 { border-left: 4px solid var(--c-border); }
 .rank-low { border-left: 4px solid var(--c-border); }
+.candidate-body { flex: 1; min-width: 0; }
 .candidate-body h3 {
     font-family: var(--font-display);
     font-size: 1.3rem; margin-bottom: 0.3rem;
@@ -388,7 +389,7 @@ a:hover { text-decoration: underline; }
     margin: 2rem 0 1rem;
     color: var(--c-text-light);
 }
-.mini-candidates { display: flex; flex-direction: column; gap: 0.8rem; }
+.mini-candidates { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
 .mini-candidate {
     padding: 0.8rem;
     background: var(--c-bg);
@@ -620,6 +621,7 @@ a:hover { text-decoration: underline; }
     .method-grid { grid-template-columns: 1fr; }
     .candidate-card { flex-direction: column; }
     .candidate-rank { text-align: left; min-width: auto; }
+    .mini-candidates { grid-template-columns: 1fr; }
     .ghetto-stats { grid-template-columns: 1fr; }
     .hero { min-height: 70vh; }
     .hero-title { font-size: 2.5rem; }
