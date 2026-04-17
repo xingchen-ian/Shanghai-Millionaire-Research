@@ -349,16 +349,17 @@ a:hover { text-decoration: underline; }
     border-radius: 8px;
     padding: 2rem;
     margin-bottom: 1.5rem;
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    display: flex;
     gap: 1.5rem;
-    align-items: start;
+    align-items: flex-start;
 }
 .candidate-rank {
     font-family: var(--font-display);
     font-size: 2rem; font-weight: 900;
     color: var(--c-accent);
     text-align: center;
+    min-width: 50px;
+    flex-shrink: 0;
     padding-top: 0.3rem;
 }
 .rank-1 { border-left: 4px solid var(--c-accent); }
@@ -397,7 +398,8 @@ a:hover { text-decoration: underline; }
 }
 
 /* ===== EVIDENCE TABLE ===== */
-.evidence-table { width: 100%; border-collapse: collapse; }
+.evidence-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.evidence-table { width: 100%; border-collapse: collapse; min-width: 500px; }
 .evidence-table th {
     text-align: left; padding: 0.6rem 0.8rem;
     background: var(--c-bg-alt);
@@ -616,8 +618,8 @@ a:hover { text-decoration: underline; }
     .intro-stats { grid-template-columns: 1fr 1fr; }
     .resource-grid { grid-template-columns: 1fr; }
     .method-grid { grid-template-columns: 1fr; }
-    .candidate-card { grid-template-columns: 1fr; }
-    .candidate-rank { text-align: left; }
+    .candidate-card { flex-direction: column; }
+    .candidate-rank { text-align: left; min-width: auto; }
     .ghetto-stats { grid-template-columns: 1fr; }
     .hero { min-height: 70vh; }
     .hero-title { font-size: 2.5rem; }
