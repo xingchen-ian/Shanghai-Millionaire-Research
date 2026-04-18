@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Map — Shanghai Millionaire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Map page extras ── */
+        .map-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 0;
+            height: calc(100vh - 60px - 56px); /* nav + page-header */
+            margin-top: 0;
+        }
+
+        /* Sidebar */
+        .map-sidebar {
+            background: var(--c-card);
+            border-right: 1px solid var(--c-border);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .map-sidebar-header {
+            padding: 1rem 1.2rem 0.8rem;
+            border-bottom: 1px solid var(--c-border);
+            background: var(--c-bg-alt);
+        }
+        .map-sidebar-header h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--c-accent);
+            margin-bottom: 0.25rem;
+        }
+        .map-sidebar-header p {
+            font-size: 0.78rem;
+            color: var(--c-text-light);
+            line-height: 1.4;
+        }
+
+        /* Filter tabs */
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid var(--c-border);
+            background: var(--c-bg);
+        }
+        .filter-tab {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1.5px solid transparent;
+            transition: all 0.15s;
+            color: #fff;
+        }
+        .filter-tab:hover { opacity: 0.8; }
+        .filter-tab.off { opacity: 0.3; filter: grayscale(1); }
+
+        /* Street list */
+        .street-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem 0;
+        }
+        .street-scroll::-webkit-scrollbar { width: 5px; }
+        .street-scroll::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+
+        .street-group {
+            margin-bottom: 0.2rem;
+        }
+        .group-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--c-text-light);
+            padding: 0.5rem 1.2rem 0.2rem;
+        }
+
+        .street-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.38rem 1.2rem;
+            cursor: pointer;
+            transition: background 0.12s;
+            border-left: 3px solid transparent;
+        }
+        .street-row:hover { background: var(--c-bg-alt); }
+        .street-row.active {
+            background: #fff8f0;
+            border-left-color: var(--c-accent);
+        }
+        .street-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 1px solid rgba(0,0,0,0.15);
+        }
+        .street-row-text { flex: 1; }
+        .street-row-en {
+            font-size: 0.8rem;
+            color: var(--c-text);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        .street-row-zh {
+            font-size: 0.7rem;
+            color: var(--c-text-light);
+        }
+        .street-row-price {
+            font-size: 0.72rem;
+            color: var(--c-text-light);
+            font-family: var(--font-display);
+            white-space: nowrap;
+        }
+
+        /* Map container */
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Custom popup */
+        .sm-popup {
+            font-family: 'Georgia', serif;
+            font-size: 0.82rem;
+            line-height: 1.55;
+            min-width: 180px;
+        }
+        .sm-popup .pop-en {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #2c2a25;
+            margin-bottom: 2px;
+        }
+        .sm-popup .pop-zh { color: #6b6560; }
+        .sm-popup .pop-modern {
+            font-size: 0.72rem;
+            color: #999;
+            margin-top: 4px;
+            border-top: 1px solid #eee;
+            padding-top: 4px;
+        }
+        .sm-popup .pop-price {
+            display: inline-block;
+            background: #f5ede0;
+            border: 1px solid #d4a574;
+            border-radius: 3px;
+            padding: 1px 6px;
+            font-size: 0.72rem;
+            color: #8b2500;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 6px;
+            box-shadow: 0 3px 16px rgba(0,0,0,0.18);
+        }
+
+        /* Page header override for map page (compact) */
+        .page-header-compact {
+            padding-top: 80px;
+            padding-bottom: 1rem;
+            background: var(--c-bg-alt);
+            border-bottom: 1px solid var(--c-border);
+        }
+        .page-header-compact .container {
+            display: flex;
+            align-items: baseline;
+            gap: 1.5rem;
+        }
+        .page-header-compact .page-eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--c-accent);
+        }
+        .page-header-compact h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--c-text);
+        }
+        .page-header-compact .page-lead {
+            font-size: 0.85rem;
+            color: var(--c-text-light);
+            margin-left: auto;
+        }
+
+        /* Legend chips at bottom */
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 0.6rem 1.2rem;
+            border-top: 1px solid var(--c-border);
+            background: var(--c-bg);
+        }
+        .legend-chip {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.68rem;
+            color: var(--c-text-light);
+        }
+        .legend-dot {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .map-layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 280px;
+                height: auto;
+            }
+            #map { height: 60vw; min-height: 280px; }
+            .map-sidebar { max-height: 280px; }
+            .page-header-compact .page-lead { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" data-i18n="nav.logo">Shanghai Millionaire</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
+                <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="map.html" class="active" data-i18n="nav.map">Street Map</a></li>
+                <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+            </ul>
+            <button class="lang-toggle" data-i18n="lang.btn">中文</button>
+        </div>
+    </nav>
+
+    <!-- Compact header -->
+    <div class="page-header-compact">
+        <div class="container">
+            <span class="page-eyebrow" data-i18n="map.eyebrow">Research Track 02</span>
+            <h1 data-i18n="map.title">Street Map</h1>
+            <span class="page-lead" data-i18n="map.lead">25 game locations mapped onto 1940s Shanghai</span>
+        </div>
+    </div>
+
+    <!-- Map layout -->
+    <div class="map-layout">
+
+        <!-- Sidebar -->
+        <div class="map-sidebar">
+            <div class="map-sidebar-header">
+                <h3 data-i18n="map.sideTitle">Game Board Streets</h3>
+                <p data-i18n="map.sideDesc">Click any street to zoom to its location. Pins use the game's original color groups.</p>
+            </div>
+            <div class="filter-tabs" id="filterTabs"></div>
+            <div class="street-scroll" id="streetList"></div>
+            <div class="map-legend" id="mapLegend"></div>
+        </div>
+
+        <!-- Leaflet map -->
+        <div id="map"></div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // ── Street data (annotated by Ian, April 2026) ────────────────────────────
+    const STREET_DATA = [
+      { id:"bund",       en:"The Bund",             zh:"外滩",    modern:"中山东一路", color:"#1a237e", price:"$350", lat:31.237653, lng:121.486001 },
+      { id:"kiukiang",   en:"Kiukiang Road",         zh:"九江路",  modern:"九江路",    color:"#1a237e", price:"$400", lat:31.23967,  lng:121.484724 },
+      { id:"kiangse",    en:"Kiangse Road",          zh:"江西路",  modern:"江西中路",  color:"#27ae60", price:"$300", lat:31.23768,  lng:121.482632 },
+      { id:"nanking",    en:"Nanking Road",          zh:"南京路",  modern:"南京东路",  color:"#27ae60", price:"$300", lat:31.239835, lng:121.481044 },
+      { id:"szechuen",   en:"Szechuen Road",         zh:"四川路",  modern:"四川中路",  color:"#27ae60", price:"$320", lat:31.240696, lng:121.483126 },
+      { id:"bubbling",   en:"Bubbling Well Road",    zh:"静安寺路",modern:"南京西路",  color:"#f1c40f", price:"$260", lat:31.236091, lng:121.468459 },
+      { id:"greatwest",  en:"Great Western Road",    zh:"大西路",  modern:"延安西路",  color:"#f1c40f", price:"$260", lat:31.222059, lng:121.439309 },
+      { id:"yuyuen",     en:"Yu Yuen Road",          zh:"愚园路",  modern:"愚园路",    color:"#f1c40f", price:"$280", lat:31.226617, lng:121.441492 },
+      { id:"seymour",    en:"Seymour Road",          zh:"西摩路",  modern:"陕西北路",  color:"#e74c3c", price:"$220", lat:31.230262, lng:121.449866 },
+      { id:"hardoon",    en:"Hardoon Road",          zh:"哈同路",  modern:"铜仁路",    color:"#e74c3c", price:"$240", lat:31.22745,  lng:121.445639 },
+      { id:"petain",     en:"Avenue Petain",         zh:"贝当路",  modern:"衡山路",    color:"#e67e22", price:"$180", lat:31.204175, lng:121.440125 },
+      { id:"albert",     en:"Avenue Roi Albert",     zh:"亚尔培路",modern:"陕西南路",  color:"#e67e22", price:"$180", lat:31.209989, lng:121.457226 },
+      { id:"joffre",     en:"Avenue Joffre",         zh:"霞飞路",  modern:"淮海中路",  color:"#e67e22", price:"$200", lat:31.215033, lng:121.44594  },
+      { id:"ningpo",     en:"Ningpo Road",           zh:"宁波路",  modern:"宁波路",    color:"#e91e8c", price:"$140", lat:31.241696, lng:121.481962 },
+      { id:"tientsin",   en:"Tientsin Road",         zh:"天津路",  modern:"天津路",    color:"#e91e8c", price:"$140", lat:31.240895, lng:121.480958 },
+      { id:"honan",      en:"Honan Road",            zh:"河南路",  modern:"河南中路",  color:"#e91e8c", price:"$160", lat:31.23661,  lng:121.481248 },
+      { id:"avenue",     en:"Avenue Road",           zh:"爱文义路",modern:"北京西路",  color:"#3498db", price:"$100", lat:31.237691, lng:121.464726 },
+      { id:"yuyaching",  en:"Yu Ya Ching Road",      zh:"虞洽卿路",modern:"西藏中路",  color:"#3498db", price:"$100", lat:31.238377, lng:121.469414 },
+      { id:"peking",     en:"Peking Road",           zh:"北京路",  modern:"北京东路",  color:"#3498db", price:"$120", lat:31.241915, lng:121.476946 },
+      { id:"haig",       en:"Avenue Haig",           zh:"海格路",  modern:"华山路",    color:"#9b59b6", price:"$60",  lat:31.216853, lng:121.434846 },
+      { id:"hart",       en:"Hart Road",             zh:"赫德路",  modern:"常德路",    color:"#9b59b6", price:"$80",  lat:31.23024,  lng:121.442142 },
+      { id:"station_e",  en:"East Railway Station",  zh:"东站",    modern:"老北站东侧",color:"#795548", price:"$200", lat:31.252287, lng:121.474355 },
+      { id:"station_s",  en:"South Railway Station", zh:"南站",    modern:"上海南站",  color:"#795548", price:"$200", lat:31.15512,  lng:121.424847 },
+      { id:"station_w",  en:"West Railway Station",  zh:"西站",    modern:"上海西站",  color:"#795548", price:"$200", lat:31.265353, lng:121.396415 },
+      { id:"station_n",  en:"North Railway Station", zh:"北站",    modern:"上海北站",  color:"#795548", price:"$200", lat:31.251859, lng:121.471667 }
+    ];
+
+    const GROUPS = [
+      { key:'dark-blue', label:'Dark Blue · $350–400', color:'#1a237e', ids:['bund','kiukiang'] },
+      { key:'green',     label:'Green · $300–320',     color:'#27ae60', ids:['kiangse','nanking','szechuen'] },
+      { key:'yellow',    label:'Yellow · $260–280',    color:'#f1c40f', ids:['bubbling','greatwest','yuyuen'] },
+      { key:'red',       label:'Red · $220–240',       color:'#e74c3c', ids:['seymour','hardoon'] },
+      { key:'orange',    label:'Orange · $180–200',    color:'#e67e22', ids:['petain','albert','joffre'] },
+      { key:'pink',      label:'Pink · $140–160',      color:'#e91e8c', ids:['ningpo','tientsin','honan'] },
+      { key:'light-blue',label:'Light Blue · $100–120',color:'#3498db', ids:['avenue','yuyaching','peking'] },
+      { key:'purple',    label:'Purple · $60–80',      color:'#9b59b6', ids:['haig','hart'] },
+      { key:'station',   label:'Railway Stations',     color:'#795548', ids:['station_e','station_s','station_w','station_n'] }
+    ];
+
+    // ── Map init ──────────────────────────────────────────────────────────────
+    const map = L.map('map', {
+        center: [31.228, 121.458],
+        zoom: 13,
+        zoomControl: true
+    });
+
+    // Use CartoDB Positron — clean, light, academic feel
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors © CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
+    // ── Marker icons ──────────────────────────────────────────────────────────
+    function makeIcon(color, isStation) {
+        const shape = isStation
+            ? `<rect x="3" y="3" width="18" height="18" rx="3" fill="${color}" stroke="#fff" stroke-width="1.5"/>
+               <text x="12" y="15" text-anchor="middle" font-size="9" fill="white" font-family="Georgia">🚉</text>`
+            : `<path d="M12 1C6.48 1 2 5.48 2 11c0 7.67 10 20 10 20S22 18.67 22 11C22 5.48 17.52 1 12 1z"
+                     fill="${color}" stroke="#fff" stroke-width="1.5"/>
+               <circle cx="12" cy="11" r="4.5" fill="white" opacity="0.88"/>`;
+
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 24 32">${shape}</svg>`;
+        return L.divIcon({
+            className: '',
+            html: svg,
+            iconSize: [26, 34],
+            iconAnchor: [13, 34],
+            popupAnchor: [0, -36]
+        });
+    }
+
+    // ── Build markers ─────────────────────────────────────────────────────────
+    const leafletMarkers = {};
+    let activeId = null;
+
+    STREET_DATA.forEach(s => {
+        const isStation = s.id.startsWith('station');
+        const marker = L.marker([s.lat, s.lng], {
+            icon: makeIcon(s.color, isStation),
+            title: s.en
+        }).addTo(map);
+
+        marker.bindPopup(`
+            <div class="sm-popup">
+                <div class="pop-en">${s.en}</div>
+                <div class="pop-zh">${s.zh}</div>
+                <div class="pop-modern">Today: ${s.modern}</div>
+                <span class="pop-price">${s.price}</span>
+            </div>
+        `, { maxWidth: 220 });
+
+        marker.on('click', () => setActive(s.id));
+        leafletMarkers[s.id] = marker;
+    });
+
+    // ── Active state ──────────────────────────────────────────────────────────
+    function setActive(id) {
+        activeId = id;
+        // Update sidebar highlight
+        document.querySelectorAll('.street-row').forEach(el => el.classList.remove('active'));
+        const row = document.getElementById('row_' + id);
+        if (row) { row.classList.add('active'); row.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+    }
+
+    function flyTo(id) {
+        const s = STREET_DATA.find(x => x.id === id);
+        if (!s) return;
+        map.flyTo([s.lat, s.lng], 16, { duration: 0.8 });
+        leafletMarkers[id].openPopup();
+        setActive(id);
+    }
+
+    // ── Sidebar ───────────────────────────────────────────────────────────────
+    const activeGroups = new Set(GROUPS.map(g => g.key));
+
+    function buildSidebar() {
+        const list = document.getElementById('streetList');
+        list.innerHTML = '';
+        GROUPS.forEach(g => {
+            if (!activeGroups.has(g.key)) return;
+            const groupEl = document.createElement('div');
+            groupEl.className = 'street-group';
+            groupEl.innerHTML = `<div class="group-label">${g.label}</div>`;
+            g.ids.forEach(id => {
+                const s = STREET_DATA.find(x => x.id === id);
+                if (!s) return;
+                const row = document.createElement('div');
+                row.className = 'street-row';
+                row.id = 'row_' + id;
+                row.innerHTML = `
+                    <div class="street-dot" style="background:${s.color}"></div>
+                    <div class="street-row-text">
+                        <div class="street-row-en">${s.en}</div>
+                        <div class="street-row-zh">${s.zh} · ${s.modern}</div>
+                    </div>
+                    <div class="street-row-price">${s.price}</div>
+                `;
+                row.onclick = () => flyTo(id);
+                groupEl.appendChild(row);
+            });
+            list.appendChild(groupEl);
+        });
+    }
+
+    // Filter tabs
+    function buildFilters() {
+        const tabs = document.getElementById('filterTabs');
+        tabs.innerHTML = '';
+        GROUPS.forEach(g => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-tab';
+            btn.style.background = g.color;
+            btn.textContent = g.label.split(' · ')[0];
+            btn.title = g.label;
+            btn.onclick = () => toggleGroup(g.key, btn);
+            btn.id = 'tab_' + g.key;
+            tabs.appendChild(btn);
+        });
+    }
+
+    function toggleGroup(key, btn) {
+        if (activeGroups.has(key)) {
+            activeGroups.delete(key);
+            btn.classList.add('off');
+            // Hide markers
+            const g = GROUPS.find(x => x.key === key);
+            g.ids.forEach(id => { if (leafletMarkers[id]) map.removeLayer(leafletMarkers[id]); });
+        } else {
+            activeGroups.add(key);
+            btn.classList.remove('off');
+            const g = GROUPS.find(x => x.key === key);
+            g.ids.forEach(id => { if (leafletMarkers[id]) leafletMarkers[id].addTo(map); });
+        }
+        buildSidebar();
+    }
+
+    // Legend
+    function buildLegend() {
+        const legend = document.getElementById('mapLegend');
+        GROUPS.forEach(g => {
+            const chip = document.createElement('div');
+            chip.className = 'legend-chip';
+            chip.innerHTML = `<div class="legend-dot" style="background:${g.color}"></div>
+                              <span>${g.label.split(' · ')[0]}</span>`;
+            legend.appendChild(chip);
+        });
+    }
+
+    buildFilters();
+    buildSidebar();
+    buildLegend();
+    </script>
+</body>
+</html>

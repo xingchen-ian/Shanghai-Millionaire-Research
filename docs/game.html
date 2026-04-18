@@ -17,6 +17,8 @@
                 <li><a href="game.html" class="active" data-i18n="nav.game">The Game</a></li>
                 <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
                 <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
+                <li><a href="land-value.html" data-i18n="nav.landValue">Land Value</a></li>
                 <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
             </ul>
             <button class="lang-toggle" data-i18n="lang.btn">中文</button>
@@ -91,59 +93,52 @@
             <div class="container">
                 <h2 class="section-heading" data-i18n="game.locTitle">Localization: Shanghai Streets</h2>
                 <div class="prose-block">
-                    <p data-i18n="game.locDesc">The most distinctive feature of Shanghai Millionaire is its replacement of London streets with Shanghai ones. These names map onto the colonial geography of the International Settlement and French Concession:</p>
+                    <p data-i18n="game.locDesc">The most distinctive feature of Shanghai Millionaire is its replacement of London streets with Shanghai ones. All 22 streets map onto the colonial geography of the International Settlement and French Concession — with the most expensive properties on the Bund and lowest-value properties on the western outskirts.</p>
                 </div>
-                <div class="streets-grid">
-                    <div class="street-card premium">
-                        <span class="street-tier" data-i18n="game.stPrem">Premium (Dark Blue)</span>
-                        <span class="street-en">The Bund</span>
-                        <span class="street-zh">外滩</span>
-                        <span class="street-now" data-i18n="game.stNow1">Now: Waitan (外滩)</span>
-                    </div>
-                    <div class="street-card premium">
-                        <span class="street-tier" data-i18n="game.stPrem">Premium (Dark Blue)</span>
-                        <span class="street-en">Bubbling Well Road</span>
-                        <span class="street-zh">静安寺路</span>
-                        <span class="street-now" data-i18n="game.stNow2">Now: Nanjing West Road (南京西路)</span>
-                    </div>
-                    <div class="street-card high">
-                        <span class="street-tier" data-i18n="game.stHigh">High Value (Green)</span>
-                        <span class="street-en">Avenue Joffre</span>
-                        <span class="street-zh">霞飞路</span>
-                        <span class="street-now" data-i18n="game.stNow3">Now: Huaihai Middle Road (淮海中路)</span>
-                    </div>
-                    <div class="street-card high">
-                        <span class="street-tier" data-i18n="game.stHigh">High Value (Green)</span>
-                        <span class="street-en">Nanking Road</span>
-                        <span class="street-zh">南京路</span>
-                        <span class="street-now" data-i18n="game.stNow4">Now: Nanjing East Road (南京东路)</span>
-                    </div>
-                    <div class="street-card mid">
-                        <span class="street-tier" data-i18n="game.stMid">Mid Value</span>
-                        <span class="street-en">Race Course Road</span>
-                        <span class="street-zh">跑马厅路</span>
-                        <span class="street-now" data-i18n="game.stNow5">Now: People's Square area</span>
-                    </div>
-                    <div class="street-card mid">
-                        <span class="street-tier" data-i18n="game.stMid">Mid Value</span>
-                        <span class="street-en">Siccawei Road</span>
-                        <span class="street-zh">徐家汇路</span>
-                        <span class="street-now" data-i18n="game.stNow6">Now: Xujiahui area</span>
-                    </div>
-                    <div class="street-card low">
-                        <span class="street-tier" data-i18n="game.stLow">Lower Value</span>
-                        <span class="street-en">Kiangse Road</span>
-                        <span class="street-zh">江西路</span>
-                        <span class="street-now" data-i18n="game.stNow7">Now: Jiangxi Road</span>
-                    </div>
-                    <div class="street-card low">
-                        <span class="street-tier" data-i18n="game.stLow">Lower Value</span>
-                        <span class="street-en">Yuenmingyuen Road</span>
-                        <span class="street-zh">圆明园路</span>
-                        <span class="street-now" data-i18n="game.stNow8">Now: Yuenmingyuen Road</span>
-                    </div>
+
+                <!-- Full street table -->
+                <div style="overflow-x:auto; margin: 1.5rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.85rem;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th data-i18n="game.tblColor" style="width:12%">Color</th>
+                            <th data-i18n="game.tblEn">Game Name</th>
+                            <th data-i18n="game.tblZh">Chinese</th>
+                            <th data-i18n="game.tblModern">Today</th>
+                            <th data-i18n="game.tblPrice" style="width:8%; text-align:right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>The Bund</td><td>外滩</td><td>中山东一路</td><td style="text-align:right;font-weight:600">$350</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>Kiukiang Road</td><td>九江路</td><td>九江路</td><td style="text-align:right;font-weight:600">$400</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Kiangse Road</td><td>江西路</td><td>江西中路</td><td style="text-align:right;font-weight:600">$300</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Nanking Road</td><td>南京路</td><td>南京东路</td><td style="text-align:right;font-weight:600">$300</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Szechuen Road</td><td>四川路</td><td>四川中路</td><td style="text-align:right;font-weight:600">$320</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Bubbling Well Road</td><td>静安寺路</td><td>南京西路</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Great Western Road</td><td>大西路</td><td>延安西路</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Yu Yuen Road</td><td>愚园路</td><td>愚园路</td><td style="text-align:right;font-weight:600">$280</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Seymour Road</td><td>西摩路</td><td>陕西北路</td><td style="text-align:right;font-weight:600">$220</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Hardoon Road</td><td>哈同路</td><td>铜仁路</td><td style="text-align:right;font-weight:600">$240</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Petain</td><td>贝当路</td><td>衡山路</td><td style="text-align:right;font-weight:600">$180</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Roi Albert</td><td>亚尔培路</td><td>陕西南路</td><td style="text-align:right;font-weight:600">$180</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Joffre</td><td>霞飞路</td><td>淮海中路</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Ningpo Road</td><td>宁波路</td><td>宁波路</td><td style="text-align:right;font-weight:600">$140</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Tientsin Road</td><td>天津路</td><td>天津路</td><td style="text-align:right;font-weight:600">$140</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Honan Road</td><td>河南路</td><td>河南中路</td><td style="text-align:right;font-weight:600">$160</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Avenue Road</td><td>爱文义路</td><td>北京西路</td><td style="text-align:right;font-weight:600">$100</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Yu Ya Ching Road</td><td>虞洽卿路</td><td>西藏中路</td><td style="text-align:right;font-weight:600">$100</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Peking Road</td><td>北京路</td><td>北京东路</td><td style="text-align:right;font-weight:600">$120</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Avenue Haig</td><td>海格路</td><td>华山路</td><td style="text-align:right;font-weight:600">$60</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Hart Road</td><td>赫德路</td><td>常德路</td><td style="text-align:right;font-weight:600">$80</td></tr>
+                    </tbody>
+                </table>
                 </div>
-                <p class="caption" data-i18n="game.stCaption">Partial list — 22 streets total on the board. Full mapping is an ongoing research task.</p>
+
+                <!-- Map CTA -->
+                <div style="text-align:center; margin: 1.5rem 0 0.5rem;">
+                    <a href="map.html" class="hero-cta" style="display:inline-block; padding:0.7rem 2rem; font-size:0.9rem;" data-i18n="game.mapCta">View Interactive Street Map →</a>
+                </div>
+                <p class="caption" data-i18n="game.stCaption">All 22 streets mapped to their 1940s locations. Pins annotated by the research team, April 2026.</p>
             </div>
         </section>
 

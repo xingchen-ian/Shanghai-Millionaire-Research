@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Value Research | Shanghai Millionaire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        .research-section { margin: 2rem 0; }
+        .research-grid { display: grid; gap: 2rem; }
+        @media (min-width: 900px) {
+            .research-grid.two-col { grid-template-columns: 1fr 1fr; }
+            .research-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+        }
+        .research-card {
+            background: var(--c-card);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--c-accent);
+        }
+        .research-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--c-accent);
+        }
+        .hypothesis-box {
+            background: linear-gradient(135deg, var(--c-card) 0%, var(--c-bg-alt) 100%);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--c-border);
+        }
+        .hypothesis-box h4 {
+            margin-top: 0;
+            color: var(--c-accent);
+        }
+        .data-table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .data-table th, .data-table td {
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid var(--c-border);
+        }
+        .data-table th {
+            background: var(--c-bg-alt);
+            font-weight: 600;
+        }
+        .data-table tr:hover {
+            background: var(--c-bg-alt);
+        }
+        .price-high { color: #1a237e; font-weight: 600; }
+        .price-mid { color: #27ae60; font-weight: 600; }
+        .price-low { color: #9b59b6; font-weight: 600; }
+        .anomaly { background: rgba(231, 76, 60, 0.1); }
+        .anomaly-note {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+        }
+        #map {
+            height: 450px;
+            width: 100%;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        .map-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+        }
+        .research-question {
+            background: var(--c-card);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 4px solid var(--c-accent);
+        }
+        .research-question h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        .research-question p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--c-text-sec);
+        }
+        .status-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+        }
+        .status-ongoing { background: #f1c40f; color: #333; }
+        .status-planned { background: #95a5a6; color: white; }
+        .status-completed { background: #27ae60; color: white; }
+        .board-preview {
+            background: var(--c-card);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .board-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--c-border);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.3rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--c-accent);
+        }
+        .timeline-year {
+            font-weight: 600;
+            color: var(--c-accent);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" data-i18n="nav.logo">Shanghai Millionaire</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                    <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
+                    <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                    <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
+                    <li><a href="land-value.html" class="active" data-i18n="nav.landValue">Land Value</a></li>
+                    <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+                </ul>
+            </nav>
+            <button class="lang-toggle" id="langToggle" data-i18n="lang.btn">中文</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-eyebrow" data-i18n="landValue.eyebrow">Research Track 03</span>
+                <h1 class="hero-title" data-i18n="landValue.title">Land Value & Game Board</h1>
+                <p class="hero-lead" data-i18n="landValue.lead">Does the Shanghai Millionaire game board encode colonial spatial hierarchy rather than empirical land values?</p>
+            </div>
+        </section>
+
+        <!-- Core Hypothesis -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.hypothesisTitle">Core Hypothesis</h2>
+                <div class="hypothesis-box">
+                    <h4 data-i18n="landValue.hypothesisQ">Research Question</h4>
+                    <p data-i18n="landValue.hypothesisText">The Shanghai Millionaire game board reflects colonial spatial hierarchy rather than empirical market land values. Streets in "Chinese commercial areas" may be systematically undervalued compared to their actual rental rates, revealing the "colonial gaze" embedded in the game's design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board Overview -->
+        <section class="content-section" style="background:var(--c-bg-alt);">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.boardTitle">The Board: Price Structure</h2>
+                <div class="research-grid two-col">
+                    <div class="board-preview">
+                        <p style="margin-bottom:1rem;" data-i18n="landValue.boardDesc">Shanghai Millionaire follows the British Waddington's Monopoly template: 40 squares, 8 color groups, prices increasing clockwise from GO. The localization replaces London streets with Shanghai streets while maintaining the price structure.</p>
+                        <p class="caption" data-i18n="landValue.boardNote">The game uses the British color scheme: Dark Blue ($350-400) as the most expensive, Purple ($60-80) as the cheapest.</p>
+                    </div>
+                    <div>
+                        <h3 data-i18n="landValue.priceTiersTitle">Price Tiers & Geographic Zones</h3>
+                        <div class="data-table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th data-i18n="landValue.tblTier">Tier</th>
+                                        <th data-i18n="landValue.tblStreets">Streets</th>
+                                        <th data-i18n="landValue.tblZone">Zone</th>
+                                        <th data-i18n="landValue.tblStatus">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="price-high">$350-400</td>
+                                        <td>Bund, Kiukiang</td>
+                                        <td data-i18n="landValue.zoneCore">IS Core</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="price-mid">$300-320</td>
+                                        <td>Kiangse, Nanking, Szechuen</td>
+                                        <td data-i18n="landValue.zoneCore">IS Core</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$260-280</td>
+                                        <td>Bubbling Well, Yu Yuen, Great Western</td>
+                                        <td data-i18n="landValue.zoneWest">IS West</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$220-240</td>
+                                        <td>Seymour, Hardoon</td>
+                                        <td data-i18n="landValue.zoneWest">IS West</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$180-200</td>
+                                        <td>Joffre, Petain, Albert</td>
+                                        <td data-i18n="landValue.zoneFrench">French Concession</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr class="anomaly">
+                                        <td>$140-160</td>
+                                        <td>Ningpo, Tientsin, Honan</td>
+                                        <td data-i18n="landValue.zoneCore">IS Core</td>
+                                        <td><span data-i18n="landValue.statusAnomaly">Anomaly?</span> <span class="anomaly-note" data-i18n="landValue.anomalyTag">Check</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>$100-120</td>
+                                        <td>Avenue, Yu Ya Ching, Peking</td>
+                                        <td data-i18n="landValue.zoneWest">IS West/North</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                    <tr class="price-low">
+                                        <td>$60-80</td>
+                                        <td>Haig, Hart</td>
+                                        <td data-i18n="landValue.zonePeriphery">Periphery</td>
+                                        <td data-i18n="landValue.statusExpected">Expected</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="caption" data-i18n="landValue.tierCaption">IS = International Settlement. The pink group (Ningpo/Tientsin/Honan) is geographically central but game-priced low — a potential anomaly worth investigating.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.mapTitle">Geographic Distribution</h2>
+                <p data-i18n="landValue.mapDesc">The map shows all 22 streets with their game prices. Click on any marker to see details. Notice how the most expensive properties cluster along the Bund and the International Settlement core, while the cheapest are on the western periphery.</p>
+                
+                <div class="map-legend">
+                    <div class="legend-item"><span class="legend-color" style="background:#1a237e"></span> $350-400 (Premium)</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#27ae60"></span> $300-320 (High)</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#f1c40f"></span> $260-280</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#e74c3c"></span> $220-240</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#e67e22"></span> $180-200</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#e91e8c"></span> $140-160</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#3498db"></span> $100-120</div>
+                    <div class="legend-item"><span class="legend-color" style="background:#9b59b6"></span> $60-80 (Lowest)</div>
+                </div>
+                
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <!-- Research Questions -->
+        <section class="content-section" style="background:var(--c-bg-alt);">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.rqTitle">Research Questions</h2>
+                
+                <div class="research-question">
+                    <h4 data-i18n="landValue.rq1">Q1: Do game prices correlate with empirical land values? <span class="status-badge status-ongoing">Ongoing</span></h4>
+                    <p data-i18n="landValue.rq1Desc">Collect SMC Annual Report property assessments and newspaper rental advertisements to compare with game prices. Focus on the pink group anomaly: were Ningpo/Tientsin/Honan actually lower-value, or are they undervalued in the colonial perspective?</p>
+                </div>
+                
+                <div class="research-question">
+                    <h4 data-i18n="landValue.rq2">Q2: How did the 1937-1941 "Solitary Island" period affect land values? <span class="status-badge status-planned">Planned</span></h4>
+                    <p data-i18n="landValue.rq2Desc">After the 1937 Battle of Shanghai, the International Settlement became an isolated "solitary island" surrounded by Japanese occupation. Refugee influx caused dramatic shifts in land values. Does the game (likely printed 1938-1940) reflect pre-war colonial imagination or wartime reality?</p>
+                </div>
+                
+                <div class="research-question">
+                    <h4 data-i18n="landValue.rq3">Q3: What does comparison with other Monopoly versions reveal? <span class="status-badge status-planned">Planned</span></h4>
+                    <p data-i18n="landValue.rq3Desc">Atlantic City (1935) and London (1936) versions have been studied for their price-value correlations. How does Shanghai's colonial context make its localization unique? Is Shanghai the only major version where localization involves colonial power asymmetry?</p>
+                </div>
+                
+                <div class="research-question">
+                    <h4 data-i18n="landValue.rq4">Q4: Who determined the value hierarchy? <span class="status-badge status-planned">Planned</span></h4>
+                    <p data-i18n="landValue.rq4Desc">The game's value system reflects whose perspective? British colonial administrators? International Settlement business elites? Or is it a pragmatic adaptation of the London board's structure without local knowledge?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Context -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.contextTitle">Historical Context</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">1935</span>
+                        <p data-i18n="landValue.timeline1935">Charles Darrow's Monopoly published by Parker Brothers (US). Based on Atlantic City, with prices loosely reflecting real estate values.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1936</span>
+                        <p data-i18n="landValue.timeline1936">Waddington's publishes British version with London streets. Mayfair and Park Lane correspond to actual high-value areas.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1937</span>
+                        <p data-i18n="landValue.timeline1937">Battle of Shanghai (August-November). Chinese city falls to Japanese forces. International Settlement and French Concession remain unoccupied "solitary island."</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1938-1940</span>
+                        <p data-i18n="landValue.timeline1938">Massive refugee influx into the Settlement. Land values in previously "Chinese" areas appreciate dramatically. <strong>Shanghai Millionaire likely printed during this period.</strong></p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1941</span>
+                        <p data-i18n="landValue.timeline1941">Pacific War begins. Japanese occupy the International Settlement (December). Game production likely ceases.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1946</span>
+                        <p data-i18n="landValue.timeline1946">Lobel brothers create handmade Shanghai Millionaire in refugee camp. Their choice of this game suggests it was well-known in the international community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Sources -->
+        <section class="content-section" style="background:var(--c-bg-alt);">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.sourcesTitle">Data Sources Needed</h2>
+                <div class="research-grid three-col">
+                    <div class="research-card">
+                        <h3 data-i18n="landValue.source1Title">SMC Annual Reports</h3>
+                        <p data-i18n="landValue.source1Desc">Shanghai Municipal Council annual reports (1935-1941) contain property tax assessments and land value indices. Available at Shanghai Municipal Archives and some university libraries.</p>
+                    </div>
+                    <div class="research-card">
+                        <h3 data-i18n="landValue.source2Title">Newspaper Archives</h3>
+                        <p data-i18n="landValue.source2Desc">North China Daily News, The China Press, and Shanghai Times contain real estate advertisements and rental market reports. Available via ProQuest Historical Newspapers.</p>
+                    </div>
+                    <div class="research-card">
+                        <h3 data-i18n="landValue.source3Title">Academic Datasets</h3>
+                        <p data-i18n="landValue.source3Desc">Virtual Shanghai (virtualshanghai.net) and Peking University Historical GIS Center have Shanghai land use data from the 1930s.</p>
+                    </div>
+                </div>
+                <p style="margin-top:1.5rem;" data-i18n="landValue.sourcesNote"><strong>Call for collaboration:</strong> If you have access to any of these sources or relevant expertise, please contact us.</p>
+            </div>
+        </section>
+
+        <!-- Related Research -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.relatedTitle">Related Research</h2>
+                <div class="research-grid two-col">
+                    <div class="research-card">
+                        <h3 data-i18n="landValue.related1Title">Atlantic City Studies</h3>
+                        <p data-i18n="landValue.related1Desc">Ralph Anspach's research (documented in <em>The Billion Dollar Monopoly Swindle</em>) established that Atlantic City prices were loosely based on real values but adjusted for gameplay. This provides methodology for our Shanghai study.</p>
+                    </div>
+                    <div class="research-card">
+                        <h3 data-i18n="landValue.related2Title">Shanghai Colonial Space</h3>
+                        <p data-i18n="landValue.related2Desc">Christian Henriot's <em>Shanghai, 1927-1937</em> and Wen-hsin Yeh's <em>Shanghai Splendor</em> provide theoretical frameworks for understanding colonial spatial hierarchy and consumption culture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="content-section" style="background:var(--c-bg-alt); text-align:center;">
+            <div class="container">
+                <p data-i18n="landValue.ctaText">This research is ongoing. We welcome contributions of historical data, methodological suggestions, or comparative insights from other Monopoly localizations.</p>
+                <p class="caption" data-i18n="landValue.ctaCaption">Last updated: April 2026</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="footer.text">A research project on a 1930s Shanghai Monopoly variant.</p>
+            <p class="caption" style="margin-top:0.5rem;">© 2026 Shanghai Millionaire Research Project</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Street data with prices
+        const STREET_DATA = [
+            { id: "bund", en: "The Bund", zh: "外滩", modern: "中山东一路", color: "#1a237e", price: "$350", lat: 31.237653, lng: 121.486001, tier: "premium" },
+            { id: "kiukiang", en: "Kiukiang Road", zh: "九江路", modern: "九江路", color: "#1a237e", price: "$400", lat: 31.23967, lng: 121.484724, tier: "premium" },
+            { id: "kiangse", en: "Kiangse Road", zh: "江西路", modern: "江西中路", color: "#27ae60", price: "$300", lat: 31.23768, lng: 121.482632, tier: "high" },
+            { id: "nanking", en: "Nanking Road", zh: "南京路", modern: "南京东路", color: "#27ae60", price: "$300", lat: 31.239835, lng: 121.481044, tier: "high" },
+            { id: "szechuen", en: "Szechuen Road", zh: "四川路", modern: "四川中路", color: "#27ae60", price: "$320", lat: 31.240696, lng: 121.483126, tier: "high" },
+            { id: "bubbling", en: "Bubbling Well Road", zh: "静安寺路", modern: "南京西路", color: "#f1c40f", price: "$260", lat: 31.236091, lng: 121.468459, tier: "mid" },
+            { id: "greatwest", en: "Great Western Road", zh: "大西路", modern: "延安西路", color: "#f1c40f", price: "$260", lat: 31.222059, lng: 121.439309, tier: "mid" },
+            { id: "yuyuen", en: "Yu Yuen Road", zh: "愚园路", modern: "愚园路", color: "#f1c40f", price: "$280", lat: 31.226617, lng: 121.441492, tier: "mid" },
+            { id: "seymour", en: "Seymour Road", zh: "西摩路", modern: "陕西北路", color: "#e74c3c", price: "$220", lat: 31.230262, lng: 121.449866, tier: "mid" },
+            { id: "hardoon", en: "Hardoon Road", zh: "哈同路", modern: "铜仁路", color: "#e74c3c", price: "$240", lat: 31.22745, lng: 121.445639, tier: "mid" },
+            { id: "petain", en: "Avenue Petain", zh: "贝当路", modern: "衡山路", color: "#e67e22", price: "$180", lat: 31.204175, lng: 121.440125, tier: "mid-low" },
+            { id: "albert", en: "Avenue Roi Albert", zh: "亚尔培路", modern: "陕西南路", color: "#e67e22", price: "$180", lat: 31.209989, lng: 121.457226, tier: "mid-low" },
+            { id: "joffre", en: "Avenue Joffre", zh: "霞飞路", modern: "淮海中路", color: "#e67e22", price: "$200", lat: 31.215033, lng: 121.44594, tier: "mid-low" },
+            { id: "ningpo", en: "Ningpo Road", zh: "宁波路", modern: "宁波路", color: "#e91e8c", price: "$140", lat: 31.241696, lng: 121.481962, tier: "low-mid", anomaly: true },
+            { id: "tientsin", en: "Tientsin Road", zh: "天津路", modern: "天津路", color: "#e91e8c", price: "$140", lat: 31.240895, lng: 121.480958, tier: "low-mid", anomaly: true },
+            { id: "honan", en: "Honan Road", zh: "河南路", modern: "河南中路", color: "#e91e8c", price: "$160", lat: 31.23661, lng: 121.481248, tier: "low-mid", anomaly: true },
+            { id: "avenue", en: "Avenue Road", zh: "爱文义路", modern: "北京西路", color: "#3498db", price: "$100", lat: 31.237691, lng: 121.464726, tier: "low" },
+            { id: "yuyaching", en: "Yu Ya Ching Road", zh: "虞洽卿路", modern: "西藏中路", color: "#3498db", price: "$100", lat: 31.238377, lng: 121.469414, tier: "low" },
+            { id: "peking", en: "Peking Road", zh: "北京路", modern: "北京东路", color: "#3498db", price: "$120", lat: 31.241915, lng: 121.476946, tier: "low" },
+            { id: "haig", en: "Avenue Haig", zh: "海格路", modern: "华山路", color: "#9b59b6", price: "$60", lat: 31.216853, lng: 121.434846, tier: "lowest" },
+            { id: "hart", en: "Hart Road", zh: "赫德路", modern: "常德路", color: "#9b59b6", price: "$80", lat: 31.23024, lng: 121.442142, tier: "lowest" }
+        ];
+
+        // Initialize map
+        const map = L.map('map').setView([31.23, 121.47], 13);
+        
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add markers
+        STREET_DATA.forEach(street => {
+            const marker = L.circleMarker([street.lat, street.lng], {
+                radius: 10,
+                fillColor: street.color,
+                color: '#fff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.9
+            }).addTo(map);
+
+            const popupContent = `
+                <div style="min-width:180px;">
+                    <strong style="color:${street.color};font-size:1.1rem;">${street.price}</strong>
+                    <div style="font-weight:600;margin-top:0.3rem;">${street.en}</div>
+                    <div style="color:#666;">${street.zh}</div>
+                    <div style="color:#888;font-size:0.85rem;margin-top:0.3rem;">Today: ${street.modern}</div>
+                    ${street.anomaly ? '<div style="background:#e74c3c;color:white;font-size:0.75rem;padding:2px 6px;border-radius:3px;display:inline-block;margin-top:0.5rem;">Potential Anomaly</div>' : ''}
+                </div>
+            `;
+            
+            marker.bindPopup(popupContent);
+        });
+    </script>
+</body>
+</html>
