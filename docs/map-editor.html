@@ -331,34 +331,35 @@
 // ── Street data (all 22 streets + 4 stations + 2 utilities) ──────────────────
 const STREETS = [
     // Dark Blue
-    { id: 'bund',       en: 'The Bund',           zh: '外滩',    modern: '中山东一路', color: '#1a237e', price: '$350', pos: null },
-    { id: 'kiukiang',   en: 'Kiukiang Road',       zh: '九江路',  modern: '九江路',   color: '#1a237e', price: '$400', pos: null },
+    { id: 'bund',       en: 'The Bund',           zh: '外滩',    modern: '中山东一路', color: '#1a237e', price: '$400', pos: null },
+    { id: 'nanking',    en: 'Nanking Road',        zh: '南京路',  modern: '南京东路', color: '#1a237e', price: '$350', pos: null },
     // Green
+    { id: 'kiukiang',   en: 'Kiukiang Road',       zh: '九江路',  modern: '九江路',   color: '#27ae60', price: '$300', pos: null },
     { id: 'kiangse',    en: 'Kiangse Road',        zh: '江西路',  modern: '江西中路', color: '#27ae60', price: '$300', pos: null },
-    { id: 'nanking',    en: 'Nanking Road',        zh: '南京路',  modern: '南京东路', color: '#27ae60', price: '$300', pos: null },
     { id: 'szechuen',   en: 'Szechuen Road',       zh: '四川路',  modern: '四川中路', color: '#27ae60', price: '$320', pos: null },
     // Yellow
-    { id: 'bubbling',   en: 'Bubbling Well Road',  zh: '静安寺路',modern: '南京西路', color: '#f1c40f', price: '$260', pos: null },
-    { id: 'greatwest',  en: 'Great Western Road',  zh: '大西路',  modern: '延安西路', color: '#f1c40f', price: '$260', pos: null },
-    { id: 'yuyuen',     en: 'Yu Yuen Road',        zh: '愚园路',  modern: '愚园路',   color: '#f1c40f', price: '$280', pos: null },
+    { id: 'hardoon',    en: 'Hardoon Road',        zh: '哈同路',  modern: '铜仁路',   color: '#f1c40f', price: '$260', pos: null },
+    { id: 'seymour',    en: 'Seymour Road',        zh: '西摩路',  modern: '陕西北路', color: '#f1c40f', price: '$260', pos: null },
+    { id: 'bubbling',   en: 'Bubbling Well Road',  zh: '静安寺路',modern: '南京西路', color: '#f1c40f', price: '$280', pos: null },
     // Red
-    { id: 'seymour',    en: 'Seymour Road',        zh: '西摩路',  modern: '陕西北路', color: '#e74c3c', price: '$220', pos: null },
-    { id: 'hardoon',    en: 'Hardoon Road',        zh: '哈同路',  modern: '铜仁路',   color: '#e74c3c', price: '$240', pos: null },
+    { id: 'greatwest',  en: 'Great Western Road',  zh: '大西路',  modern: '延安西路', color: '#e74c3c', price: '$220', pos: null },
+    { id: 'yuyuen',     en: 'Yu Yuen Road',        zh: '愚园路',  modern: '愚园路',   color: '#e74c3c', price: '$220', pos: null },
+    { id: 'connaught',  en: 'Connaught Road',      zh: '康脑脱路',modern: '康定路',   color: '#e74c3c', price: '$240', pos: null },
     // Orange
     { id: 'petain',     en: 'Avenue Petain',       zh: '贝当路',  modern: '衡山路',   color: '#e67e22', price: '$180', pos: null },
     { id: 'albert',     en: 'Avenue Roi Albert',   zh: '亚尔培路',modern: '陕西南路', color: '#e67e22', price: '$180', pos: null },
     { id: 'joffre',     en: 'Avenue Joffre',       zh: '霞飞路',  modern: '淮海中路', color: '#e67e22', price: '$200', pos: null },
     // Pink
-    { id: 'ningpo',     en: 'Ningpo Road',         zh: '宁波路',  modern: '宁波路',   color: '#e91e8c', price: '$140', pos: null },
     { id: 'tientsin',   en: 'Tientsin Road',       zh: '天津路',  modern: '天津路',   color: '#e91e8c', price: '$140', pos: null },
-    { id: 'honan',      en: 'Honan Road',          zh: '河南路',  modern: '河南中路', color: '#e91e8c', price: '$160', pos: null },
+    { id: 'ningpo',     en: 'Ningpo Road',         zh: '宁波路',  modern: '宁波路',   color: '#e91e8c', price: '$160', pos: null },
+    { id: 'honan',      en: 'Honan Road',          zh: '河南路',  modern: '河南中路', color: '#e91e8c', price: '$140', pos: null },
     // Light Blue
     { id: 'avenue',     en: 'Avenue Road',         zh: '爱文义路',modern: '北京西路', color: '#3498db', price: '$100', pos: null },
     { id: 'yuyaching',  en: 'Yu Ya Ching Road',    zh: '虞洽卿路',modern: '西藏中路', color: '#3498db', price: '$100', pos: null },
     { id: 'peking',     en: 'Peking Road',         zh: '北京路',  modern: '北京东路', color: '#3498db', price: '$120', pos: null },
     // Light Purple
     { id: 'haig',       en: 'Avenue Haig',         zh: '海格路',  modern: '华山路',   color: '#9b59b6', price: '$60',  pos: null },
-    { id: 'hart',       en: 'Hart Road',           zh: '赫德路',  modern: '常德路',   color: '#9b59b6', price: '$80',  pos: null },
+    { id: 'hart',       en: 'Hart Road',           zh: '赫德路',  modern: '常德路',   color: '#9b59b6', price: '$60',  pos: null },
     // Railway Stations
     { id: 'station_e',  en: 'East Railway Station',  zh: '东站', modern: '老北站东侧',color: '#795548', price: '$200', pos: null },
     { id: 'station_s',  en: 'South Railway Station', zh: '南站', modern: '上海南站', color: '#795548', price: '$200', pos: null },

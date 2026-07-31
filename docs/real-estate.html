@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai Real Estate — A Related Variant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" data-i18n="nav.logo">Shanghai Millionaire</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                <li><a href="real-estate.html" class="active" data-i18n="nav.realEstate">Real Estate</a></li>
+                <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
+                <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources">Source Matrix</a></li>
+                <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
+                <li><a href="land-value.html" data-i18n="nav.landValue">Land Value</a></li>
+                <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+            </ul>
+            <button class="lang-toggle" data-i18n="lang.btn">中文</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="page-eyebrow" data-i18n="re.eyebrow">Related Variant</p>
+            <h1 data-i18n="re.title">Shanghai Real Estate</h1>
+            <p class="page-lead" data-i18n="re.lead">A Parker Brothers pirate: the other Shanghai Monopoly — modeled on the American board, not the British one.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Overview -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.overviewTitle">Two Shanghai Pirates, Two Parent Models</h2>
+                <div class="source-strip" aria-label="Sources for Shanghai Real Estate">
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="https://themonopolist.net/2016/05/26/the-ebay-beat-shanghai-real-estate-darrow-black-box-australian-stock-exchange/" target="_blank" rel="noopener">themonopolist.net</a>
+                </div>
+                <div class="prose-block">
+                    <p data-i18n="re.overview1">1930s Shanghai produced not one but two distinct pirated Monopoly variants. <strong>Shanghai Millionaire</strong> — the main subject of this project — was modeled on the British Waddington's London edition. <strong>Shanghai Real Estate</strong>, the subject of this page, was a direct unauthorized copy of the American Parker Brothers 1935 edition. Both replaced Atlantic City or London streets with Shanghai streets, but they made different design choices at every point where the parent editions diverged.</p>
+                    <p data-i18n="re.overview2">The two versions share 11 of 22 property streets, but differ in their cheapest properties, their transit squares, their tax squares, and their source-model logic. Together, they form a natural experiment: two independent localizations of the same game design, made in the same city within a few years of each other.</p>
+                </div>
+                <div style="overflow-x:auto; margin:1.5rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.85rem;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th data-i18n="re.ovTh1" style="width:20%">Feature</th>
+                            <th data-i18n="re.ovTh2">Shanghai Real Estate</th>
+                            <th data-i18n="re.ovTh3">Shanghai Millionaire</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-i18n="re.ovR1L">Estimated date</td><td>~1937</td><td>~1938–1940</td></tr>
+                        <tr><td data-i18n="re.ovR2L">Source model</td><td data-i18n="re.ovR2V1"><strong>Parker Brothers</strong> (US 1935)</td><td data-i18n="re.ovR2V2"><strong>Waddington's</strong> (UK London)</td></tr>
+                        <tr><td data-i18n="re.ovR3L">Currency</td><td>$ (US Dollar prices)</td><td>£ (Pound Sterling prices)</td></tr>
+                        <tr><td data-i18n="re.ovR4L">Transit squares</td><td data-i18n="re.ovR4V1">4 shipping lines (real companies)</td><td data-i18n="re.ovR4V2">4 railway stations (N/S/E/W)</td></tr>
+                        <tr><td data-i18n="re.ovR5L">Luxury tax square</td><td data-i18n="re.ovR5V1">"Your Night Out" ($35)</td><td data-i18n="re.ovR5V2">"Super Tax" (£100)</td></tr>
+                        <tr><td data-i18n="re.ovR6L">Cheapest properties</td><td data-i18n="re.ovR6V1">Rubicon Rd, Mac Leod Rd (western outskirts)</td><td data-i18n="re.ovR6V2">Avenue Haig, Hart Road (inner west)</td></tr>
+                        <tr><td data-i18n="re.ovR7L">Shared streets</td><td colspan="2" style="text-align:center;">11 of 22</td></tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board image -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.boardTitle">The Board</h2>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="re.boardLead">The Shanghai Real Estate board, from the Phil Orbanes collection, photographed by themonopolist.net.</p>
+                <div class="board-compare-grid" style="grid-template-columns:1fr;">
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/world-shanghai-real-estate-board.gif" alt="Shanghai Real Estate board from themonopolist.net">
+                        <h3 data-i18n="re.boardImgTitle">Shanghai Real Estate board (full view)</h3>
+                        <p data-i18n="re.boardImgDesc">Phil Orbanes collection photograph. The board follows the Parker Brothers layout exactly, with Shanghai streets replacing Atlantic City names and shipping lines replacing railroads.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full board table -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.squaresTitle">All 40 Squares</h2>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="re.squaresLead">Complete board reading from GO, following the direction of play. All 22 property names verified against board photographs and Veldhuis's catalogue. Prices match the 1935 Parker Brothers edition exactly.</p>
+                <div style="overflow-x:auto; margin:1.5rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.85rem;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th style="width:5%">#</th>
+                            <th data-i18n="re.sqThType" style="width:12%">Type</th>
+                            <th data-i18n="re.sqThName">Board Text</th>
+                            <th data-i18n="re.sqThModern">Today / Notes</th>
+                            <th data-i18n="re.sqThPrice" style="width:10%; text-align:right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>GO</td><td>GO (Collect $200 Salary)</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>2</td><td data-i18n="re.tStreet">Street</td><td><strong>Rubicon Road</strong></td><td>罗别根路 → 哈密路 (western outskirts)</td><td style="text-align:right;font-weight:600">$60</td></tr>
+                        <tr><td>3</td><td data-i18n="re.tCC">Community Chest</td><td>Community Chest</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>4</td><td data-i18n="re.tStreet">Street</td><td><strong>Mac Leod Road</strong></td><td>麦克利奥路 → 淮阴路 (western outskirts)</td><td style="text-align:right;font-weight:600">$60</td></tr>
+                        <tr><td>5</td><td data-i18n="re.tTax">Tax</td><td>Income Tax (Pay 10% or $200)</td><td>—</td><td style="text-align:right">10%/$200</td></tr>
+                        <tr><td>6</td><td data-i18n="re.tTransit">Shipping Line</td><td><strong>Blue Funnel Line</strong></td><td>蓝烟囱轮船公司 (British)</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr><td>7</td><td data-i18n="re.tStreet">Street</td><td><strong>Columbia Circle</strong></td><td>哥伦比亚住宅圈 → 上生·新所</td><td style="text-align:right;font-weight:600">$100</td></tr>
+                        <tr><td>8</td><td data-i18n="re.tChance">Chance</td><td>Chance</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>9</td><td data-i18n="re.tStreet">Street</td><td><strong>Great Western Road</strong></td><td>大西路 → 延安西路</td><td style="text-align:right;font-weight:600">$100</td></tr>
+                        <tr><td>10</td><td data-i18n="re.tStreet">Street</td><td><strong>Avenue Foch</strong></td><td>福煦路 → 延安中路 (French Concession)</td><td style="text-align:right;font-weight:600">$120</td></tr>
+                        <tr><td>11</td><td data-i18n="re.tJail">Jail</td><td>In Jail / Just Visiting</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>12</td><td data-i18n="re.tStreet">Street</td><td><strong>Route de Say-Zoong</strong></td><td>French Concession; modern name unconfirmed *</td><td style="text-align:right;font-weight:600">$140</td></tr>
+                        <tr><td>13</td><td data-i18n="re.tUtility">Utility</td><td>Electric Company</td><td>—</td><td style="text-align:right;font-weight:600">$150</td></tr>
+                        <tr><td>14</td><td data-i18n="re.tStreet">Street</td><td><strong>Avenue Petain</strong></td><td>贝当路 → 衡山路 (French Concession)</td><td style="text-align:right;font-weight:600">$140</td></tr>
+                        <tr><td>15</td><td data-i18n="re.tStreet">Street</td><td><strong>Avenue Joffre</strong></td><td>霞飞路 → 淮海中路 (French Concession)</td><td style="text-align:right;font-weight:600">$160</td></tr>
+                        <tr><td>16</td><td data-i18n="re.tTransit">Shipping Line</td><td><strong>Dollar S.S. Line</strong></td><td>大来轮船公司 (American; renamed APL Aug 1938)</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr><td>17</td><td data-i18n="re.tStreet">Street</td><td><strong>Honan Road</strong></td><td>河南路 → 河南中路/南路</td><td style="text-align:right;font-weight:600">$180</td></tr>
+                        <tr><td>18</td><td data-i18n="re.tCC">Community Chest</td><td>Community Chest</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>19</td><td data-i18n="re.tStreet">Street</td><td><strong>Canton Road</strong></td><td>广东路 (沿用)</td><td style="text-align:right;font-weight:600">$180</td></tr>
+                        <tr><td>20</td><td data-i18n="re.tStreet">Street</td><td><strong>Hankow Road</strong></td><td>汉口路 (沿用)</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr><td>21</td><td data-i18n="re.tParking">Free Parking</td><td>Free Parking</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>22</td><td data-i18n="re.tStreet">Street</td><td><strong>Kiangse Road</strong></td><td>江西路 → 江西中路</td><td style="text-align:right;font-weight:600">$220</td></tr>
+                        <tr><td>23</td><td data-i18n="re.tChance">Chance</td><td>Chance</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>24</td><td data-i18n="re.tStreet">Street</td><td><strong>Soochow Road</strong></td><td>苏州路 → 南苏州路 (along Soochow Creek)</td><td style="text-align:right;font-weight:600">$220</td></tr>
+                        <tr><td>25</td><td data-i18n="re.tStreet">Street</td><td><strong>Peking Road</strong></td><td>北京路 → 北京东路</td><td style="text-align:right;font-weight:600">$240</td></tr>
+                        <tr><td>26</td><td data-i18n="re.tTransit">Shipping Line</td><td><strong>N.D.L. S.S. Co.</strong></td><td>北德意志劳埃德 (German)</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr><td>27</td><td data-i18n="re.tStreet">Street</td><td><strong>Bubbling Well Road</strong></td><td>静安寺路 → 南京西路</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td>28</td><td data-i18n="re.tStreet">Street</td><td><strong>Yu Yuen Road</strong></td><td>愚园路 (沿用)</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td>29</td><td data-i18n="re.tUtility">Utility</td><td>Water Works</td><td>—</td><td style="text-align:right;font-weight:600">$150</td></tr>
+                        <tr><td>30</td><td data-i18n="re.tStreet">Street</td><td><strong>West End Gardens</strong></td><td>Western gardens district; exact referent unconfirmed *</td><td style="text-align:right;font-weight:600">$280</td></tr>
+                        <tr><td>31</td><td data-i18n="re.tGoJail">Go To Jail</td><td>Go To Jail</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>32</td><td data-i18n="re.tStreet">Street</td><td><strong>Avenue Edward VII</strong> &dagger;</td><td>爱多亚路 → 延安东路</td><td style="text-align:right;font-weight:600">$300</td></tr>
+                        <tr><td>33</td><td data-i18n="re.tStreet">Street</td><td><strong>Szechuen Road</strong> &dagger;</td><td>四川路 → 四川中路</td><td style="text-align:right;font-weight:600">$300</td></tr>
+                        <tr><td>34</td><td data-i18n="re.tCC">Community Chest</td><td>Community Chest</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>35</td><td data-i18n="re.tStreet">Street</td><td><strong>Broadway</strong></td><td>百老汇路 → 大名路/东大名路 (Hongkew)</td><td style="text-align:right;font-weight:600">$320</td></tr>
+                        <tr><td>36</td><td data-i18n="re.tTransit">Shipping Line</td><td><strong>China Merchants S. & N. Co.</strong></td><td>轮船招商局 (Chinese)</td><td style="text-align:right;font-weight:600">$200</td></tr>
+                        <tr><td>37</td><td data-i18n="re.tChance">Chance</td><td>Chance</td><td>—</td><td style="text-align:right">—</td></tr>
+                        <tr><td>38</td><td data-i18n="re.tStreet">Street</td><td><strong>Nanking Road</strong></td><td>南京路 → 南京东路 ("Great Road No. 1")</td><td style="text-align:right;font-weight:600">$350</td></tr>
+                        <tr><td>39</td><td data-i18n="re.tTax">Tax</td><td><strong>Your Night Out</strong> (Pay $35.00)</td><td data-i18n="re.sq39Note">Replaces Parker's "Luxury Tax" ($75) — see below</td><td style="text-align:right;font-weight:600">$35</td></tr>
+                        <tr><td>40</td><td data-i18n="re.tStreet">Street</td><td><strong>The Bund</strong></td><td>外滩 → 中山东一路</td><td style="text-align:right;font-weight:600">$400</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <p class="caption" data-i18n="re.squaresNote">&dagger; Board photograph severely faded; name confirmed from Veldhuis catalogue (worldofmonopoly.com). * See Open Questions below.</p>
+            </div>
+        </section>
+
+        <!-- Color groups -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.colorTitle">Color Groups & Price Structure</h2>
+                <div style="overflow-x:auto; margin:1.5rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.85rem;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th data-i18n="re.cgThColor" style="width:10%">Color</th>
+                            <th data-i18n="re.cgThStreets">Streets</th>
+                            <th data-i18n="re.cgThPrice" style="width:12%; text-align:right">Price Range</th>
+                            <th data-i18n="re.cgThParker" style="width:22%">Parker Equivalent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Rubicon Road, Mac Leod Road</td><td style="text-align:right">$60</td><td>Mediterranean / Baltic</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Columbia Circle, Great Western Road, Avenue Foch</td><td style="text-align:right">$100–120</td><td>Oriental / Vermont / Connecticut</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Route de Say-Zoong, Avenue Petain, Avenue Joffre</td><td style="text-align:right">$140–160</td><td>St. Charles / States / Virginia</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Honan Road, Canton Road, Hankow Road</td><td style="text-align:right">$180–200</td><td>St. James / Tennessee / New York</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Kiangse Road, Soochow Road, Peking Road</td><td style="text-align:right">$220–240</td><td>Kentucky / Indiana / Illinois</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Bubbling Well Road, Yu Yuen Road, West End Gardens</td><td style="text-align:right">$260–280</td><td>Atlantic / Ventnor / Marvin Gardens</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Avenue Edward VII, Szechuen Road, Broadway</td><td style="text-align:right">$300–320</td><td>Pacific / N. Carolina / Pennsylvania</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>Nanking Road, The Bund</td><td style="text-align:right">$350–400</td><td>Park Place / Boardwalk</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="callout">
+                    <p data-i18n="re.priceMatch"><strong>Key finding:</strong> The price structure is identical to the 1935 Parker Brothers edition — $60 start, $400 top, Income Tax at 10%/$200, transit squares at $200, Electric Company at $150. This is hard evidence that Shanghai Real Estate copied the American board directly, not the British Waddington version (which uses £ currency and different tax amounts).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Your Night Out -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.nightOutTitle">"Your Night Out" — A Shanghai Joke</h2>
+                <div class="prose-block">
+                    <p data-i18n="re.nightOut1">In the original Parker Brothers edition, the square between Park Place and Boardwalk (positions 38–40) is <strong>"Luxury Tax"</strong> — pay $75. Shanghai Real Estate replaces it with <strong>"Your Night Out"</strong> — pay $35. This is the only square on the entire board where the pirate designer changed not just the name but the concept and the amount.</p>
+                    <p data-i18n="re.nightOut2">"A night out" — a night on the town — was a recognizable expense category in 1930s Shanghai, a city internationally famous for its nightlife. The designer is saying: in this city, your "luxury" isn't a diamond ring or a yacht; it's an evening at the dance halls, cabarets, and restaurants of Nanking Road or the French Concession. The halved amount ($35 vs. $75) may wink at the idea that a Shanghai night out, while not free, was cheaper than the formal luxury the American board had in mind — or it may simply reflect a lighter, more playful tone.</p>
+                    <p data-i18n="re.nightOut3">Either way, it is a deliberate, witty localization: the only point on the board where the pirate moved beyond mechanical copying to inject a specifically Shanghai voice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping Lines -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.shippingTitle">Four Shipping Lines Replace Four Railroads</h2>
+                <div class="source-strip" aria-label="Sources for shipping line research">
+                    <a class="source-chip" href="https://en.wikipedia.org/wiki/Alfred_Holt_and_Company" target="_blank" rel="noopener">Blue Funnel (Wiki)</a>
+                    <a class="source-chip" href="https://en.wikipedia.org/wiki/Norddeutscher_Lloyd" target="_blank" rel="noopener">NDL (Wiki)</a>
+                </div>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="re.shippingLead">Where Parker Brothers has four railroads and Waddington has four London railway stations, Shanghai Real Estate substitutes four real shipping companies — reflecting a treaty port whose arteries were maritime, not rail.</p>
+                <div class="version-grid" style="grid-template-columns:repeat(2,1fr);">
+                    <article class="version-card">
+                        <div class="version-card-body">
+                            <h3>Blue Funnel Line</h3>
+                            <p><strong>🇬🇧 British</strong> · Alfred Holt & Co. (founded 1866, Liverpool). Major UK–East Asia shipping operator. Sailors included Chinese crewmen, indirectly forming Liverpool's early Chinese community.</p>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <div class="version-card-body">
+                            <h3>Dollar S.S. Line</h3>
+                            <p><strong>🇺🇸 American</strong> · Robert Dollar Co. (founded 1901). Trans-Pacific leader. <strong>Renamed American President Lines in August 1938</strong> — the board still says "Dollar," suggesting it was printed before that date.</p>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <div class="version-card-body">
+                            <h3>N.D.L. S.S. Co.</h3>
+                            <p><strong>🇩🇪 German</strong> · Norddeutscher Lloyd (founded 1857, Bremen). Bremen–East Asia routes; by 1907 operated Shanghai–Hankow service. One of the largest German shipping companies.</p>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <div class="version-card-body">
+                            <h3>China Merchants S. & N. Co.</h3>
+                            <p><strong>🇨🇳 Chinese</strong> · 轮船招商局 (founded 1872, Shanghai). China's first joint-stock steamship enterprise, founded by Li Hongzhang. Headquartered in Shanghai.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="callout" style="margin-top:1.5rem;">
+                    <p data-i18n="re.shippingAnalysis"><strong>Not random:</strong> The four companies represent the four major shipping powers in 1930s Shanghai — British, American, German, and Chinese. This is a miniature portrait of the treaty-port power structure, and one of the few design choices the pirate made that was <em>not</em> direct copying from either parent edition.</p>
+                </div>
+                <div class="callout" style="margin-top:1rem; border-left-color:#2d7d46; background:rgba(45,125,70,0.06);">
+                    <p data-i18n="re.dollarClue"><strong>Dating clue:</strong> The Dollar Line was forcibly reorganized into American President Lines in August 1938 and legally could no longer use the "Dollar" name. The board still reads "Dollar S.S. Line," providing independent evidence that Shanghai Real Estate was printed <strong>before August 1938</strong> — consistent with Veldhuis's ~1937 dating.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison: More Radical? -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.radicalTitle">A More Radical Real Estate Hierarchy?</h2>
+                <div class="prose-block">
+                    <p data-i18n="re.radical1">Shanghai Real Estate's cheapest two properties — <strong>Rubicon Road</strong> (now Hami Road) and <strong>Mac Leod Road</strong> (now Huaiyin Road) — are both in the western extraterritorial road-building zone (越界筑路区), far from the settlement center. Shanghai Millionaire's cheapest two — <strong>Avenue Haig</strong> (now Huashan Road) and <strong>Hart Road</strong> (now Changde Road) — are also western, but closer to the settlement's inner edge. Real Estate's gradient is steeper: it reaches further out into the periphery for its lowest tier.</p>
+                    <p data-i18n="re.radical2">Does this more radical property hierarchy mean Real Estate was produced <em>later</em> than Millionaire — the product of a more mature understanding of Shanghai's property market?</p>
+                    <p data-i18n="re.radical3"><strong>The evidence points the other way.</strong> The Dollar Line name gives Real Estate a terminus ante quem of August 1938, and Veldhuis dates it to ~1937. Shanghai Millionaire is dated ~1938–1940. Real Estate appears to be the <em>earlier</em> game, not the later one.</p>
+                    <p data-i18n="re.radical4">The "more radical" property selection is better explained by differences in <em>design philosophy</em> than in chronology:</p>
+                    <ul>
+                        <li data-i18n="re.radicalLi1"><strong>Source model:</strong> Parker Brothers' Atlantic City color groups follow geographic adjacency — cheap properties are in the south side, expensive ones on the beachfront. This logic naturally encouraged the Real Estate designer to find Shanghai's actual geographic periphery. Waddington's London groups follow social class, which maps more loosely onto distance.</li>
+                        <li data-i18n="re.radicalLi2"><strong>Designer knowledge:</strong> The Real Estate designer may simply have had deeper local knowledge — someone who knew that Rubicon Road and Mac Leod Road were real roads in the western outskirts, not just generic "far away" names.</li>
+                        <li data-i18n="re.radicalLi3"><strong>Design ambition:</strong> Real Estate also replaced railroads with shipping lines and invented "Your Night Out." Across the board, its designer made more creative localization choices than Millionaire's. This suggests a different creative temperament, not a later date.</li>
+                    </ul>
+                    <p data-i18n="re.radical5">In short: the steeper property gradient is a <em>design choice</em> consistent with the Parker Brothers model and a more adventurous designer — not evidence of later production. The hard dating evidence (Dollar Line) confirms Real Estate came first.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Street Comparison Table -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.cmpTitle">Street-by-Street: Real Estate vs. Millionaire</h2>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="re.cmpLead">22 properties each, 11 shared. Both boards agree on the top two (Nanking Road + The Bund) — independently confirming the ceiling of Shanghai's property market.</p>
+                <div style="overflow-x:auto; margin:1.5rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.82rem;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th data-i18n="re.cmpThColor" style="width:8%">Color</th>
+                            <th>Shanghai Real Estate</th>
+                            <th>Shanghai Millionaire</th>
+                            <th data-i18n="re.cmpThShared" style="width:8%">Shared?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Rubicon Road ($60)</td><td>Avenue Haig ($60)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Mac Leod Road ($60)</td><td>Hart Road ($60)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Columbia Circle ($100)</td><td>Avenue Road ($100)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Great Western Road ($100)</td><td>Great Western Road ($220)</td><td style="color:#2d7d46;font-weight:700">✓</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Avenue Foch ($120)</td><td>Yu Ya Ching Road ($100)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>—</td><td>Peking Road ($120)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Route de Say-Zoong ($140)</td><td>Tientsin Road ($140)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Avenue Petain ($140)</td><td>Honan Road ($140)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Avenue Joffre ($160)</td><td>Ningpo Road ($160)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Honan Road ($180)</td><td>Avenue Petain ($180)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Canton Road ($180)</td><td>Avenue Roi Albert ($180)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Hankow Road ($200)</td><td>Avenue Joffre ($200)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Kiangse Road ($220)</td><td>Great Western Road ($220)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Soochow Road ($220)</td><td>Yu Yuen Road ($220)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Peking Road ($240)</td><td>Connaught Road ($240)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Bubbling Well Road ($260)</td><td>Hardoon Road ($260)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Yu Yuen Road ($260)</td><td>Seymour Road ($260)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>West End Gardens ($280)</td><td>Bubbling Well Road ($280)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Avenue Edward VII ($300)</td><td>Kiukiang Road ($300)</td><td>—</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Szechuen Road ($300)</td><td>Kiangse Road ($300)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Broadway ($320)</td><td>Szechuen Road ($320)</td><td style="color:#2d7d46;font-weight:700">✓ (diff. group)</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>Nanking Road ($350)</td><td>Nanking Road ($350)</td><td style="color:#2d7d46;font-weight:700">✓</td></tr>
+                        <tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>The Bund ($400)</td><td>The Bund ($400)</td><td style="color:#2d7d46;font-weight:700">✓</td></tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="callout">
+                    <p data-i18n="re.cmpNote"><strong>Shared ceiling:</strong> Both boards independently place Nanking Road ($350) and The Bund ($400) as the two most expensive properties — two independent localizations confirming the same market hierarchy. Note also that several shared streets appear in <em>different</em> color groups: the two designers disagreed on relative ranking even when they chose the same streets.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Questions -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="re.openTitle">Open Questions</h2>
+                <div class="prose-block">
+                    <ol>
+                        <li data-i18n="re.open1"><strong>Route de Say-Zoong ($140):</strong> A French Concession "Route de..." road name, but no modern counterpart has been confirmed. Suggest checking Virtual Shanghai's French Concession road-name index or 1930s French-language maps of Shanghai.</li>
+                        <li data-i18n="re.open2"><strong>West End Gardens ($280):</strong> Grouped with Bubbling Well Road and Yu Yuen Road (both western roads). Likely a general reference to the western gardens residential district rather than a specific street — comparable to how "Columbia Circle" names an area, not a road.</li>
+                        <li data-i18n="re.open3"><strong>"Your Night Out" amount:</strong> Read as $35.00 from enhanced photographs. If higher-resolution images of the board become available, this should be re-verified.</li>
+                        <li data-i18n="re.open4"><strong>Green group verification:</strong> Two green-group squares (Avenue Edward VII, Szechuen Road) are faded on the board photograph; names confirmed from Veldhuis's catalogue. Direct visual confirmation from another copy would strengthen the record.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="re.footer">Shanghai Millionaire Research Project · Ian · NYU Shanghai · 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -15,8 +15,10 @@
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
                 <li><a href="game.html" class="active" data-i18n="nav.game">The Game</a></li>
+                <li><a href="real-estate.html" data-i18n="nav.realEstate">Real Estate</a></li>
                 <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
                 <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources">Source Matrix</a></li>
                 <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
                 <li><a href="land-value.html" data-i18n="nav.landValue">Land Value</a></li>
                 <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
@@ -37,6 +39,12 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="game.versions">Two Versions</h2>
+                <div class="source-strip" aria-label="Sources for version evidence">
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse</a>
+                    <a class="source-chip" href="https://portal.ehri-project.eu/units/us-005578-irn36901-irn37343" target="_blank" rel="noopener">EHRI / USHMM</a>
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="https://library.csun.edu/sca/peek-stacks/bell" target="_blank" rel="noopener">CSUN Bell</a>
+                </div>
                 <div class="comparison-grid">
                     <div class="comparison-card commercial">
                         <div class="comparison-badge" data-i18n="game.comBadge">Commercial Edition</div>
@@ -47,11 +55,11 @@
                             <tr><th data-i18n="game.comMfr">Manufacturer</th><td data-i18n="game.comMfrV">Unknown (Shanghai)</td></tr>
                             <tr><th data-i18n="game.comSize">Board Size</th><td>48.5 × 48.5 cm</td></tr>
                             <tr><th data-i18n="game.comLang">Language</th><td data-i18n="game.comLangV">English</td></tr>
-                            <tr><th data-i18n="game.comBased">Based On</th><td data-i18n="game.comBasedV">Waddington's London Edition (UK)</td></tr>
-                            <tr><th data-i18n="game.comSold">Sold At</th><td data-i18n="game.comSoldV">Wing On department store, Nanking Road</td></tr>
+                            <tr><th data-i18n="game.comBased">Based On</th><td data-i18n="game.comBasedV">Monopoly design family; Waddington route possible but unproven</td></tr>
+                            <tr><th data-i18n="game.comSold">Retail Clue</th><td data-i18n="game.comSoldV">Recalled as sold in major department stores such as Wing On</td></tr>
                             <tr><th data-i18n="game.comProd">Production</th><td data-i18n="game.comProdV">Commercial, mass-produced</td></tr>
                         </table>
-                        <p class="comparison-note" data-i18n="game.comNote">A well-printed, professionally manufactured game sold to Shanghai's foreign community. The design copies Waddington's London layout but substitutes Shanghai street names — a fact consistent with British influence in the International Settlement.</p>
+                        <p class="comparison-note" data-i18n="game.comNote">A well-printed, professionally manufactured game associated with Shanghai's English-language consumer world. It localizes Monopoly's property-trading system into Shanghai streets; a Waddington route remains plausible, but board layout alone does not prove it over Parker Brothers.</p>
                     </div>
 
                     <div class="comparison-card handmade">
@@ -75,15 +83,185 @@
 
         <section class="content-section alt-bg">
             <div class="container">
-                <h2 class="section-heading" data-i18n="game.designTitle">Design Source: Waddington's, Not Parker Brothers</h2>
-                <div class="prose-block">
-                    <p data-i18n="game.design1">A critical finding is that Shanghai Millionaire copies the <strong>British Waddington's London edition</strong>, not the American Parker Brothers version. This makes sense historically: the International Settlement was a British-dominated enclave, and British cultural influence in Shanghai was pervasive.</p>
-                    <p data-i18n="game.design2">Key differences from the US version that confirm the Waddington's lineage:</p>
+                <h2 class="section-heading" data-i18n="game.versionCompTitle">Known Version Comparison</h2>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="game.versionCompLead">The surviving evidence points to several commercial copies, one handmade refugee-child copy, and at least one related Shanghai Monopoly-like variant. The comparison below separates confirmed objects from collector leads.</p>
+                <div class="version-grid">
+                    <article class="version-card">
+                        <img src="assets/images/board-front-thumb.jpg" alt="Sihang collection Shanghai Millionaire board">
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v1Title">Sihang Collection Copy</h3>
+                            <p data-i18n="game.v1Desc">A complete or near-complete commercial set used as this project's material baseline: board dimensions, street list, rulebook, cards, box, and print details.</p>
+                            <span class="version-meta" data-i18n="game.v1Meta">Local object evidence · project photographs</span>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <img src="assets/images/versions/powerhouse-00.jpg" alt="Powerhouse Ross family Shanghai Millionaire set">
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v2Title">Powerhouse / Ross Family Copy</h3>
+                            <p data-i18n="game.v2Desc">Museum record for a commercial set purchased in Shanghai between August 1945 and November 1946, then carried to Australia by a refugee family.</p>
+                            <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener" data-i18n="game.viewSource">View source</a>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <img src="assets/images/versions/world-shanghai-millionaire-board.jpg" alt="World of Monopoly Shanghai Millionaire board">
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v3Title">World of Monopoly / Korzenstein Board</h3>
+                            <p data-i18n="game.v3Desc">Collector documentation of a commercial board with unknown Shanghai maker, a reported Waddington connection, and migration provenance through Eastern Europe, Shanghai, and Canada.</p>
+                            <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener" data-i18n="game.viewSource2">View source</a>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <div class="version-placeholder" data-i18n="game.v4ImageNote">Images at EHRI / USHMM source pages</div>
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v4Title">Lobel Brothers' Handmade Copy</h3>
+                            <p data-i18n="game.v4Desc">A 1946 hand-drawn refugee-child version from Hongkew, made from US Army ration-box cardboard. It proves copying practice, not commercial distribution.</p>
+                            <a class="source-chip" href="https://portal.ehri-project.eu/units/us-005578-irn36901-irn37343" target="_blank" rel="noopener" data-i18n="game.viewSource3">View source</a>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <img src="assets/images/versions/csun-bell-board.jpg" alt="CSUN Bell Family Shanghai Millionaire board">
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v5Title">CSUN / Bell Family Copy</h3>
+                            <p data-i18n="game.v5Desc">Archive description places a Shanghai Millionaire set in the Bell Family Collection, connected to wartime Shanghai and Chapei civilian internment context.</p>
+                            <a class="source-chip" href="https://library.csun.edu/sca/peek-stacks/bell" target="_blank" rel="noopener" data-i18n="game.viewSource4">View source</a>
+                        </div>
+                    </article>
+                    <article class="version-card">
+                        <img src="assets/images/versions/world-shanghai-real-estate-board.gif" alt="Shanghai Real Estate related variant board">
+                        <div class="version-card-body">
+                            <h3 data-i18n="game.v6Title">Shanghai Real Estate Variant</h3>
+                            <p data-i18n="game.v6Desc">A related 1930s Shanghai Monopoly-like game discussed by collectors. It is useful for manufacturing comparison, but should not be counted as a Shanghai Millionaire copy.</p>
+                            <a class="source-chip" href="real-estate.html" data-i18n="game.viewRealEstate">Full analysis →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="game.boardCompareTitle">Board Image Comparison</h2>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="game.boardCompareLead">For internal research, these images are shown directly so board layout, title lettering, street order, color groups, and components can be compared side by side.</p>
+                <div class="board-compare-grid">
+                    <article class="board-compare-item">
+                        <img src="assets/images/board-front-thumb.jpg" alt="Sihang collection commercial board">
+                        <h3 data-i18n="game.bc1Title">Sihang collection board</h3>
+                        <p data-i18n="game.bc1Desc">Clean front-board photograph from the project copy. Useful for baseline street order and price checking.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/powerhouse-00.jpg" alt="Powerhouse Ross family set">
+                        <h3 data-i18n="game.bc2Title">Powerhouse / Ross family set</h3>
+                        <p data-i18n="game.bc2Desc">Full set view with board, title deeds, Chance/Community Chest cards, houses, hotels, money, dice, and token.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/world-shanghai-millionaire-board.jpg" alt="World of Monopoly board">
+                        <h3 data-i18n="game.bc3Title">World of Monopoly commercial board</h3>
+                        <p data-i18n="game.bc3Desc">Lower-resolution but important collector image. It appears to match the commercial board layout closely.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/csun-bell-board.jpg" alt="CSUN Bell Family board">
+                        <h3 data-i18n="game.bc4Title">CSUN / Bell family board</h3>
+                        <p data-i18n="game.bc4Desc">Board shown with play pieces and card piles in place. Useful for comparing actual play presentation.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/world-shanghai-millionaire-back.jpg" alt="World of Monopoly board back">
+                        <h3 data-i18n="game.bc5Title">Board back and label</h3>
+                        <p data-i18n="game.bc5Desc">World of Monopoly's back-board image shows the black underside and white label, a possible material clue for future object comparison.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/world-shanghai-real-estate-board.gif" alt="Shanghai Real Estate variant board">
+                        <h3 data-i18n="game.bc6Title">Shanghai Real Estate variant</h3>
+                        <p data-i18n="game.bc6Desc">Related Shanghai property-trading game. Included for manufacturing and layout comparison, not as a Shanghai Millionaire copy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="game.designTitle">Design Lineage: Waddington Hypothesis Still Open</h2>
+                <div class="source-strip" aria-label="Sources for design lineage">
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="https://collections.vam.ac.uk/item/O1242178/monopoly-board-game-john-waddington-ltd/" target="_blank" rel="noopener">V&amp;A Waddington</a>
+                    <a class="source-chip" href="https://www.spokesman.com/further-review/monopoly/" target="_blank" rel="noopener">Parker Brothers image</a>
+                    <a class="source-chip" href="https://library.csun.edu/sca/peek-stacks/bell" target="_blank" rel="noopener">CSUN Bell</a>
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse</a>
+                </div>
+                <p class="page-lead" style="color:var(--c-text-light); margin-bottom:1.5rem;" data-i18n="game.lineageLead">Placed beside the British Waddington London board and the American Parker Brothers Atlantic City board, Shanghai Millionaire cannot be confidently assigned to either source by board layout alone. The Waddington link remains a hypothesis that requires stronger square-by-square and archival evidence.</p>
+                <div class="evidence-table-wrap" style="margin-bottom:1.5rem;">
+                    <table class="evidence-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="game.womTh1">Person / source</th>
+                                <th data-i18n="game.womTh2">Claim</th>
+                                <th data-i18n="game.womTh3">Basis given on World of Monopoly</th>
+                                <th data-i18n="game.womTh4">How we use it</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="game.womR1Person">Albert C. Veldhuis, <em>World of Monopoly</em> China catalogue page</td>
+                                <td data-i18n="game.womR1Claim">Shanghai Millionaire is described as clearly based on Waddington's English/London design.</td>
+                                <td data-i18n="game.womR1Basis">The page lists three Waddington-style features: station locomotives pointing anticlockwise; Community Chest spaces without the blue treasure-chest icon; Super Tax without the gold ring and diamond image.</td>
+                                <td data-i18n="game.womR1Use">Strong collector attribution, but not archival proof of the printer, license path, or production date.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.womR2Person">Gary Korzenstein board, documented by World of Monopoly</td>
+                                <td data-i18n="game.womR2Claim">Commercial board from a refugee-family provenance, reported as likely manufactured in Shanghai and sold in local stores.</td>
+                                <td data-i18n="game.womR2Basis">World of Monopoly presents Korzenstein's account: he had the board for decades; it came through a family that fled Eastern Europe to Shanghai and later emigrated to Canada.</td>
+                                <td data-i18n="game.womR2Use">Useful for provenance and circulation, but the Waddington judgment still comes from visual comparison by the catalogue author.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.womR3Person">Kent McKeever, Shanghai historian, cited on World of Monopoly</td>
+                                <td data-i18n="game.womR3Claim">The box and components suggest commercial manufacture in larger quantities, not a handmade refugee copy.</td>
+                                <td data-i18n="game.womR3Basis">The page notes that McKeever acquired the box and attributes belonging to the game board; the contents indicate commercial production beyond limited wartime handmade conditions.</td>
+                                <td data-i18n="game.womR3Use">Supports the commercial-edition status of Shanghai Millionaire; it does not by itself prove Waddington as the source design.</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.womR4Person">Phil Orbanes account of <em>Shanghai Real Estate</em>, quoted on the same page</td>
+                                <td data-i18n="game.womR4Claim">Shanghai Real Estate is treated as a direct unauthorized copy of Parker Brothers' 1935 American version.</td>
+                                <td data-i18n="game.womR4Basis">World of Monopoly contrasts Real Estate with Millionaire: Real Estate follows the American board, while Millionaire is attributed to the Waddington design.</td>
+                                <td data-i18n="game.womR4Use">Important comparative control: two Shanghai Monopoly-like games may have drawn from different source models.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout" style="margin-bottom:1.5rem;">
+                    <p data-i18n="game.projectInferenceIntro"><strong>Project inference:</strong> the Waddington/Parker question should now move from board-image comparison to material comparison. The key test is whether Shanghai Millionaire and Shanghai Real Estate share paper stock, board backing, box construction, card size, print registration, typography, ink behavior, or component sourcing.</p>
                     <ul>
-                        <li data-i18n="game.designLi1">Board layout matches the London edition's property arrangement</li>
-                        <li data-i18n="game.designLi2">Use of "Community Chest" and "Chance" card categories</li>
-                        <li data-i18n="game.designLi3">Color groupings correspond to the London, not Atlantic City, street sets</li>
-                        <li data-i18n="game.designLi4">The currency and token designs follow the Waddington's template</li>
+                        <li data-i18n="game.projectInference1">If the two games share material and production traits, that would support a common printer, publisher, or manufacturing network, even if they copied different Monopoly source models.</li>
+                        <li data-i18n="game.projectInference2">If the traits diverge, the safer explanation is two separate Shanghai Monopoly-like production lines responding to the same market opportunity.</li>
+                        <li data-i18n="game.projectInference3">The greater public visibility of surviving Shanghai Millionaire copies should not be treated as direct proof of a larger print run. It may instead reflect better preservation, refugee-family provenance, museum digitization, English naming, or collector attention.</li>
+                    </ul>
+                    <p data-i18n="game.projectInferenceCaution">For now, the evidence supports only this cautious claim: Shanghai Millionaire is more visible in public collections and online records than Shanghai Real Estate, but original production volume remains unproven.</p>
+                </div>
+                <div class="board-compare-grid lineage-grid">
+                    <article class="board-compare-item">
+                        <img src="assets/images/board-front-thumb.jpg" alt="Shanghai Millionaire commercial board">
+                        <h3 data-i18n="game.lineageShanghaiTitle">Shanghai Millionaire</h3>
+                        <p data-i18n="game.lineageShanghaiDesc">Localizes the Monopoly street economy into Shanghai: Bund/Nanking Road at the high end, French Concession and International Settlement streets across the color groups.</p>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/waddington-london-1936-board.jpg" alt="1936 Waddingtons London Monopoly board">
+                        <h3 data-i18n="game.lineageWaddingtonTitle">Waddington London board, 1936</h3>
+                        <p data-i18n="game.lineageWaddingtonDesc">British licensed edition using London properties. It matters because collector sources describe Shanghai Millionaire through a Waddington lineage, but its basic board structure is very close to Parker Brothers as well.</p>
+                        <a class="source-chip" href="https://collections.vam.ac.uk/item/O1242178/monopoly-board-game-john-waddington-ltd/" target="_blank" rel="noopener" data-i18n="game.viewSource6">View source</a>
+                    </article>
+                    <article class="board-compare-item">
+                        <img src="assets/images/versions/parker-brothers-1935-board.jpg" alt="1935 Parker Brothers Atlantic City Monopoly board">
+                        <h3 data-i18n="game.lineageParkerTitle">Parker Brothers Atlantic City board, 1935</h3>
+                        <p data-i18n="game.lineageParkerDesc">American edition using Atlantic City properties. Because Waddington was licensed from Parker Brothers, many visible features are shared and cannot by themselves distinguish the source model.</p>
+                        <a class="source-chip" href="https://www.spokesman.com/further-review/monopoly/" target="_blank" rel="noopener" data-i18n="game.viewSource7">View source</a>
+                    </article>
+                </div>
+                <div class="prose-block">
+                    <p data-i18n="game.design1">The safer current judgment is that Shanghai Millionaire is a Shanghai localization of the broader Monopoly design family. A Waddington route is plausible, especially because some collector descriptions point that way and Shanghai's English-language consumer world had strong British connections. But the visual comparison does not yet prove Waddington over Parker Brothers.</p>
+                    <p data-i18n="game.design2">What the comparison shows and does not show:</p>
+                    <ul>
+                        <li data-i18n="game.designLi1">Board layout, color groups, Chance, and Community Chest are shared Monopoly-family features, not decisive Waddington evidence</li>
+                        <li data-i18n="game.designLi2">The Waddington hypothesis currently rests more on collector attribution and British Shanghai context than on visible board morphology</li>
+                        <li data-i18n="game.designLi3">A stronger test must compare every Shanghai square with London and Atlantic City sequences, prices, railways, utilities, taxes, and card wording</li>
+                        <li data-i18n="game.designLi4">Until that test is complete, the site should treat Waddington as a working hypothesis rather than a settled conclusion</li>
                     </ul>
                 </div>
             </div>
@@ -92,6 +270,11 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="game.locTitle">Localization: Shanghai Streets</h2>
+                <div class="source-strip" aria-label="Sources for street localization">
+                    <a class="source-chip" href="map.html">Project street map</a>
+                    <a class="source-chip" href="land-value.html">Land value study</a>
+                    <a class="source-chip" href="https://migrantknowledge.org/2020/03/18/power-of-play/" target="_blank" rel="noopener">Cheng, Power of Play</a>
+                </div>
                 <div class="prose-block">
                     <p data-i18n="game.locDesc">The most distinctive feature of Shanghai Millionaire is its replacement of London streets with Shanghai ones. All 22 streets map onto the colonial geography of the International Settlement and French Concession — with the most expensive properties on the Bund and lowest-value properties on the western outskirts.</p>
                 </div>
@@ -109,27 +292,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>The Bund</td><td>外滩</td><td>中山东一路</td><td style="text-align:right;font-weight:600">$350</td></tr>
-                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>Kiukiang Road</td><td>九江路</td><td>九江路</td><td style="text-align:right;font-weight:600">$400</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>The Bund</td><td>外滩</td><td>中山东一路</td><td style="text-align:right;font-weight:600">$400</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#1a237e;vertical-align:middle"></span></td><td>Nanking Road</td><td>南京路</td><td>南京东路</td><td style="text-align:right;font-weight:600">$350</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Kiukiang Road</td><td>九江路</td><td>九江路</td><td style="text-align:right;font-weight:600">$300</td></tr>
                         <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Kiangse Road</td><td>江西路</td><td>江西中路</td><td style="text-align:right;font-weight:600">$300</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Nanking Road</td><td>南京路</td><td>南京东路</td><td style="text-align:right;font-weight:600">$300</td></tr>
                         <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#27ae60;vertical-align:middle"></span></td><td>Szechuen Road</td><td>四川路</td><td>四川中路</td><td style="text-align:right;font-weight:600">$320</td></tr>
-                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Bubbling Well Road</td><td>静安寺路</td><td>南京西路</td><td style="text-align:right;font-weight:600">$260</td></tr>
-                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Great Western Road</td><td>大西路</td><td>延安西路</td><td style="text-align:right;font-weight:600">$260</td></tr>
-                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Yu Yuen Road</td><td>愚园路</td><td>愚园路</td><td style="text-align:right;font-weight:600">$280</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Seymour Road</td><td>西摩路</td><td>陕西北路</td><td style="text-align:right;font-weight:600">$220</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Hardoon Road</td><td>哈同路</td><td>铜仁路</td><td style="text-align:right;font-weight:600">$240</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Hardoon Road</td><td>哈同路</td><td>铜仁路</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Seymour Road</td><td>西摩路</td><td>陕西北路</td><td style="text-align:right;font-weight:600">$260</td></tr>
+                        <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f1c40f;vertical-align:middle"></span></td><td>Bubbling Well Road</td><td>静安寺路</td><td>南京西路</td><td style="text-align:right;font-weight:600">$280</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Great Western Road</td><td>大西路</td><td>延安西路</td><td style="text-align:right;font-weight:600">$220</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Yu Yuen Road</td><td>愚园路</td><td>愚园路</td><td style="text-align:right;font-weight:600">$220</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e74c3c;vertical-align:middle"></span></td><td>Connaught Road</td><td>康脑脱路</td><td>康定路</td><td style="text-align:right;font-weight:600">$240</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Petain</td><td>贝当路</td><td>衡山路</td><td style="text-align:right;font-weight:600">$180</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Roi Albert</td><td>亚尔培路</td><td>陕西南路</td><td style="text-align:right;font-weight:600">$180</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e67e22;vertical-align:middle"></span></td><td>Avenue Joffre</td><td>霞飞路</td><td>淮海中路</td><td style="text-align:right;font-weight:600">$200</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Ningpo Road</td><td>宁波路</td><td>宁波路</td><td style="text-align:right;font-weight:600">$140</td></tr>
                         <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Tientsin Road</td><td>天津路</td><td>天津路</td><td style="text-align:right;font-weight:600">$140</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Honan Road</td><td>河南路</td><td>河南中路</td><td style="text-align:right;font-weight:600">$160</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Ningpo Road</td><td>宁波路</td><td>宁波路</td><td style="text-align:right;font-weight:600">$160</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#e91e8c;vertical-align:middle"></span></td><td>Honan Road</td><td>河南路</td><td>河南中路</td><td style="text-align:right;font-weight:600">$140</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Avenue Road</td><td>爱文义路</td><td>北京西路</td><td style="text-align:right;font-weight:600">$100</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Yu Ya Ching Road</td><td>虞洽卿路</td><td>西藏中路</td><td style="text-align:right;font-weight:600">$100</td></tr>
                         <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3498db;vertical-align:middle"></span></td><td>Peking Road</td><td>北京路</td><td>北京东路</td><td style="text-align:right;font-weight:600">$120</td></tr>
                         <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Avenue Haig</td><td>海格路</td><td>华山路</td><td style="text-align:right;font-weight:600">$60</td></tr>
-                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Hart Road</td><td>赫德路</td><td>常德路</td><td style="text-align:right;font-weight:600">$80</td></tr>
+                        <tr style="background:var(--c-bg-alt)"><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#9b59b6;vertical-align:middle"></span></td><td>Hart Road</td><td>赫德路</td><td>常德路</td><td style="text-align:right;font-weight:600">$60</td></tr>
                     </tbody>
                 </table>
                 </div>
@@ -145,6 +329,10 @@
         <section class="content-section alt-bg">
             <div class="container">
                 <h2 class="section-heading" data-i18n="game.provTitle">Provenance</h2>
+                <div class="source-strip" aria-label="Sources for provenance">
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse / Ross</a>
+                </div>
                 <div class="prose-block">
                     <p data-i18n="game.prov1">The known commercial copy was owned by <strong>Gary Korzenstein</strong> of Toronto, Canada. It came to him through his brother's friend in Montreal, whose family had fled Eastern Europe for Shanghai before or during World War II, then emigrated to Canada before or during the 1949 revolution.</p>
                     <p data-i18n="game.prov2">This migration path — Eastern Europe → Shanghai → Canada — mirrors the trajectory of many Jewish refugee families who found temporary sanctuary in Shanghai's open port.</p>

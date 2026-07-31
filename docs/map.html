@@ -12,7 +12,7 @@
         /* ── Map page extras ── */
         .map-layout {
             display: grid;
-            grid-template-columns: 320px 1fr;
+            grid-template-columns: 420px 1fr;
             gap: 0;
             height: calc(100vh - 60px - 56px); /* nav + page-header */
             margin-top: 0;
@@ -196,6 +196,20 @@
             color: var(--c-text-light);
             margin-left: auto;
         }
+        .map-source-strip {
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.45rem 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.04);
+            background: var(--c-bg);
+            font-size: 0.72rem;
+            overflow-x: auto;
+        }
+        .map-source-strip a {
+            white-space: nowrap;
+            color: var(--c-accent);
+            font-weight: 700;
+        }
 
         /* Legend chips at bottom */
         .map-legend {
@@ -218,6 +232,146 @@
             border-radius: 50%;
             border: 1px solid rgba(0,0,0,0.15);
         }
+        .legend-swatch {
+            width: 16px;
+            height: 10px;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        .settlement-tooltip {
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 4px;
+            background: rgba(255,255,255,0.9);
+            color: #3d342c;
+            font-size: 0.72rem;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .settlement-note {
+            padding: 0.5rem 1.2rem;
+            border-top: 1px solid var(--c-border);
+            background: var(--c-bg-alt);
+            color: var(--c-text-light);
+            font-size: 0.68rem;
+            line-height: 1.35;
+        }
+        .map-finding {
+            padding: 0.95rem 1.1rem;
+            border-bottom: 1px solid var(--c-border);
+            background: #fff7ec;
+        }
+        .map-finding-kicker {
+            display: inline-block;
+            margin-bottom: 0.35rem;
+            border: 1px solid rgba(139, 37, 0, 0.24);
+            border-radius: 3px;
+            padding: 0.08rem 0.35rem;
+            color: #8b2500;
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: #fffdf9;
+        }
+        .map-finding h4 {
+            margin: 0 0 0.35rem;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--c-accent);
+            line-height: 1.2;
+        }
+        .map-finding p {
+            margin: 0;
+            color: var(--c-text);
+            font-size: 0.74rem;
+            line-height: 1.48;
+        }
+        .map-finding .finding-note {
+            margin-top: 0.45rem;
+            color: var(--c-text-light);
+            font-size: 0.7rem;
+        }
+        .finding-block {
+            margin-top: 0.65rem;
+        }
+        .finding-block h5 {
+            margin: 0 0 0.25rem;
+            color: var(--c-text);
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .finding-block ul {
+            margin: 0;
+            padding-left: 1rem;
+            color: var(--c-text-light);
+            font-size: 0.7rem;
+            line-height: 1.42;
+        }
+        .finding-block li + li {
+            margin-top: 0.22rem;
+        }
+        .is-hidden-for-now {
+            display: none;
+        }
+        .boundary-editor {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--c-border);
+            background: #fffaf2;
+        }
+        .boundary-editor h4 {
+            margin: 0 0 0.25rem;
+            font-family: var(--font-display);
+            font-size: 0.86rem;
+            color: var(--c-accent);
+        }
+        .boundary-editor p {
+            margin: 0 0 0.55rem;
+            color: var(--c-text-light);
+            font-size: 0.68rem;
+            line-height: 1.35;
+        }
+        .draw-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.35rem;
+        }
+        .draw-tools button {
+            border: 1px solid var(--c-border);
+            border-radius: 4px;
+            background: var(--c-bg);
+            color: var(--c-text);
+            cursor: pointer;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 0.32rem 0.4rem;
+        }
+        .draw-tools button:hover,
+        .draw-tools button.active {
+            border-color: var(--c-accent);
+            color: var(--c-accent);
+            background: #fff3df;
+        }
+        .boundary-export {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 70px;
+            margin-top: 0.55rem;
+            border: 1px solid var(--c-border);
+            border-radius: 4px;
+            padding: 0.45rem;
+            resize: vertical;
+            font-size: 0.64rem;
+            line-height: 1.35;
+            color: var(--c-text);
+            background: #fff;
+        }
+        .draw-status {
+            margin-top: 0.4rem;
+            font-size: 0.66rem;
+            color: var(--c-text-light);
+        }
 
         @media (max-width: 768px) {
             .map-layout {
@@ -238,9 +392,12 @@
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
                 <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                <li><a href="real-estate.html" data-i18n="nav.realEstate">Real Estate</a></li>
                 <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
                 <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources">Source Matrix</a></li>
                 <li><a href="map.html" class="active" data-i18n="nav.map">Street Map</a></li>
+                <li><a href="land-value.html" data-i18n="nav.landValue">Land Value</a></li>
                 <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
             </ul>
             <button class="lang-toggle" data-i18n="lang.btn">中文</button>
@@ -252,7 +409,15 @@
         <div class="container">
             <span class="page-eyebrow" data-i18n="map.eyebrow">Research Track 02</span>
             <h1 data-i18n="map.title">Street Map</h1>
-            <span class="page-lead" data-i18n="map.lead">25 game locations mapped onto 1940s Shanghai</span>
+            <span class="page-lead" data-i18n="map.lead">26 game locations mapped onto 1940s Shanghai</span>
+        </div>
+        <div class="map-source-strip" aria-label="Map data sources">
+            <span>Data sources:</span>
+            <a href="data/board_streets.json">board_streets.json</a>
+            <a href="data/virtualshanghai_land_value_summary.json">land value summary</a>
+            <a href="data/manual_settlement_boundaries.geojson">manual settlement boundaries</a>
+            <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/1932_map_of_Shanghai.jpg/3840px-1932_map_of_Shanghai.jpg" target="_blank" rel="noopener">1932 Shanghai map</a>
+            <a href="https://www.virtualshanghai.net/Maps/" target="_blank" rel="noopener">Virtual Shanghai</a>
         </div>
     </div>
 
@@ -265,9 +430,55 @@
                 <h3 data-i18n="map.sideTitle">Game Board Streets</h3>
                 <p data-i18n="map.sideDesc">Click any street to zoom to its location. Pins use the game's original color groups.</p>
             </div>
+            <section class="map-finding" aria-labelledby="mapFindingTitle">
+                <span class="map-finding-kicker" data-i18n="map.findingKicker">Original finding</span>
+                <h4 id="mapFindingTitle" data-i18n="map.findingTitle">Color groups as western settlement boundaries</h4>
+                <p data-i18n="map.findingBody">The dating clue is not price alone. It lies in how the board groups western roads: Great Western Road, Yu Yuen Road, and Connaught Road form a red cluster around the International Settlement's mature west-end life boundary, while the still farther-west Avenue Haig appears in the purple group rather than extending that red cluster.</p>
+                <p class="finding-note" data-i18n="map.findingNote">Avenue Haig therefore strengthens the method: the board is not simply ranking streets by how far west they are. It seems to distinguish a recognizable concession-life edge from a more peripheral western road. This remains a working hypothesis to test against maps, advertisements, land values, and object evidence.</p>
+                <div class="finding-block">
+                    <h5 data-i18n="map.findingMatchTitle">What it matches</h5>
+                    <ul>
+                        <li data-i18n="map.findingMatch1">The 1936 Waddington/London Monopoly context gives the Shanghai version a plausible lower bound.</li>
+                        <li data-i18n="map.findingMatch2">1933/1934 land-value maps are close enough to test the street hierarchy behind the board.</li>
+                        <li data-i18n="map.findingMatch3">Late-1930s and early-1940s circulation clues fit a game designed around the war-break and isolated-settlement years.</li>
+                    </ul>
+                </div>
+                <div class="finding-block">
+                    <h5 data-i18n="map.findingLogicTitle">How the date is inferred</h5>
+                    <ul>
+                        <li data-i18n="map.findingLogic1">The board uses a Monopoly-family form that likely postdates the 1935-1936 commercial spread of Monopoly.</li>
+                        <li data-i18n="map.findingLogic2">Avenue Haig is farther west than the red group, yet it is not grouped with Great Western, Yu Yuen, and Connaught.</li>
+                        <li data-i18n="map.findingLogic3">This suggests a social map of concession life and color grouping, not a simple westward-distance rule.</li>
+                    </ul>
+                </div>
+                <div class="finding-block">
+                    <h5 data-i18n="map.findingNextTitle">What still needs testing</h5>
+                    <ul>
+                        <li data-i18n="map.findingNext1">Compare the red group with 1936-1941 street guides, real-estate ads, and newspaper descriptions.</li>
+                        <li data-i18n="map.findingNext2">Check whether maps and land-value bands place these roads at a recognizable west-end threshold.</li>
+                        <li data-i18n="map.findingNext3">Separate board design date, printing date, and later purchase or circulation date.</li>
+                    </ul>
+                </div>
+            </section>
+            <div class="boundary-editor is-hidden-for-now">
+                <h4>Boundary Drawing / 边界转绘</h4>
+                <p>Choose a concession, click points on the map, then finish and export GeoJSON. Use the 1932 map as a reference.</p>
+                <div class="draw-tools">
+                    <button id="drawInternational" type="button">Draw Public</button>
+                    <button id="drawFrench" type="button">Draw French</button>
+                    <button id="finishBoundary" type="button">Finish</button>
+                    <button id="undoBoundaryPoint" type="button">Undo Point</button>
+                    <button id="clearBoundaryDraft" type="button">Clear Draft</button>
+                    <button id="exportBoundaries" type="button">Export GeoJSON</button>
+                    <button id="toggleReferenceOverlay" type="button">Show Reference</button>
+                </div>
+                <textarea id="boundaryExport" class="boundary-export" readonly placeholder="Drawn boundary GeoJSON will appear here."></textarea>
+                <div id="drawStatus" class="draw-status">Drawing off.</div>
+            </div>
             <div class="filter-tabs" id="filterTabs"></div>
             <div class="street-scroll" id="streetList"></div>
             <div class="map-legend" id="mapLegend"></div>
+            <div class="settlement-note" data-i18n="map.settlementNote">Settlement areas are approximate overlays redrawn from a 1932 Japanese map and used for spatial orientation, not surveyed boundaries.</div>
         </div>
 
         <!-- Leaflet map -->
@@ -276,32 +487,34 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data/manual_settlement_boundaries.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
     // ── Street data (annotated by Ian, April 2026) ────────────────────────────
     const STREET_DATA = [
-      { id:"bund",       en:"The Bund",             zh:"外滩",    modern:"中山东一路", color:"#1a237e", price:"$350", lat:31.237653, lng:121.486001 },
-      { id:"kiukiang",   en:"Kiukiang Road",         zh:"九江路",  modern:"九江路",    color:"#1a237e", price:"$400", lat:31.23967,  lng:121.484724 },
+      { id:"bund",       en:"The Bund",             zh:"外滩",    modern:"中山东一路", color:"#1a237e", price:"$400", lat:31.237653, lng:121.486001 },
+      { id:"nanking",    en:"Nanking Road",          zh:"南京路",  modern:"南京东路",  color:"#1a237e", price:"$350", lat:31.239835, lng:121.481044 },
+      { id:"kiukiang",   en:"Kiukiang Road",         zh:"九江路",  modern:"九江路",    color:"#27ae60", price:"$300", lat:31.23967,  lng:121.484724 },
       { id:"kiangse",    en:"Kiangse Road",          zh:"江西路",  modern:"江西中路",  color:"#27ae60", price:"$300", lat:31.23768,  lng:121.482632 },
-      { id:"nanking",    en:"Nanking Road",          zh:"南京路",  modern:"南京东路",  color:"#27ae60", price:"$300", lat:31.239835, lng:121.481044 },
       { id:"szechuen",   en:"Szechuen Road",         zh:"四川路",  modern:"四川中路",  color:"#27ae60", price:"$320", lat:31.240696, lng:121.483126 },
-      { id:"bubbling",   en:"Bubbling Well Road",    zh:"静安寺路",modern:"南京西路",  color:"#f1c40f", price:"$260", lat:31.236091, lng:121.468459 },
-      { id:"greatwest",  en:"Great Western Road",    zh:"大西路",  modern:"延安西路",  color:"#f1c40f", price:"$260", lat:31.222059, lng:121.439309 },
-      { id:"yuyuen",     en:"Yu Yuen Road",          zh:"愚园路",  modern:"愚园路",    color:"#f1c40f", price:"$280", lat:31.226617, lng:121.441492 },
-      { id:"seymour",    en:"Seymour Road",          zh:"西摩路",  modern:"陕西北路",  color:"#e74c3c", price:"$220", lat:31.230262, lng:121.449866 },
-      { id:"hardoon",    en:"Hardoon Road",          zh:"哈同路",  modern:"铜仁路",    color:"#e74c3c", price:"$240", lat:31.22745,  lng:121.445639 },
+      { id:"hardoon",    en:"Hardoon Road",          zh:"哈同路",  modern:"铜仁路",    color:"#f1c40f", price:"$260", lat:31.22745,  lng:121.445639 },
+      { id:"seymour",    en:"Seymour Road",          zh:"西摩路",  modern:"陕西北路",  color:"#f1c40f", price:"$260", lat:31.230262, lng:121.449866 },
+      { id:"bubbling",   en:"Bubbling Well Road",    zh:"静安寺路",modern:"南京西路",  color:"#f1c40f", price:"$280", lat:31.236091, lng:121.468459 },
+      { id:"greatwest",  en:"Great Western Road",    zh:"大西路",  modern:"延安西路",  color:"#e74c3c", price:"$220", lat:31.222059, lng:121.439309 },
+      { id:"yuyuen",     en:"Yu Yuen Road",          zh:"愚园路",  modern:"愚园路",    color:"#e74c3c", price:"$220", lat:31.226617, lng:121.441492 },
+      { id:"connaught",  en:"Connaught Road",        zh:"康脑脱路",modern:"康定路",    color:"#e74c3c", price:"$240", lat:31.2335,   lng:121.4495 },
       { id:"petain",     en:"Avenue Petain",         zh:"贝当路",  modern:"衡山路",    color:"#e67e22", price:"$180", lat:31.204175, lng:121.440125 },
       { id:"albert",     en:"Avenue Roi Albert",     zh:"亚尔培路",modern:"陕西南路",  color:"#e67e22", price:"$180", lat:31.209989, lng:121.457226 },
       { id:"joffre",     en:"Avenue Joffre",         zh:"霞飞路",  modern:"淮海中路",  color:"#e67e22", price:"$200", lat:31.215033, lng:121.44594  },
-      { id:"ningpo",     en:"Ningpo Road",           zh:"宁波路",  modern:"宁波路",    color:"#e91e8c", price:"$140", lat:31.241696, lng:121.481962 },
       { id:"tientsin",   en:"Tientsin Road",         zh:"天津路",  modern:"天津路",    color:"#e91e8c", price:"$140", lat:31.240895, lng:121.480958 },
-      { id:"honan",      en:"Honan Road",            zh:"河南路",  modern:"河南中路",  color:"#e91e8c", price:"$160", lat:31.23661,  lng:121.481248 },
+      { id:"ningpo",     en:"Ningpo Road",           zh:"宁波路",  modern:"宁波路",    color:"#e91e8c", price:"$160", lat:31.241696, lng:121.481962 },
+      { id:"honan",      en:"Honan Road",            zh:"河南路",  modern:"河南中路",  color:"#e91e8c", price:"$140", lat:31.23661,  lng:121.481248 },
       { id:"avenue",     en:"Avenue Road",           zh:"爱文义路",modern:"北京西路",  color:"#3498db", price:"$100", lat:31.237691, lng:121.464726 },
       { id:"yuyaching",  en:"Yu Ya Ching Road",      zh:"虞洽卿路",modern:"西藏中路",  color:"#3498db", price:"$100", lat:31.238377, lng:121.469414 },
       { id:"peking",     en:"Peking Road",           zh:"北京路",  modern:"北京东路",  color:"#3498db", price:"$120", lat:31.241915, lng:121.476946 },
       { id:"haig",       en:"Avenue Haig",           zh:"海格路",  modern:"华山路",    color:"#9b59b6", price:"$60",  lat:31.216853, lng:121.434846 },
-      { id:"hart",       en:"Hart Road",             zh:"赫德路",  modern:"常德路",    color:"#9b59b6", price:"$80",  lat:31.23024,  lng:121.442142 },
+      { id:"hart",       en:"Hart Road",             zh:"赫德路",  modern:"常德路",    color:"#9b59b6", price:"$60",  lat:31.23024,  lng:121.442142 },
       { id:"station_e",  en:"East Railway Station",  zh:"东站",    modern:"老北站东侧",color:"#795548", price:"$200", lat:31.252287, lng:121.474355 },
       { id:"station_s",  en:"South Railway Station", zh:"南站",    modern:"上海南站",  color:"#795548", price:"$200", lat:31.15512,  lng:121.424847 },
       { id:"station_w",  en:"West Railway Station",  zh:"西站",    modern:"上海西站",  color:"#795548", price:"$200", lat:31.265353, lng:121.396415 },
@@ -309,16 +522,69 @@
     ];
 
     const GROUPS = [
-      { key:'dark-blue', label:'Dark Blue · $350–400', color:'#1a237e', ids:['bund','kiukiang'] },
-      { key:'green',     label:'Green · $300–320',     color:'#27ae60', ids:['kiangse','nanking','szechuen'] },
-      { key:'yellow',    label:'Yellow · $260–280',    color:'#f1c40f', ids:['bubbling','greatwest','yuyuen'] },
-      { key:'red',       label:'Red · $220–240',       color:'#e74c3c', ids:['seymour','hardoon'] },
+      { key:'dark-blue', label:'Dark Blue · $350–400', color:'#1a237e', ids:['nanking','bund'] },
+      { key:'green',     label:'Green · $300–320',     color:'#27ae60', ids:['kiukiang','kiangse','szechuen'] },
+      { key:'yellow',    label:'Yellow · $260–280',    color:'#f1c40f', ids:['hardoon','seymour','bubbling'] },
+      { key:'red',       label:'Red · $220–240',       color:'#e74c3c', ids:['greatwest','yuyuen','connaught'] },
       { key:'orange',    label:'Orange · $180–200',    color:'#e67e22', ids:['petain','albert','joffre'] },
       { key:'pink',      label:'Pink · $140–160',      color:'#e91e8c', ids:['ningpo','tientsin','honan'] },
       { key:'light-blue',label:'Light Blue · $100–120',color:'#3498db', ids:['avenue','yuyaching','peking'] },
-      { key:'purple',    label:'Purple · $60–80',      color:'#9b59b6', ids:['haig','hart'] },
+      { key:'purple',    label:'Purple · $60',         color:'#9b59b6', ids:['haig','hart'] },
       { key:'station',   label:'Railway Stations',     color:'#795548', ids:['station_e','station_s','station_w','station_n'] }
     ];
+
+    const SETTLEMENT_AREAS = [
+      {
+        key: 'international',
+        label: 'International Settlement / 公共租界',
+        color: '#2f6f9f',
+        fill: '#7fb3d5',
+        note: 'Approximate 1930s public-settlement outline, redrawn from the 1932 Japanese map and adjusted to the modern basemap. It includes the central settlement, Hongkew/northern districts, and eastern Yangtzepoo context.',
+        coords: [
+          [31.2228, 121.4300],
+          [31.2310, 121.4290],
+          [31.2398, 121.4315],
+          [31.2505, 121.4435],
+          [31.2620, 121.4585],
+          [31.2710, 121.4810],
+          [31.2725, 121.5070],
+          [31.2670, 121.5320],
+          [31.2560, 121.5520],
+          [31.2410, 121.5565],
+          [31.2320, 121.5460],
+          [31.2285, 121.5230],
+          [31.2288, 121.5050],
+          [31.2365, 121.4910],
+          [31.2420, 121.4845],
+          [31.2380, 121.4760],
+          [31.2320, 121.4630],
+          [31.2268, 121.4460]
+        ]
+      },
+      {
+        key: 'french',
+        label: 'French Concession / 法租界',
+        color: '#8e5a24',
+        fill: '#f3c46b',
+        note: 'Approximate 1930s French Concession outline, redrawn from the 1932 Japanese map and adjusted to the modern basemap.',
+        coords: [
+          [31.2280, 121.4100],
+          [31.2295, 121.4300],
+          [31.2265, 121.4495],
+          [31.2240, 121.4645],
+          [31.2200, 121.4775],
+          [31.2130, 121.4860],
+          [31.2040, 121.4845],
+          [31.1970, 121.4720],
+          [31.1945, 121.4540],
+          [31.1950, 121.4315],
+          [31.2015, 121.4120],
+          [31.2140, 121.4045]
+        ]
+      }
+    ];
+
+    const MANUAL_BOUNDARY_URL = 'data/manual_settlement_boundaries.geojson';
 
     // ── Map init ──────────────────────────────────────────────────────────────
     const map = L.map('map', {
@@ -333,6 +599,272 @@
         subdomains: 'abcd',
         maxZoom: 19
     }).addTo(map);
+
+    // Approximate settlement overlays for orientation only.
+    const settlementLayer = L.layerGroup();
+    const settlementPolygons = [];
+    let referenceOverlayVisible = false;
+    SETTLEMENT_AREAS.forEach(area => {
+        const polygon = L.polygon(area.coords, {
+            color: area.color,
+            weight: 1.4,
+            opacity: 0.75,
+            fillColor: area.fill,
+            fillOpacity: 0.18,
+            dashArray: '6 5',
+            interactive: true,
+            bubblingMouseEvents: false
+        }).addTo(settlementLayer);
+        settlementPolygons.push(polygon);
+        polygon.bindTooltip(area.label, {
+            permanent: true,
+            direction: 'center',
+            className: 'settlement-tooltip'
+        });
+        polygon.bindPopup(`
+            <div class="sm-popup">
+                <div class="pop-en">${area.label}</div>
+                <div class="pop-modern">${area.note}</div>
+                <span class="pop-price">Approximate overlay</span>
+            </div>
+        `);
+        polygon.on('click', e => {
+            if (drawMode) addDraftPoint(e.latlng);
+        });
+    });
+
+    function toggleReferenceOverlay() {
+        const btn = document.getElementById('toggleReferenceOverlay');
+        if (referenceOverlayVisible) {
+            map.removeLayer(settlementLayer);
+            referenceOverlayVisible = false;
+            btn.textContent = 'Show Reference';
+            btn.classList.remove('active');
+            setDrawStatus('Reference overlay hidden. Your manually drawn boundaries remain visible.');
+        } else {
+            settlementLayer.addTo(map);
+            referenceOverlayVisible = true;
+            btn.textContent = 'Hide Reference';
+            btn.classList.add('active');
+            setDrawStatus('Reference overlay visible. It is only a rough guide.');
+        }
+    }
+
+    // ── Boundary drawing tool ────────────────────────────────────────────────
+    const BOUNDARY_STYLES = {
+        international: {
+            label: 'International Settlement / 公共租界',
+            color: '#2f6f9f',
+            fill: '#7fb3d5'
+        },
+        french: {
+            label: 'French Concession / 法租界',
+            color: '#8e5a24',
+            fill: '#f3c46b'
+        }
+    };
+    const drawnBoundaryLayer = L.layerGroup().addTo(map);
+    const draftLayer = L.layerGroup().addTo(map);
+    const savedBoundaryLayer = L.layerGroup().addTo(map);
+    const drawnBoundaryPolygons = [];
+    let drawMode = null;
+    let draftPoints = [];
+    let draftLine = null;
+
+    function setDrawStatus(text) {
+        const el = document.getElementById('drawStatus');
+        if (el) el.textContent = text;
+    }
+
+    function setDrawMode(mode) {
+        drawMode = mode;
+        draftPoints = [];
+        renderDraft();
+        document.getElementById('drawInternational').classList.toggle('active', mode === 'international');
+        document.getElementById('drawFrench').classList.toggle('active', mode === 'french');
+        const label = BOUNDARY_STYLES[mode].label;
+        setDrawStatus(`Drawing ${label}. Click map points; press Finish when closed.`);
+    }
+
+    function addDraftPoint(latlng) {
+        if (!drawMode) return;
+        draftPoints.push([latlng.lat, latlng.lng]);
+        renderDraft();
+        setDrawStatus(`${BOUNDARY_STYLES[drawMode].label}: ${draftPoints.length} points.`);
+    }
+
+    function renderDraft() {
+        draftLayer.clearLayers();
+        draftLine = null;
+        if (!drawMode || draftPoints.length === 0) return;
+        const style = BOUNDARY_STYLES[drawMode];
+        draftPoints.forEach((pt, index) => {
+            L.circleMarker(pt, {
+                radius: 4,
+                color: style.color,
+                weight: 2,
+                fillColor: '#fff',
+                fillOpacity: 1
+            }).bindTooltip(String(index + 1), {
+                permanent: true,
+                direction: 'top',
+                className: 'settlement-tooltip'
+            }).addTo(draftLayer);
+        });
+        if (draftPoints.length >= 2) {
+            draftLine = L.polyline(draftPoints, {
+                color: style.color,
+                weight: 2,
+                dashArray: '4 4'
+            }).addTo(draftLayer);
+        }
+    }
+
+    function finishBoundary() {
+        if (!drawMode || draftPoints.length < 3) {
+            setDrawStatus('Need at least 3 points before finishing a boundary.');
+            return;
+        }
+        const style = BOUNDARY_STYLES[drawMode];
+        const polygon = L.polygon(draftPoints, {
+            color: style.color,
+            weight: 2,
+            opacity: 0.95,
+            fillColor: style.fill,
+            fillOpacity: 0.28
+        }).addTo(drawnBoundaryLayer);
+        polygon.featureMeta = {
+            key: drawMode,
+            label: style.label,
+            source: 'Manual drawing on docs/map.html using 1932 Japanese Shanghai map as reference'
+        };
+        polygon.bindPopup(`
+            <div class="sm-popup">
+                <div class="pop-en">${style.label}</div>
+                <div class="pop-modern">Manual boundary drawing, ${draftPoints.length} points.</div>
+                <span class="pop-price">Exportable GeoJSON</span>
+            </div>
+        `);
+        drawnBoundaryPolygons.push(polygon);
+        setDrawStatus(`Finished ${style.label}: ${draftPoints.length} points.`);
+        draftPoints = [];
+        drawMode = null;
+        document.getElementById('drawInternational').classList.remove('active');
+        document.getElementById('drawFrench').classList.remove('active');
+        renderDraft();
+        exportBoundaries(false);
+    }
+
+    function undoBoundaryPoint() {
+        if (!draftPoints.length) return;
+        draftPoints.pop();
+        renderDraft();
+        setDrawStatus(drawMode ? `${BOUNDARY_STYLES[drawMode].label}: ${draftPoints.length} points.` : 'Drawing off.');
+    }
+
+    function clearBoundaryDraft() {
+        draftPoints = [];
+        drawMode = null;
+        draftLayer.clearLayers();
+        document.getElementById('drawInternational').classList.remove('active');
+        document.getElementById('drawFrench').classList.remove('active');
+        setDrawStatus('Draft cleared. Drawing off.');
+    }
+
+    function exportBoundaries(showStatus = true) {
+        const features = drawnBoundaryPolygons.map((polygon, index) => {
+            const ring = polygon.getLatLngs()[0].map(pt => [Number(pt.lng.toFixed(6)), Number(pt.lat.toFixed(6))]);
+            if (ring.length && (ring[0][0] !== ring[ring.length - 1][0] || ring[0][1] !== ring[ring.length - 1][1])) {
+                ring.push(ring[0]);
+            }
+            return {
+                type: 'Feature',
+                properties: {
+                    id: `${polygon.featureMeta.key}_${index + 1}`,
+                    label: polygon.featureMeta.label,
+                    source: polygon.featureMeta.source,
+                    status: 'manual_draft'
+                },
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [ring]
+                }
+            };
+        });
+        const collection = {
+            type: 'FeatureCollection',
+            name: 'manual_settlement_boundaries',
+            features
+        };
+        const output = document.getElementById('boundaryExport');
+        output.value = JSON.stringify(collection, null, 2);
+        if (showStatus) {
+            output.focus();
+            output.select();
+            setDrawStatus(`Exported ${features.length} boundary polygon(s). GeoJSON text is selected in the box above.`);
+        }
+    }
+
+    function styleForBoundary(feature) {
+        const label = feature.properties?.label || '';
+        const isFrench = label.includes('French') || label.includes('法租界');
+        const style = isFrench ? BOUNDARY_STYLES.french : BOUNDARY_STYLES.international;
+        return {
+            color: style.color,
+            weight: 2.4,
+            opacity: 0.95,
+            fillColor: style.fill,
+            fillOpacity: 0.24
+        };
+    }
+
+    function loadSavedBoundaries() {
+        if (window.MANUAL_SETTLEMENT_BOUNDARIES) {
+            renderSavedBoundaries(window.MANUAL_SETTLEMENT_BOUNDARIES);
+            return;
+        }
+        fetch(MANUAL_BOUNDARY_URL)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            })
+            .then(renderSavedBoundaries)
+            .catch(() => {
+                setDrawStatus('No saved manual boundary file loaded. Use the drawing tool to create one.');
+            });
+    }
+
+    function renderSavedBoundaries(data) {
+        savedBoundaryLayer.clearLayers();
+        L.geoJSON(data, {
+            style: styleForBoundary,
+            onEachFeature(feature, layer) {
+                const label = feature.properties?.label || 'Manual boundary';
+                const source = feature.properties?.source || 'Manual drawing';
+                layer.bindPopup(`
+                    <div class="sm-popup">
+                        <div class="pop-en">${label}</div>
+                        <div class="pop-modern">${source}</div>
+                        <span class="pop-price">Saved manual boundary</span>
+                    </div>
+                `);
+            }
+        }).addTo(savedBoundaryLayer);
+        setDrawStatus(`Loaded saved manual boundaries: ${data.features?.length || 0} polygon(s).`);
+    }
+
+    map.on('click', e => {
+        if (drawMode) addDraftPoint(e.latlng);
+    });
+
+    document.getElementById('drawInternational').onclick = () => setDrawMode('international');
+    document.getElementById('drawFrench').onclick = () => setDrawMode('french');
+    document.getElementById('finishBoundary').onclick = finishBoundary;
+    document.getElementById('undoBoundaryPoint').onclick = undoBoundaryPoint;
+    document.getElementById('clearBoundaryDraft').onclick = clearBoundaryDraft;
+    document.getElementById('exportBoundaries').onclick = () => exportBoundaries(true);
+    document.getElementById('toggleReferenceOverlay').onclick = toggleReferenceOverlay;
+    loadSavedBoundaries();
 
     // ── Marker icons ──────────────────────────────────────────────────────────
     function makeIcon(color, isStation) {

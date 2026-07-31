@@ -6,5 +6,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Local analysis/runtime dependencies
+.codex_deps/
+node_modules
+
 # WorkBuddy
 .workbuddy/

@@ -15,8 +15,10 @@
             <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-links">
                 <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                <li><a href="real-estate.html" data-i18n="nav.realEstate">Real Estate</a></li>
                 <li><a href="printers.html" class="active" data-i18n="nav.printers">Printers</a></li>
                 <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources">Source Matrix</a></li>
                 <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
                 <li><a href="land-value.html" data-i18n="nav.landValue">Land Value</a></li>
                 <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
@@ -37,17 +39,23 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="pr.evidence">Known Evidence</h2>
+                <div class="source-strip" aria-label="Sources for known evidence">
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse</a>
+                    <a class="source-chip" href="https://library.csun.edu/sca/peek-stacks/bell" target="_blank" rel="noopener">CSUN Bell</a>
+                    <a class="source-chip" href="source-matrix.html">Source matrix</a>
+                </div>
                 <div class="evidence-table-wrap">
                     <table class="evidence-table">
                         <thead>
                             <tr><th data-i18n="pr.evTh1">Clue</th><th data-i18n="pr.evTh2">Source</th><th data-i18n="pr.evTh3">Reliability</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td data-i18n="pr.ev1">Based on Waddington's London edition</td><td data-i18n="pr.ev1s">World of Monopoly (Albert Veldhuis)</td><td class="rel-high" data-i18n="pr.ev1r">High</td></tr>
+                            <tr><td data-i18n="pr.ev1">Monopoly-family localization; Waddington route possible but unproven</td><td data-i18n="pr.ev1s">World of Monopoly (Albert Veldhuis)</td><td class="rel-medium" data-i18n="pr.ev1r">Medium</td></tr>
                             <tr><td data-i18n="pr.ev2">Produced ~late 1930s / early 1940s</td><td data-i18n="pr.ev2s">rickshaw.org (Ralph Harpuder)</td><td class="rel-mid" data-i18n="pr.ev2r">Medium</td></tr>
-                            <tr><td data-i18n="pr.ev3">Sold at <strong>Wing On</strong> department store</td><td data-i18n="pr.ev3s">rickshaw.org</td><td class="rel-high" data-i18n="pr.ev3r">High</td></tr>
+                            <tr><td data-i18n="pr.ev3">Recalled as sold in major department stores such as <strong>Wing On</strong></td><td data-i18n="pr.ev3s">rickshaw.org</td><td class="rel-mid" data-i18n="pr.ev3r">Medium-low</td></tr>
                             <tr><td data-i18n="pr.ev4">Commercial mass production (not hand-made)</td><td data-i18n="pr.ev4s">Kent McKeever analysis</td><td class="rel-mid" data-i18n="pr.ev4r">Medium</td></tr>
-                            <tr><td data-i18n="pr.ev5">Well-printed, 48.5×48.5cm, all English</td><td data-i18n="pr.ev5s">Ian's physical examination</td><td class="rel-high" data-i18n="pr.ev5r">High</td></tr>
+                            <tr><td data-i18n="pr.ev5">Well-printed, 48.5×48.5cm, all English</td><td data-i18n="pr.ev5s">Physical examination of the Sihang collection copy</td><td class="rel-high" data-i18n="pr.ev5r">High</td></tr>
                             <tr><td data-i18n="pr.ev6">Original owner's family fled E. Europe to Shanghai</td><td data-i18n="pr.ev6s">Gary Korzenstein (collector)</td><td class="rel-high" data-i18n="pr.ev6r">High</td></tr>
                             <tr><td data-i18n="pr.ev7">Board back: black underside + white label</td><td data-i18n="pr.ev7s">World of Monopoly description</td><td data-i18n="pr.ev7r">Label text unknown</td></tr>
                             <tr><td data-i18n="pr.ev8">Manufacturer: Unknown</td><td data-i18n="pr.ev8s">World of Monopoly</td><td data-i18n="pr.ev8r">—</td></tr>
@@ -60,7 +68,42 @@
 
         <section class="content-section alt-bg">
             <div class="container">
+                <h2 class="section-heading" data-i18n="pr.retailTitle">Retail Evidence Update</h2>
+                <div class="source-strip" aria-label="Sources for retail evidence">
+                    <a class="source-chip" href="resources.html">Research update log</a>
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse purchase record</a>
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                </div>
+                <div class="assessment-grid">
+                    <div class="assess-card for">
+                        <h3 data-i18n="pr.retailWhatTitle">What the evidence supports</h3>
+                        <ul>
+                            <li data-i18n="pr.retailWhat1">Ralph Harpuder recalls the game being sold in major Shanghai department stores, naming Wing On as an example.</li>
+                            <li data-i18n="pr.retailWhat2">Powerhouse records show a commercial copy was purchased in Shanghai between August 1945 and November 1946.</li>
+                            <li data-i18n="pr.retailWhat3">World of Monopoly supports local Shanghai manufacture and sale through local stores, but does not name Wing On.</li>
+                        </ul>
+                    </div>
+                    <div class="assess-card against">
+                        <h3 data-i18n="pr.retailNotTitle">What remains unproven</h3>
+                        <ul>
+                            <li data-i18n="pr.retailNot1">No Wing On advertisement, catalogue, invoice, receipt, or price label has yet been located.</li>
+                            <li data-i18n="pr.retailNot2">Powerhouse and CSUN collection records do not identify the specific shop where their commercial copies were bought or kept.</li>
+                            <li data-i18n="pr.retailNot3">The current wording should remain "recalled as sold" rather than "confirmed sold at Wing On."</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="callout" data-i18n="pr.retailConclusion"><strong>Current conclusion:</strong> Wing On is the best named retail lead, but not a confirmed sales channel. The next research target is not another general web search, but department-store advertising, Christmas toy catalogues, import records, and any surviving labels or price marks on commercial copies.</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
                 <h2 class="section-heading" data-i18n="pr.candidates">Candidate Ranking</h2>
+                <div class="source-strip" aria-label="Sources for printer candidates">
+                    <a class="source-chip" href="resources.html">Research resources</a>
+                    <a class="source-chip" href="https://doi.org/10.5281/zenodo.4008398" target="_blank" rel="noopener">Shanghai Hong List</a>
+                    <a class="source-chip" href="https://www.virtualshanghai.net/Maps/" target="_blank" rel="noopener">Virtual Shanghai</a>
+                </div>
 
                 <div class="candidate-card rank-1">
                     <div class="candidate-rank">#1</div>
@@ -151,6 +194,11 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="pr.twTitle">Time Window Analysis</h2>
+                <div class="source-strip" aria-label="Sources for time window analysis">
+                    <a class="source-chip" href="resources.html">Research resources</a>
+                    <a class="source-chip" href="https://collection.powerhouse.com.au/object/136055" target="_blank" rel="noopener">Powerhouse</a>
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                </div>
                 <div class="time-window-grid">
                     <div class="tw-card">
                         <h3 data-i18n="pr.tw1Title">Before 1937</h3>

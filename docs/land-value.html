@@ -167,22 +167,23 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo" data-i18n="nav.logo">Shanghai Millionaire</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
-                    <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
-                    <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
-                    <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
-                    <li><a href="land-value.html" class="active" data-i18n="nav.landValue">Land Value</a></li>
-                    <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
-                </ul>
-            </nav>
-            <button class="lang-toggle" id="langToggle" data-i18n="lang.btn">中文</button>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" data-i18n="nav.logo">Shanghai Millionaire</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="game.html" data-i18n="nav.game">The Game</a></li>
+                <li><a href="real-estate.html" data-i18n="nav.realEstate">Real Estate</a></li>
+                <li><a href="printers.html" data-i18n="nav.printers">Printers</a></li>
+                <li><a href="camps.html" data-i18n="nav.camps">Camps & Refugees</a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources">Source Matrix</a></li>
+                <li><a href="map.html" data-i18n="nav.map">Street Map</a></li>
+                <li><a href="land-value.html" class="active" data-i18n="nav.landValue">Land Value</a></li>
+                <li><a href="resources.html" data-i18n="nav.resources">Resources</a></li>
+            </ul>
+            <button class="lang-toggle" data-i18n="lang.btn">中文</button>
         </div>
-    </header>
+    </nav>
 
     <main>
         <!-- Hero -->
@@ -198,9 +199,106 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="landValue.hypothesisTitle">Core Hypothesis</h2>
+                <div class="source-strip" aria-label="Sources for land-value hypothesis">
+                    <a class="source-chip" href="game.html">Board street list</a>
+                    <a class="source-chip" href="map.html">Mapped streets</a>
+                    <a class="source-chip" href="source-matrix.html">Evidence matrix</a>
+                    <a class="source-chip" href="https://migrantknowledge.org/2020/03/18/power-of-play/" target="_blank" rel="noopener">Cheng, Power of Play</a>
+                </div>
                 <div class="hypothesis-box">
                     <h4 data-i18n="landValue.hypothesisQ">Research Question</h4>
                     <p data-i18n="landValue.hypothesisText">The Shanghai Millionaire game board reflects colonial spatial hierarchy rather than empirical market land values. Streets in "Chinese commercial areas" may be systematically undervalued compared to their actual rental rates, revealing the "colonial gaze" embedded in the game's design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- London Social-Class Encoding to Shanghai Colonial Hierarchy -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.londonEncodingTitle">Design Lineage: London's Social-Class Encoding</h2>
+                <div class="source-strip" aria-label="Sources for London color-class encoding">
+                    <a class="source-chip" href="https://collections.vam.ac.uk/item/O1242178/monopoly-board-game-john-waddington-ltd/" target="_blank" rel="noopener">V&amp;A Waddington</a>
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/uk.php" target="_blank" rel="noopener">World of Monopoly</a>
+                    <a class="source-chip" href="game.html">SM board data</a>
+                </div>
+                <div class="prose-block" style="margin-bottom:1.2rem;">
+                    <p data-i18n="landValue.londonEncodingIntro">It is widely recognized among Monopoly researchers that Waddington's 1936 London edition encodes British social class through its eight color groups — from working-class Whitechapel (brown, £60) to aristocratic Mayfair (dark blue, £400). Shanghai Millionaire inherits the identical eight-group structure and price tiers, but replaces London streets with Shanghai concession roads. However, the two cities organize space along fundamentally different axes — London by class within a single sovereignty, Shanghai by a combination of jurisdiction, function, and nationality. The color-group mapping should therefore be read as a point of departure for investigation, not as proof of a direct transposition of London's class logic.</p>
+                </div>
+
+                <div style="overflow-x:auto; margin: 1rem 0;">
+                <table class="info-table" style="width:100%; font-size:0.81rem; line-height:1.35;">
+                    <thead>
+                        <tr style="background:var(--c-bg-alt);">
+                            <th data-i18n="landValue.londonTblGroup">Group</th>
+                            <th data-i18n="landValue.londonTblLondon">London (1936)</th>
+                            <th data-i18n="landValue.londonTblLondonClass">London Class</th>
+                            <th data-i18n="landValue.londonTblSM">Shanghai Millionaire</th>
+                            <th data-i18n="landValue.londonTblSMClass">Colonial Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#8B4513;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;vertical-align:middle;"></span> <strong>$60</strong></td>
+                            <td>Old Kent Rd / Whitechapel</td>
+                            <td>Working class<br><span style="font-size:0.72rem;color:var(--c-text-light)">East End slums</span></td>
+                            <td>Haig / Hart</td>
+                            <td>Periphery<br><span style="font-size:0.72rem;color:var(--c-text-light)">Concession edge</span></td>
+                        </tr>
+                        <tr style="background:var(--c-bg-alt)">
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#87CEEB;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;vertical-align:middle;"></span> <strong>$100-120</strong></td>
+                            <td>Angel / Euston / Pentonville</td>
+                            <td>Lower middle<br><span style="font-size:0.72rem;color:var(--c-text-light)">North London</span></td>
+                            <td>Avenue / Yu Ya Ching / Peking</td>
+                            <td>Mixed zone<br><span style="font-size:0.72rem;color:var(--c-text-light)">North / west IS</span></td>
+                        </tr>
+                        <tr style="background:rgba(231,76,60,0.06);">
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FFB6C1;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e91e8c;vertical-align:middle;"></span> <strong>$140-160</strong></td>
+                            <td>Pall Mall / Whitehall / Northumberland</td>
+                            <td>Civil service<br><span style="font-size:0.72rem;color:var(--c-text-light)">Westminster</span></td>
+                            <td>Tientsin / Ningpo / Honan</td>
+                            <td>Chinese financial district<br><span style="font-size:0.72rem;color:var(--c-text-light);">Native banking; Ningpo Rd = "China's Wall St"</span></td>
+                        </tr>
+                        <tr style="background:var(--c-bg-alt)">
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FFA500;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;vertical-align:middle;"></span> <strong>$180-200</strong></td>
+                            <td>Bow St / Marlborough / Vine</td>
+                            <td>Legal / trade<br><span style="font-size:0.72rem;color:var(--c-text-light)">Covent Garden</span></td>
+                            <td>Av. Joffre / Petain / Roi Albert</td>
+                            <td>French Concession<br><span style="font-size:0.72rem;color:var(--c-text-light)">Colonial middle tier</span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#DC143C;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;vertical-align:middle;"></span> <strong>$220-240</strong></td>
+                            <td>Strand / Fleet St / Trafalgar Sq</td>
+                            <td>Professional / press<br><span style="font-size:0.72rem;color:var(--c-text-light)">Central London</span></td>
+                            <td>Great Western / Yu Yuen / Connaught</td>
+                            <td>Western residential<br><span style="font-size:0.72rem;color:var(--c-text-light)">Life boundary edge</span></td>
+                        </tr>
+                        <tr style="background:var(--c-bg-alt)">
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FFD700;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;vertical-align:middle;"></span> <strong>$260-280</strong></td>
+                            <td>Leicester Sq / Coventry / Piccadilly</td>
+                            <td>Entertainment<br><span style="font-size:0.72rem;color:var(--c-text-light)">West End</span></td>
+                            <td>Hardoon / Seymour / Bubbling Well</td>
+                            <td>Upper residential<br><span style="font-size:0.72rem;color:var(--c-text-light)">Prestige west end</span></td>
+                        </tr>
+                        <tr>
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#228B22;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#27ae60;vertical-align:middle;"></span> <strong>$300-320</strong></td>
+                            <td>Regent St / Oxford / Bond</td>
+                            <td>Upper class / commerce<br><span style="font-size:0.72rem;color:var(--c-text-light)">Luxury shopping</span></td>
+                            <td>Kiukiang / Kiangse / Szechuen</td>
+                            <td>British commercial<br><span style="font-size:0.72rem;color:var(--c-text-light)">IS financial core</span></td>
+                        </tr>
+                        <tr style="background:var(--c-bg-alt)">
+                            <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00008B;vertical-align:middle;"></span> <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1a237e;vertical-align:middle;"></span> <strong>$350-400</strong></td>
+                            <td>Park Lane / Mayfair</td>
+                            <td>Aristocracy<br><span style="font-size:0.72rem;color:var(--c-text-light)">Seat of power</span></td>
+                            <td>Nanking Road / The Bund</td>
+                            <td>Colonial elite<br><span style="font-size:0.72rem;color:var(--c-text-light)">Financial power</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="callout">
+                    <p data-i18n="landValue.londonInsight"><strong>Key observation:</strong> The substitution pattern between London and Shanghai color groups is not a clean transposition. London's pink group represents Pall Mall and Whitehall — the administrative core of the British state. Shanghai's pink group holds Ningpo Road, Tientsin Road, and Honan Road — the heart of native Chinese banking, with over ninety <em>qianzhuang</em> (traditional banks) concentrated on Ningpo Road alone. These two "pink groups" represent different kinds of power — British governmental in London, Chinese financial in Shanghai — mapped onto the same price tier. This divergence suggests that the Shanghai designer(s) adapted the color-group form but substituted their own criteria: a mixture of functional geography (banking district, residential zone, commercial core), national-racial hierarchy, and possibly market knowledge. The color-group structure should therefore be treated as a trace of design intention — but the precise nature of that intention requires empirical verification, not analogical inference from London.</p>
                 </div>
             </div>
         </section>
@@ -209,9 +307,14 @@
         <section class="content-section" style="background:var(--c-bg-alt);">
             <div class="container">
                 <h2 class="section-heading" data-i18n="landValue.boardTitle">The Board: Price Structure</h2>
+                <div class="source-strip" aria-label="Sources for board prices">
+                    <a class="source-chip" href="game.html">Project object data</a>
+                    <a class="source-chip" href="data/board_streets.json">Street data JSON</a>
+                    <a class="source-chip" href="https://www.worldofmonopoly.com/albert/china1.htm" target="_blank" rel="noopener">World of Monopoly</a>
+                </div>
                 <div class="research-grid two-col">
                     <div class="board-preview">
-                        <p style="margin-bottom:1rem;" data-i18n="landValue.boardDesc">Shanghai Millionaire follows the British Waddington's Monopoly template: 40 squares, 8 color groups, prices increasing clockwise from GO. The localization replaces London streets with Shanghai streets while maintaining the price structure.</p>
+                        <p style="margin-bottom:1rem;" data-i18n="landValue.boardDesc">Shanghai Millionaire follows the broader Monopoly template: 40 squares, 8 color groups, prices increasing clockwise from GO. The localization replaces an existing property sequence with Shanghai streets while the exact Waddington/Parker Brothers route remains under investigation.</p>
                         <p class="caption" data-i18n="landValue.boardNote">The game uses the British color scheme: Dark Blue ($350-400) as the most expensive, Purple ($60-80) as the cheapest.</p>
                     </div>
                     <div>
@@ -229,25 +332,25 @@
                                 <tbody>
                                     <tr>
                                         <td class="price-high">$350-400</td>
-                                        <td>Bund, Kiukiang</td>
+                                        <td>Nanking, Bund</td>
                                         <td data-i18n="landValue.zoneCore">IS Core</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
                                     <tr>
                                         <td class="price-mid">$300-320</td>
-                                        <td>Kiangse, Nanking, Szechuen</td>
+                                        <td>Kiukiang, Kiangse, Szechuen</td>
                                         <td data-i18n="landValue.zoneCore">IS Core</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
                                     <tr>
                                         <td>$260-280</td>
-                                        <td>Bubbling Well, Yu Yuen, Great Western</td>
+                                        <td>Hardoon, Seymour, Bubbling Well</td>
                                         <td data-i18n="landValue.zoneWest">IS West</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
                                     <tr>
                                         <td>$220-240</td>
-                                        <td>Seymour, Hardoon</td>
+                                        <td>Great Western, Yu Yuen, Connaught</td>
                                         <td data-i18n="landValue.zoneWest">IS West</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
@@ -259,7 +362,7 @@
                                     </tr>
                                     <tr class="anomaly">
                                         <td>$140-160</td>
-                                        <td>Ningpo, Tientsin, Honan</td>
+                                        <td>Tientsin, Ningpo, Honan</td>
                                         <td data-i18n="landValue.zoneCore">IS Core</td>
                                         <td><span data-i18n="landValue.statusAnomaly">Anomaly?</span> <span class="anomaly-note" data-i18n="landValue.anomalyTag">Check</span></td>
                                     </tr>
@@ -270,7 +373,7 @@
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
                                     <tr class="price-low">
-                                        <td>$60-80</td>
+                                        <td>$60</td>
                                         <td>Haig, Hart</td>
                                         <td data-i18n="landValue.zonePeriphery">Periphery</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
@@ -278,7 +381,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="caption" data-i18n="landValue.tierCaption">IS = International Settlement. The pink group (Ningpo/Tientsin/Honan) is geographically central but game-priced low — a potential anomaly worth investigating.</p>
+                        <p class="caption" data-i18n="landValue.tierCaption">IS = International Settlement. The pink group (Tientsin/Ningpo/Honan) is geographically central but game-priced low — a potential anomaly worth investigating.</p>
                     </div>
                 </div>
             </div>
@@ -288,6 +391,11 @@
         <section class="content-section">
             <div class="container">
                 <h2 class="section-heading" data-i18n="landValue.mapTitle">Geographic Distribution</h2>
+                <div class="source-strip" aria-label="Sources for geographic map">
+                    <a class="source-chip" href="data/board_streets.json">Board street data</a>
+                    <a class="source-chip" href="data/virtualshanghai_land_value_summary.json">Land value summary</a>
+                    <a class="source-chip" href="https://www.virtualshanghai.net/Maps/" target="_blank" rel="noopener">Virtual Shanghai</a>
+                </div>
                 <p data-i18n="landValue.mapDesc">The map shows all 22 streets with their game prices. Click on any marker to see details. Notice how the most expensive properties cluster along the Bund and the International Settlement core, while the cheapest are on the western periphery.</p>
                 
                 <div class="map-legend">
@@ -312,7 +420,7 @@
                 
                 <div class="research-question">
                     <h4 data-i18n="landValue.rq1">Q1: Do game prices correlate with empirical land values? <span class="status-badge status-ongoing">Ongoing</span></h4>
-                    <p data-i18n="landValue.rq1Desc">Collect SMC Annual Report property assessments and newspaper rental advertisements to compare with game prices. Focus on the pink group anomaly: were Ningpo/Tientsin/Honan actually lower-value, or are they undervalued in the colonial perspective?</p>
+                    <p data-i18n="landValue.rq1Desc">Collect SMC Annual Report property assessments and newspaper rental advertisements to compare with game prices. Focus on the pink group anomaly: were Tientsin/Ningpo/Honan actually lower-value, or are they undervalued in the colonial perspective?</p>
                 </div>
                 
                 <div class="research-question">
@@ -359,7 +467,7 @@
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-year">1946</span>
-                        <p data-i18n="landValue.timeline1946">Lobel brothers create handmade Shanghai Millionaire in refugee camp. Their choice of this game suggests it was well-known in the international community.</p>
+                        <p data-i18n="landValue.timeline1946">Lobel brothers create handmade Shanghai Millionaire in the Hongkew designated area after liberation. Their choice of this game suggests it was known in refugee-child circles.</p>
                     </div>
                 </div>
             </div>
@@ -369,6 +477,11 @@
         <section class="content-section" style="background:var(--c-bg-alt);">
             <div class="container">
                 <h2 class="section-heading" data-i18n="landValue.sourcesTitle">Data Sources Needed</h2>
+                <div class="source-strip" aria-label="Sources and datasets for land-value research">
+                    <a class="source-chip" href="https://www.virtualshanghai.net/" target="_blank" rel="noopener">Virtual Shanghai</a>
+                    <a class="source-chip" href="https://doi.org/10.5281/zenodo.4008398" target="_blank" rel="noopener">Shanghai Hong List</a>
+                    <a class="source-chip" href="resources.html">Resource list</a>
+                </div>
                 <div class="research-grid three-col">
                     <div class="research-card">
                         <h3 data-i18n="landValue.source1Title">SMC Annual Reports</h3>
@@ -422,30 +535,32 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
     <script>
         // Street data with prices
         const STREET_DATA = [
-            { id: "bund", en: "The Bund", zh: "外滩", modern: "中山东一路", color: "#1a237e", price: "$350", lat: 31.237653, lng: 121.486001, tier: "premium" },
-            { id: "kiukiang", en: "Kiukiang Road", zh: "九江路", modern: "九江路", color: "#1a237e", price: "$400", lat: 31.23967, lng: 121.484724, tier: "premium" },
+            { id: "bund", en: "The Bund", zh: "外滩", modern: "中山东一路", color: "#1a237e", price: "$400", lat: 31.237653, lng: 121.486001, tier: "premium" },
+            { id: "nanking", en: "Nanking Road", zh: "南京路", modern: "南京东路", color: "#1a237e", price: "$350", lat: 31.239835, lng: 121.481044, tier: "premium" },
+            { id: "kiukiang", en: "Kiukiang Road", zh: "九江路", modern: "九江路", color: "#27ae60", price: "$300", lat: 31.23967, lng: 121.484724, tier: "high" },
             { id: "kiangse", en: "Kiangse Road", zh: "江西路", modern: "江西中路", color: "#27ae60", price: "$300", lat: 31.23768, lng: 121.482632, tier: "high" },
-            { id: "nanking", en: "Nanking Road", zh: "南京路", modern: "南京东路", color: "#27ae60", price: "$300", lat: 31.239835, lng: 121.481044, tier: "high" },
             { id: "szechuen", en: "Szechuen Road", zh: "四川路", modern: "四川中路", color: "#27ae60", price: "$320", lat: 31.240696, lng: 121.483126, tier: "high" },
-            { id: "bubbling", en: "Bubbling Well Road", zh: "静安寺路", modern: "南京西路", color: "#f1c40f", price: "$260", lat: 31.236091, lng: 121.468459, tier: "mid" },
-            { id: "greatwest", en: "Great Western Road", zh: "大西路", modern: "延安西路", color: "#f1c40f", price: "$260", lat: 31.222059, lng: 121.439309, tier: "mid" },
-            { id: "yuyuen", en: "Yu Yuen Road", zh: "愚园路", modern: "愚园路", color: "#f1c40f", price: "$280", lat: 31.226617, lng: 121.441492, tier: "mid" },
-            { id: "seymour", en: "Seymour Road", zh: "西摩路", modern: "陕西北路", color: "#e74c3c", price: "$220", lat: 31.230262, lng: 121.449866, tier: "mid" },
-            { id: "hardoon", en: "Hardoon Road", zh: "哈同路", modern: "铜仁路", color: "#e74c3c", price: "$240", lat: 31.22745, lng: 121.445639, tier: "mid" },
+            { id: "hardoon", en: "Hardoon Road", zh: "哈同路", modern: "铜仁路", color: "#f1c40f", price: "$260", lat: 31.22745, lng: 121.445639, tier: "mid" },
+            { id: "seymour", en: "Seymour Road", zh: "西摩路", modern: "陕西北路", color: "#f1c40f", price: "$260", lat: 31.230262, lng: 121.449866, tier: "mid" },
+            { id: "bubbling", en: "Bubbling Well Road", zh: "静安寺路", modern: "南京西路", color: "#f1c40f", price: "$280", lat: 31.236091, lng: 121.468459, tier: "mid" },
+            { id: "greatwest", en: "Great Western Road", zh: "大西路", modern: "延安西路", color: "#e74c3c", price: "$220", lat: 31.222059, lng: 121.439309, tier: "mid" },
+            { id: "yuyuen", en: "Yu Yuen Road", zh: "愚园路", modern: "愚园路", color: "#e74c3c", price: "$220", lat: 31.226617, lng: 121.441492, tier: "mid" },
+            { id: "connaught", en: "Connaught Road", zh: "康脑脱路", modern: "康定路", color: "#e74c3c", price: "$240", lat: 31.2335, lng: 121.4495, tier: "mid" },
             { id: "petain", en: "Avenue Petain", zh: "贝当路", modern: "衡山路", color: "#e67e22", price: "$180", lat: 31.204175, lng: 121.440125, tier: "mid-low" },
             { id: "albert", en: "Avenue Roi Albert", zh: "亚尔培路", modern: "陕西南路", color: "#e67e22", price: "$180", lat: 31.209989, lng: 121.457226, tier: "mid-low" },
             { id: "joffre", en: "Avenue Joffre", zh: "霞飞路", modern: "淮海中路", color: "#e67e22", price: "$200", lat: 31.215033, lng: 121.44594, tier: "mid-low" },
-            { id: "ningpo", en: "Ningpo Road", zh: "宁波路", modern: "宁波路", color: "#e91e8c", price: "$140", lat: 31.241696, lng: 121.481962, tier: "low-mid", anomaly: true },
             { id: "tientsin", en: "Tientsin Road", zh: "天津路", modern: "天津路", color: "#e91e8c", price: "$140", lat: 31.240895, lng: 121.480958, tier: "low-mid", anomaly: true },
-            { id: "honan", en: "Honan Road", zh: "河南路", modern: "河南中路", color: "#e91e8c", price: "$160", lat: 31.23661, lng: 121.481248, tier: "low-mid", anomaly: true },
+            { id: "ningpo", en: "Ningpo Road", zh: "宁波路", modern: "宁波路", color: "#e91e8c", price: "$160", lat: 31.241696, lng: 121.481962, tier: "low-mid", anomaly: true },
+            { id: "honan", en: "Honan Road", zh: "河南路", modern: "河南中路", color: "#e91e8c", price: "$140", lat: 31.23661, lng: 121.481248, tier: "low-mid", anomaly: true },
             { id: "avenue", en: "Avenue Road", zh: "爱文义路", modern: "北京西路", color: "#3498db", price: "$100", lat: 31.237691, lng: 121.464726, tier: "low" },
             { id: "yuyaching", en: "Yu Ya Ching Road", zh: "虞洽卿路", modern: "西藏中路", color: "#3498db", price: "$100", lat: 31.238377, lng: 121.469414, tier: "low" },
             { id: "peking", en: "Peking Road", zh: "北京路", modern: "北京东路", color: "#3498db", price: "$120", lat: 31.241915, lng: 121.476946, tier: "low" },
             { id: "haig", en: "Avenue Haig", zh: "海格路", modern: "华山路", color: "#9b59b6", price: "$60", lat: 31.216853, lng: 121.434846, tier: "lowest" },
-            { id: "hart", en: "Hart Road", zh: "赫德路", modern: "常德路", color: "#9b59b6", price: "$80", lat: 31.23024, lng: 121.442142, tier: "lowest" }
+            { id: "hart", en: "Hart Road", zh: "赫德路", modern: "常德路", color: "#9b59b6", price: "$60", lat: 31.23024, lng: 121.442142, tier: "lowest" }
         ];
 
         // Initialize map
