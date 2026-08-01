@@ -95,6 +95,18 @@
                 <div class="dating-timeline">
                     <div class="tl-scroll-wrap">
                         <div class="tl-inner">
+                            <!-- Source Models (parent games) track -->
+                            <div class="tl-track-row">
+                                <div class="tl-track-label" data-i18n="game.dtParent">Source Models</div>
+                                <div class="tl-track-bar">
+                                    <div class="tl-point parent" style="left:2%">
+                                        <span class="tl-point-label" data-i18n="game.dtLblParker">Parker Brothers<br>Nov 1935</span>
+                                    </div>
+                                    <div class="tl-point parent" style="left:14.3%">
+                                        <span class="tl-point-label" data-i18n="game.dtLblWaddington">Waddington London<br>1936</span>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- Real Estate track -->
                             <div class="tl-track-row">
                                 <div class="tl-track-label" data-i18n="game.dtRE">Shanghai Real Estate</div>
@@ -106,6 +118,7 @@
                                     <div class="tl-ceiling" style="left:42.9%">
                                         <span class="tl-constraint-label" data-i18n="game.dtLblCeiling">Dollar Line ceiling<br>before Aug 1938</span>
                                     </div>
+                                    <div class="tl-cutoff" style="left:85.7%"></div>
                                 </div>
                             </div>
                             <!-- Millionaire track -->
@@ -122,6 +135,9 @@
                                     <div class="tl-point sm" style="left:71.4%">
                                         <span class="tl-point-label" data-i18n="game.dtLblSM2">Veldhuis &plusmn;1940</span>
                                     </div>
+                                    <div class="tl-cutoff" style="left:85.7%">
+                                        <span class="tl-constraint-label" data-i18n="game.dtLblCutoff">Dec 1941 &mdash; Japanese occupation<br>End of concession-era publishing</span>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Year axis -->
@@ -135,9 +151,11 @@
 
                 <!-- Legend -->
                 <div class="tl-legend">
+                    <span class="tl-legend-item"><span class="tl-dot parent"></span> <span data-i18n="game.dtLegParent">Source model (parent game)</span></span>
                     <span class="tl-legend-item"><span class="tl-dot re"></span> <span data-i18n="game.dtLegRE">Real Estate claim</span></span>
                     <span class="tl-legend-item"><span class="tl-dot sm"></span> <span data-i18n="game.dtLegSM">Millionaire claim</span></span>
                     <span class="tl-legend-item"><span class="tl-dash"></span> <span data-i18n="game.dtLegDash">Hard constraint</span></span>
+                    <span class="tl-legend-item"><span class="tl-dash-cutoff"></span> <span data-i18n="game.dtLegCutoff">1941 occupation cutoff</span></span>
                     <span class="tl-legend-item"><span class="tl-bar-sample"></span> <span data-i18n="game.dtLegRange">Likely window</span></span>
                 </div>
 
@@ -154,6 +172,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Source Models group -->
+                            <tr class="dt-group-header">
+                                <td colspan="4" data-i18n="game.dtParentGroup">Source Models (Parent Games)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.dtC10S">Parker Brothers, Atlantic City edition (first published Nov 1935)</td>
+                                <td data-i18n="game.dtC10">Source model for Shanghai Real Estate — price structure matches exactly ($60&ndash;$400)</td>
+                                <td><span class="ev-badge dependency" data-i18n="game.dtT4">Design dependency</span></td>
+                                <td data-i18n="game.dtD10">Real Estate copies Parker's price structure, board layout, and property-name pattern; confirms Nov 1935 Parker edition as the immediate source; sets earliest possible date for Real Estate at late 1935</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.dtC11S">John Waddington Ltd, London edition (first published 1936)</td>
+                                <td data-i18n="game.dtC11">Source model for Shanghai Millionaire — follows Waddington London board layout and naming</td>
+                                <td><span class="ev-badge dependency" data-i18n="game.dtT4">Design dependency</span></td>
+                                <td data-i18n="game.dtD11">Millionaire follows Waddington London design features (Super Tax, Community Chest format, station orientation); Waddington London first published 1936, setting the earliest possible date for Millionaire</td>
+                            </tr>
                             <!-- Real Estate group -->
                             <tr class="dt-group-header">
                                 <td colspan="4" data-i18n="game.dtREGroup">Shanghai Real Estate</td>
@@ -215,6 +249,16 @@
                                 <td data-i18n="game.dtC9">Commercial mass-produced (not handmade)</td>
                                 <td><span class="ev-badge examination" data-i18n="game.dtT6">Physical examination</span></td>
                                 <td data-i18n="game.dtD9">McKeever examined the box and components in 2004; confirmed commercial production; acquired the box belonging to the game board</td>
+                            </tr>
+                            <!-- Chronological boundaries group -->
+                            <tr class="dt-group-header">
+                                <td colspan="4" data-i18n="game.dtBoundsGroup">Chronological Boundaries (Shared)</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="game.dtC12S">Japanese occupation of International Settlement (Dec 8, 1941)</td>
+                                <td data-i18n="game.dtC12">No commercial printing of Western board games after Dec 1941 &mdash; Shanghai enters "isolated island" period</td>
+                                <td><span class="ev-badge context" data-i18n="game.dtT5">Historical context</span></td>
+                                <td data-i18n="game.dtD12">Japanese forces entered the International Settlement on Dec 8, 1941 (day after Pearl Harbor); foreign concessions ceased to function; local commercial publishing of English-language Western games effectively ceased &mdash; terminus ante quem for both Real Estate and Millionaire</td>
                             </tr>
                         </tbody>
                     </table>

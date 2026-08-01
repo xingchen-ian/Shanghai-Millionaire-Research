@@ -768,6 +768,7 @@ a:hover { text-decoration: underline; }
 }
 .tl-range.re { background: #2c5f8a; }
 .tl-range.sm { background: var(--c-accent); }
+.tl-range.parent { background: #2d8a5f; }
 
 /* Point markers */
 .tl-point {
@@ -783,6 +784,7 @@ a:hover { text-decoration: underline; }
 }
 .tl-point.re { background: #2c5f8a; }
 .tl-point.sm { background: var(--c-accent); }
+.tl-point.parent { background: #2d8a5f; }
 
 .tl-point-label {
     position: absolute;
@@ -822,6 +824,19 @@ a:hover { text-decoration: underline; }
 }
 .tl-ceiling .tl-constraint-label { color: #c0392b; }
 .tl-floor .tl-constraint-label { color: var(--c-accent); }
+
+/* 1941 occupation cutoff (shared terminus ante quem) */
+.tl-cutoff {
+    position: absolute;
+    top: -6px;
+    bottom: -6px;
+    width: 0;
+    z-index: 3;
+    border-left: 2px dashed #795548;
+}
+.tl-cutoff .tl-constraint-label {
+    color: #795548;
+}
 
 /* Year axis */
 .tl-year-axis {
@@ -871,11 +886,18 @@ a:hover { text-decoration: underline; }
 }
 .tl-dot.re { background: #2c5f8a; }
 .tl-dot.sm { background: var(--c-accent); }
+.tl-dot.parent { background: #2d8a5f; }
 .tl-dash {
     display: inline-block;
     width: 14px;
     height: 0;
     border-top: 2px dashed #c0392b;
+}
+.tl-dash-cutoff {
+    display: inline-block;
+    width: 14px;
+    height: 0;
+    border-top: 2px dashed #795548;
 }
 .tl-bar-sample {
     display: inline-block;
