@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobel 1946 — Shanghai Millionaire Research</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" data-i18n="nav.logo">Shanghai Millionaire</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="game.html" data-i18n="nav.game"></a></li>
+                <li><a href="real-estate.html" data-i18n="nav.realEstate"></a></li>
+                <li><a href="land-value.html" data-i18n="nav.landValue"></a></li>
+                <li><a href="printers.html" data-i18n="nav.printers"></a></li>
+                <li><a href="camps.html" data-i18n="nav.camps"></a></li>
+                <li><a href="lobel.html" class="active" data-i18n="nav.lobel"></a></li>
+                <li><a href="map.html" data-i18n="nav.map"></a></li>
+                <li><a href="source-matrix.html" data-i18n="nav.sources"></a></li>
+                <li><a href="resources.html" data-i18n="nav.resources"></a></li>
+            </ul>
+            <button class="lang-toggle" data-i18n="lang.btn">中文</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <p class="page-eyebrow" data-i18n="lobel.eyebrow">USHMM 2001.406.1 · Handmade · 1946</p>
+            <h1 data-i18n="lobel.title">Lobel 1946: A Child's Shanghai</h1>
+            <p class="page-lead" data-i18n="lobel.lead">A handmade board game by Jewish refugee children — preserving, transforming, and personalizing a city.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- ====== Section 1: Material Information ====== -->
+        <section class="content-section" id="material">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s1">1. Material Information</h2>
+                <div class="source-strip">
+                    <span class="source-chip">USHMM 2001.406.1</span>
+                    <a class="source-chip" href="https://portal.ehri-project.eu/units/us-005578-irn36901-irn37343" target="_blank" rel="noopener">EHRI Portal</a>
+                    <span class="source-chip" data-i18n="lobel.s1.chipIan">Ian Canva Analysis</span>
+                </div>
+
+                <div class="material-grid">
+                    <div class="material-image">
+                        <img src="assets/images/lobel-board-ushmm.jpg" alt="Lobel 1946 handmade board — USHMM 2001.406.1" style="width:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+                        <p class="img-caption" style="font-size:0.85rem;color:var(--c-text-light);margin-top:0.5rem;text-align:center;" data-i18n="lobel.s1.imgCap">Lobel 1946 board. USHMM Collection 2001.406.1. Board rotated 180° in photograph.</p>
+                    </div>
+
+                    <div class="material-details">
+                        <table class="info-table">
+                            <tr><th data-i18n="lobel.s1.thObj">Object</th><td data-i18n="lobel.s1.vObj">Handmade board game</td></tr>
+                            <tr><th data-i18n="lobel.s1.thTitle">Title</th><td data-i18n="lobel.s1.vTitle">"Shanghai Millionaire" (hand-lettered)</td></tr>
+                            <tr><th data-i18n="lobel.s1.thCreator">Creators</th><td data-i18n="lobel.s1.vCreator">Manfred &amp; Siegfried Lobel</td></tr>
+                            <tr><th data-i18n="lobel.s1.thDate">Date</th><td data-i18n="lobel.s1.vDate">1946</td></tr>
+                            <tr><th data-i18n="lobel.s1.thPlace">Place</th><td data-i18n="lobel.s1.vPlace">Shanghai (presumed)</td></tr>
+                            <tr><th data-i18n="lobel.s1.thRepo">Repository</th><td data-i18n="lobel.s1.vRepo">United States Holocaust Memorial Museum</td></tr>
+                            <tr><th data-i18n="lobel.s1.thAcc">Accession No.</th><td data-i18n="lobel.s1.vAcc">2001.406.1</td></tr>
+                            <tr><th data-i18n="lobel.s1.thMedium">Medium</th><td data-i18n="lobel.s1.vMedium">Hand-drawn on cloth/paper board; English-language place names and monetary values handwritten in ink or pencil</td></tr>
+                            <tr><th data-i18n="lobel.s1.thFeat">Features</th><td data-i18n="lobel.s1.vFeat">Colour-coded property groups; Community Chest &amp; Chance central zones; 4 railway stations; corner squares (GO, JAIL, FREE PARKING, GO TO JAIL)</td></tr>
+                            <tr><th data-i18n="lobel.s1.thCond">Condition</th><td data-i18n="lobel.s1.vCond">Photographed inverted; moderate fading; most text legible at high resolution</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top:2rem;">
+                    <p data-i18n="lobel.s1.why"><strong>Why this object matters.</strong> The Lobel board is one of only two known surviving artefacts of Shanghai Monopoly — and the only one made by children. It is not a degraded copy of the commercial game, but a <em>parallel cartography</em>: preserving the financial hierarchy of Nanking Road ($350) and The Bund ($400) while substituting and omitting streets at the lower and middle tiers. The board encodes the spatial memory of Jewish refugee children in wartime Shanghai.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 2: Three-Way Comparison Overview ====== -->
+        <section class="content-section alt-bg" id="overview">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s2">2. Three Versions at a Glance</h2>
+                <div class="source-strip">
+                    <span class="source-chip" data-i18n="lobel.s2.chip1">SRE: themonopolist.net + Veldhuis</span>
+                    <span class="source-chip" data-i18n="lobel.s2.chip2">SHM: Ian's collection + photo verification</span>
+                    <span class="source-chip" data-i18n="lobel.s2.chip3">Lobel: USHMM 2001.406.1 + Ian Canva</span>
+                </div>
+
+                <div class="comparison-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;">
+                    <div class="version-card" style="border-top:4px solid #a0522d;">
+                        <h3 style="color:#a0522d;" data-i18n="lobel.s2.card1Title">Shanghai Real Estate</h3>
+                        <p class="version-meta" data-i18n="lobel.s2.card1Meta">~1937 · Parker Brothers US 1935 base</p>
+                        <ul style="list-style:none;padding:0;font-size:0.92rem;">
+                            <li data-i18n="lobel.s2.card1l1">22 streets</li>
+                            <li data-i18n="lobel.s2.card1l2">4 real shipping lines</li>
+                            <li data-i18n="lobel.s2.card1l3">$60–400 (US price ladder)</li>
+                            <li data-i18n="lobel.s2.card1l4">Your Night Out tax ($35)</li>
+                            <li data-i18n="lobel.s2.card1l5">11 unique streets (Rubicon, Mac Leod,&hellip;)</li>
+                        </ul>
+                    </div>
+                    <div class="version-card" style="border-top:4px solid #8b2500;">
+                        <h3 style="color:#8b2500;" data-i18n="lobel.s2.card2Title">Shanghai Millionaire</h3>
+                        <p class="version-meta" data-i18n="lobel.s2.card2Meta">~1938–1940 · Waddington's London base</p>
+                        <ul style="list-style:none;padding:0;font-size:0.92rem;">
+                            <li data-i18n="lobel.s2.card2l1">22 streets</li>
+                            <li data-i18n="lobel.s2.card2l2">4 railway stations (E/S/W/N)</li>
+                            <li data-i18n="lobel.s2.card2l3">$60–400 (London colour ladder)</li>
+                            <li data-i18n="lobel.s2.card2l4">Super Tax ($100)</li>
+                            <li data-i18n="lobel.s2.card2l5">11 unique streets (Ave Roi Albert, Kiukiang,&hellip;)</li>
+                        </ul>
+                    </div>
+                    <div class="version-card" style="border-top:4px solid #2e7d32;">
+                        <h3 style="color:#2e7d32;" data-i18n="lobel.s2.card3Title">Lobel 1946</h3>
+                        <p class="version-meta" data-i18n="lobel.s2.card3Meta">1946 · Hand-copied by refugee children</p>
+                        <ul style="list-style:none;padding:0;font-size:0.92rem;">
+                            <li data-i18n="lobel.s2.card3l1">~19–22 streets (partial ID)</li>
+                            <li data-i18n="lobel.s2.card3l2">4 railway stations</li>
+                            <li data-i18n="lobel.s2.card3l3">$100–400 (compressed)</li>
+                            <li data-i18n="lobel.s2.card3l4">TAX confirmed</li>
+                            <li data-i18n="lobel.s2.card3l5">1 unique street: <strong>Dixwell Road</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Venn diagram -->
+                <div style="margin-top:2rem;background:var(--c-card);padding:2rem;border-radius:8px;border:1px solid var(--c-border);">
+                    <h3 style="margin-top:0;" data-i18n="lobel.s2.vennTitle">Street Overlap Structure</h3>
+                    <p style="color:var(--c-text-light);margin-bottom:1.5rem;" data-i18n="lobel.s2.vennDesc">SRE and SHM share 11 streets but disagree on price for 9 of them. Lobel inherits all SHM streets and adds one: Dixwell Road.</p>
+                    <div class="venn-container" style="text-align:center;">
+                        <pre style="background:transparent;font-family:'SF Mono','Source Code Pro',monospace;font-size:0.82rem;line-height:1.5;color:var(--c-text);text-align:left;display:inline-block;">
+       SRE (22)                        SHM (11)
+   ┌──────────────┐              ┌──────────────┐
+   │ Rubicon Rd   │  11 shared   │ Ave Haig     │
+   │ Mac Leod Rd  │  Nanking     │ Hart Rd      │
+   │ Columbia Cir │  Bund        │ Ave Rd       │
+   │ Ave Foch     │  Ave Petain  │ Yu Ya Ching  │
+   │ Route Say-Z..│  Ave Joffre  │ Tientsin Rd  │
+   │ Canton Rd    │  Honan Rd    │ Ningpo Rd    │
+   │ Hankow Rd    │  Kiangse Rd  │ Ave Roi Alb..│
+   │ Soochow Rd   │  Szechuen Rd │ Connaught Rd │
+   │ West End Gds │  Peking Rd   │ Hardoon Rd   │
+   │ Ave Edw.VII  │  Bubbling W. │ Seymour Rd   │
+   │ Broadway     │  Great W.Rd  │ Kiukiang Rd  │
+   └──────┬───────┘  Yu Yuen Rd  └──────┬───────┘
+          │                             │
+          │    Lobel 1946 (~19-22)      │
+          │  ┌──────────────────────────┘
+          └──┤ All SHM streets
+             │ + 4 Railway Stations
+             │ + <strong style="color:#8b2500;">Dixwell Rd</strong> (NOWHERE else)
+             │ × ZERO SRE-only streets
+             └─────────────────────────
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 3: Evidence — Lobel Descends from SHM ====== -->
+        <section class="content-section" id="evidence">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s3">3. Evidence: Lobel Descends from Shanghai Millionaire</h2>
+                <div class="source-strip">
+                    <span class="source-chip" data-i18n="lobel.s3.chip1">Canva board reading by Ian</span>
+                    <span class="source-chip" data-i18n="lobel.s3.chip2">USHMM photo cross-check</span>
+                </div>
+
+                <p style="max-width:680px;" data-i18n="lobel.s3.intro">Seven pieces of evidence converge on a single conclusion: the Lobel board was copied from a <strong>Shanghai Millionaire</strong> commercial set, and shows no interaction with the parallel <strong>Shanghai Real Estate</strong> edition.</p>
+
+                <table class="evidence-table" style="margin-top:1.5rem;">
+                    <thead>
+                        <tr><th data-i18n="lobel.s3.thN">#</th><th data-i18n="lobel.s3.thEvi">Evidence</th><th data-i18n="lobel.s3.thPts">Points to</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td data-i18n="lobel.s3.r1evi"><strong>4 Railway Stations</strong> (East, South, West, North) — all four are legible on the Lobel board</td>
+                            <td data-i18n="lobel.s3.r1pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;SRE uses 4 real shipping lines instead</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td data-i18n="lobel.s3.r2evi"><strong>Avenue Roi Albert</strong> — confirmed on Lobel; a SHM-exclusive street</td>
+                            <td data-i18n="lobel.s3.r2pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;Not in SRE</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td data-i18n="lobel.s3.r3evi"><strong>KIUKIANG Road</strong> — confirmed on Lobel; a SHM-exclusive street</td>
+                            <td data-i18n="lobel.s3.r3pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;Not in SRE</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td data-i18n="lobel.s3.r4evi"><strong>Avenue Haig</strong> — visible on Lobel; a SHM-exclusive street</td>
+                            <td data-i18n="lobel.s3.r4pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;Not in SRE</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td data-i18n="lobel.s3.r5evi"><strong>Tientsin Road</strong> — identified on Lobel; a SHM-exclusive street</td>
+                            <td data-i18n="lobel.s3.r5pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;Not in SRE</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td data-i18n="lobel.s3.r6evi"><strong>Super Tax</strong> — corner TAX square visible on Lobel</td>
+                            <td data-i18n="lobel.s3.r6pts"><span class="ev-badge" style="background:#e8d5c4;color:#8b2500;">SHM</span> &nbsp;SRE uses "Your Night Out" tax instead</td>
+                        </tr>
+                        <tr style="background:#fffdf5;">
+                            <td>7</td>
+                            <td data-i18n="lobel.s3.r7evi"><strong>ALL 11 SRE-exclusive streets are ABSENT from Lobel</strong><br><small>Rubicon · Mac Leod · Columbia Circle · Avenue Foch · Route de Say-Zoong · Canton · Hankow · Soochow · West End Gardens · Avenue Edward VII · Broadway</small></td>
+                            <td data-i18n="lobel.s3.r7pts"><span class="ev-badge" style="background:#f5e0e0;color:#9b1b1b;">NOT SRE</span> &nbsp;If Lobel had seen SRE, at least one of these would likely appear</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout" style="margin-top:2rem;">
+                    <p data-i18n="lobel.s3.concl"><strong>Conclusion:</strong> The Lobel 1946 board is unambiguously descended from the <em>Shanghai Millionaire</em> commercial edition. It bears zero traces of the parallel <em>Shanghai Real Estate</em> edition — no SRE-exclusive streets, no shipping lines, no "Your Night Out" tax. The two commercial editions circulated independently in Shanghai, and the Lobel brothers had access to only one of them.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 4: Shared Streets — Same Names, Different Prices ====== -->
+        <section class="content-section alt-bg" id="price-divergence">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s4">4. Same Streets, Different Prices</h2>
+                <div class="source-strip">
+                    <span class="source-chip" data-i18n="lobel.s4.chip1">SRE: board_streets.csv reconstruction</span>
+                    <span class="source-chip" data-i18n="lobel.s4.chip2">SHM: Ian's board photo verification</span>
+                </div>
+
+                <p style="max-width:680px;" data-i18n="lobel.s4.intro">The 11 streets shared by SRE and SHM reveal a remarkable pattern: <strong>only Nanking Road and The Bund receive the same price in both games</strong>. The other 9 shared streets show price divergences of $20–$120 — proving that the two editions were independently designed.</p>
+
+                <table class="evidence-table" style="margin-top:1.5rem;">
+                    <thead>
+                        <tr><th data-i18n="lobel.s4.thStreet">Street</th><th data-i18n="lobel.s4.thSRE">SRE</th><th data-i18n="lobel.s4.thSHM">SHM</th><th data-i18n="lobel.s4.thDiv">Divergence</th><th data-i18n="lobel.s4.thIntp">Interpretation</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background:#e8f5e9;">
+                            <td><strong>Nanking Road</strong></td><td>$350 · Dark Blue</td><td>$350 · Dark Blue</td><td>—</td><td data-i18n="lobel.s4.r1intp">Both agree: absolute pinnacle</td>
+                        </tr>
+                        <tr style="background:#e8f5e9;">
+                            <td><strong>The Bund</strong></td><td>$400 · Dark Blue</td><td>$400 · Dark Blue</td><td>—</td><td data-i18n="lobel.s4.r2intp">Both agree: absolute pinnacle</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peking Road</strong></td><td>$240 · Red</td><td>$120 · Light Blue</td><td style="color:#8b2500;font-weight:700;">$120</td>
+                            <td data-i18n="lobel.s4.r3intp">Largest divergence. SRE sees it as a major commercial road; SHM places it in the lowest-mid tier.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Great Western Road</strong></td><td>$100 · Light Blue</td><td>$220 · Red</td><td style="color:#8b2500;font-weight:700;">$120</td>
+                            <td data-i18n="lobel.s4.r4intp">Nearly opposite. SRE treats it as cheap periphery; SHM as prime residential.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kiangse Road</strong></td><td>$220 · Red</td><td>$300 · Green</td><td style="font-weight:700;">$80</td>
+                            <td data-i18n="lobel.s4.r5intp">SHM elevates Kiangse to near-financial-core tier.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avenue Petain</strong></td><td>$140 · Pink</td><td>$180 · Orange</td><td>$40</td>
+                            <td data-i18n="lobel.s4.r6intp">SHM consistently values French Concession higher.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avenue Joffre</strong></td><td>$160 · Pink</td><td>$200 · Orange</td><td>$40</td>
+                            <td data-i18n="lobel.s4.r7intp">Same pattern: SHM French Concession premium.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Honan Road</strong></td><td>$180 · Orange</td><td>$140 · Pink</td><td>$40</td>
+                            <td data-i18n="lobel.s4.r8intp">Interesting reversal: SRE ranks it higher than SHM.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yu Yuen Road</strong></td><td>$260 · Yellow</td><td>$220 · Red</td><td>$40</td>
+                            <td data-i18n="lobel.s4.r9intp">SRE considers it premium residential; SHM places it mid.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="callout" style="margin-top:2rem;">
+                    <p data-i18n="lobel.s4.why"><strong>Why?</strong> SRE inherits the Parker Brothers U.S. colour-price ladder, where colour groups loosely map to <em>road prominence</em>. SHM inherits the Waddington's London ladder, where colours systematically encode <em>social class</em> (east-to-west poverty-to-wealth gradient). The same Shanghai streets were slotted into fundamentally different mental frameworks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 5: Dixwell Road ====== -->
+        <section class="content-section" id="dixwell">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s5">5. Dixwell Road: The Only Street That Matters</h2>
+                <div class="source-strip">
+                    <a class="source-chip" href="https://www.historic-shanghai.com/shanghai-synagogue-the-house-of-rachel/" target="_blank" rel="noopener" data-i18n="lobel.s5.chip1">Historic Shanghai: Ohel Rachel</a>
+                    <span class="source-chip" data-i18n="lobel.s5.chip2">Ian Canva annotation</span>
+                </div>
+
+                <div class="dixwell-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem;">
+                    <div>
+                        <p data-i18n="lobel.s5.p1">Among the ~19–22 streets identified on the Lobel board, <strong>one name stands alone</strong>: Dixwell Road (溧阳路).</p>
+                        <p data-i18n="lobel.s5.p2">Dixwell Road does not appear on either commercial edition — neither <em>Shanghai Millionaire</em> nor <em>Shanghai Real Estate</em>. It is the only street that is <strong>exclusively Lobel</strong>.</p>
+
+                        <h4 style="margin-top:1.5rem;" data-i18n="lobel.s5.h4why">Why Dixwell Road?</h4>
+                        <p data-i18n="lobel.s5.p3">The <strong>Shanghai Jewish School</strong> was founded in 1902 on Dixwell Road, inside the Shearith Israel synagogue (Ohel Rachel compound). It relocated in 1930, but the street remained central to Shanghai's Jewish community identity.</p>
+                        <p data-i18n="lobel.s5.p4">The Lobel brothers — Manfred and Siegfried — were Jewish refugee children. Their inclusion of Dixwell Road is not random: it is <strong>autobiographical geography</strong>. They inscribed their lived space into the game grid, replacing a commercial street with one that held personal meaning.</p>
+                    </div>
+                    <div class="dixwell-context" style="background:var(--c-card);padding:1.5rem;border-radius:8px;border-left:4px solid var(--c-accent);">
+                        <h4 style="margin-top:0;" data-i18n="lobel.s5.h4sp">Spatial Context</h4>
+                        <table class="info-table" style="font-size:0.9rem;">
+                            <tr><th data-i18n="lobel.s5.thCN">Chinese name</th><td data-i18n="lobel.s5.thCNv">溧阳路</td></tr>
+                            <tr><th data-i18n="lobel.s5.thDist">District</th><td data-i18n="lobel.s5.thDistv">Hongkou (虹口), north of Suzhou Creek</td></tr>
+                            <tr><th data-i18n="lobel.s5.thJur">Jurisdiction</th><td data-i18n="lobel.s5.thJurv">Originally International Settlement (Northern District); under Japanese control 1937–1945</td></tr>
+                            <tr><th data-i18n="lobel.s5.thJs">Jewish significance</th><td data-i18n="lobel.s5.thJsv">Shanghai Jewish School (1902–1930); Ohel Rachel Synagogue; core of Jewish refugee settlement zone</td></tr>
+                            <tr><th data-i18n="lobel.s5.thBoard">On commercial boards?</th><td data-i18n="lobel.s5.thBoardv"><strong>No.</strong> Neither SHM nor SRE includes it.</td></tr>
+                        </table>
+
+                        <h4 style="margin-top:1.5rem;" data-i18n="lobel.s5.h4th">Theoretical Significance</h4>
+                        <p style="font-size:0.92rem;" data-i18n="lobel.s5.p5">The presence of Dixwell Road transforms the Lobel board from a <em>copy</em> into a <strong>counter-mapping</strong>. The commercial editions encode a colonial designer's view of Shanghai — finance, Western residences, treaty-port infrastructure. The Lobel board encodes a refugee child's view — school, neighbourhood, community. Two cartographies, one city.</p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top:2rem;">
+                    <p data-i18n="lobel.s5.callout">This is the strongest material evidence yet for Ian's <strong>"game design from life"</strong> methodology: the children did not passively copy — they <em>re-authored</em> the game with their own spatial memory. Dixwell Road is the signature of that authorship.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 5.1: Lobel Family in Hongkou — Interactive Map ====== -->
+        <section class="content-section" id="hongkou-map" style="padding-bottom:0;">
+            <div class="container">
+                <h2 class="section-heading">5.1 Lobel Family in Hongkou: An Interactive Map</h2>
+                <div class="source-strip">
+                    <span class="source-chip">USHMM 2001.406.1</span>
+                    <span class="source-chip">USHMM Manfred Lobel biography (irn37343)</span>
+                    <span class="source-chip">上海犹太难民纪念馆</span>
+                    <span class="source-chip">Historic Shanghai</span>
+                </div>
+                <p style="max-width:680px;margin-bottom:1.5rem;">Dixwell Road (溧阳路) is shown as a red line running through Hongkou. Markers show the Lobel family's known locations, 1940–1946. Click any marker for full detail.</p>
+            </div>
+            <style>
+                #lobel-map { width:100%; height:620px; border-top:1px solid var(--c-border); }
+                .lobel-map-legend {
+                    display: flex; flex-wrap: wrap; gap: 14px; padding: 0.8rem 1.5rem;
+                    background: var(--c-bg-alt); border-top: 1px solid var(--c-border);
+                    font-size: 0.78rem; color: var(--c-text);
+                }
+                .lobel-map-legend span { display:flex; align-items:center; gap:6px; }
+                .lmg-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; border:1px solid rgba(0,0,0,0.2); }
+                .lmg-dot.sq { border-radius:2px; }
+                .lmg-line { width:22px; height:3px; flex-shrink:0; }
+                .lobel-popup { font-family: var(--font-body); font-size:0.85rem; line-height:1.5; min-width:200px; }
+                .lobel-popup strong { color: var(--c-accent); font-size:0.95rem; }
+                .lobel-popup .zh { color: var(--c-text-light); font-size:0.82rem; }
+                .lobel-popup .desc { font-size:0.78rem; color: var(--c-text); margin-top:4px; padding-top:4px; border-top:1px solid #eee; }
+                /* Permanent labels next to markers */
+                .lobel-label {
+                    background: rgba(255,255,255,0.92);
+                    border: 1px solid var(--c-border);
+                    border-radius: 3px;
+                    padding: 2px 6px;
+                    font-family: var(--font-body);
+                    font-size: 0.72rem;
+                    font-weight: 600;
+                    color: var(--c-text);
+                    white-space: nowrap;
+                    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+                }
+                .lobel-label.zh { color: var(--c-text-light); font-weight:400; }
+                /* Big marker variants */
+                .lobel-marker-big circle, .lobel-marker-big polygon {
+                    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
+                }
+                @media (max-width: 760px) {
+                    #lobel-map { height: 460px; }
+                }
+            </style>
+            <div id="lobel-map"></div>
+            <div class="lobel-map-legend">
+                <span><span class="lmg-line" style="background:#c0392b;"></span> Dixwell Road (溧阳路)</span>
+                <span><span class="lmg-dot" style="background:#8b2500;"></span> Lobel family</span>
+                <span><span class="lmg-dot" style="background:#2e7d32;"></span> Jewish community</span>
+                <span><span class="lmg-dot" style="background:#f1c40f;border-radius:0;clip-path:polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);"></span> Board creation site (1946)</span>
+                <span style="margin-left:auto;color:var(--c-text-light);font-size:0.7rem;font-style:italic;">Click markers for details · scroll/pinch to zoom</span>
+            </div>
+
+            <!-- Official Boundary Reference -->
+            <div style="background:var(--c-bg-alt);border-top:1px solid var(--c-border);padding:1.5rem 0;">
+                <div class="container">
+                    <h3 style="font-family:var(--font-display);color:var(--c-accent);font-size:1.05rem;margin:0 0 0.6rem;">📜 Official 1943 Hongkew Ghetto Boundary Order</h3>
+                    <p style="font-size:0.82rem;color:var(--c-text-light);margin-bottom:0.6rem;">From the Japanese Proclamation of 18 February 1943 (Restricted Sector for Stateless Refugees):</p>
+                    <blockquote style="margin:0;padding:0.8rem 1rem;border-left:3px solid var(--c-accent);background:var(--c-card);font-family:Georgia,serif;font-size:0.86rem;line-height:1.6;color:var(--c-text);">
+                        "The designated area is bordered on the <strong>west</strong> by the line connecting <strong>Chaoufoong, Muirhead, and Dent Roads</strong>; on the <strong>east</strong> by <strong>Yangtzepoo Creek</strong> (杨树浦/虹口港); on the <strong>south</strong> by the line connecting <strong>East Seward, Muirhead, and Wayside Roads</strong>; and on the <strong>north</strong> by the boundary of the <strong>International Settlement</strong>."
+                    </blockquote>
+                    <details style="margin-top:0.8rem;font-size:0.85rem;">
+                        <summary style="cursor:pointer;color:var(--c-accent);font-weight:600;">Old road names → Modern equivalents</summary>
+                        <table style="margin-top:0.6rem;width:100%;border-collapse:collapse;font-size:0.82rem;">
+                            <tr><th style="text-align:left;padding:4px 8px;">Old name</th><th style="text-align:left;padding:4px 8px;">Modern name</th><th style="text-align:left;padding:4px 8px;">Direction</th></tr>
+                            <tr><td style="padding:4px 8px;">Chaoufoong Road 兆丰路</td><td style="padding:4px 8px;">Gaoyang Road 高阳路</td><td style="padding:4px 8px;">N–S (western edge)</td></tr>
+                            <tr><td style="padding:4px 8px;">Muirhead Road 麦克利奥路</td><td style="padding:4px 8px;">Macleod Rd 麦克利奥路</td><td style="padding:4px 8px;">N–S (central)</td></tr>
+                            <tr><td style="padding:4px 8px;">Dent Road 邓脱路</td><td style="padding:4px 8px;">Huoshang Rd 霍山路区域</td><td style="padding:4px 8px;">E–W (northern edge)</td></tr>
+                            <tr><td style="padding:4px 8px;">East Seward 东虬江路</td><td style="padding:4px 8px;">East Qiujiang Rd</td><td style="padding:4px 8px;">E–W (southern edge)</td></tr>
+                            <tr><td style="padding:4px 8px;">Wayside Road 海宁路</td><td style="padding:4px 8px;">Haining Rd 海宁路</td><td style="padding:4px 8px;">E–W (southern edge)</td></tr>
+                            <tr><td style="padding:4px 8px;">Yangtzepoo Creek 杨树浦水道</td><td style="padding:4px 8px;">Hongkou Creek 虹口港</td><td style="padding:4px 8px;">E (natural boundary)</td></tr>
+                        </table>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 6: Three Thesis Points ====== -->
+        <section class="content-section alt-bg" id="thesis">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s6">6. Three Thesis Arguments</h2>
+
+                <div class="thesis-list" style="display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem;">
+                    <div class="thesis-card" style="background:var(--c-card);padding:2rem;border-radius:8px;border:1px solid var(--c-border);">
+                        <h3 style="margin-top:0;color:var(--c-accent);" data-i18n="lobel.s6.thesis1">I. One City, Two Price Systems</h3>
+                        <p class="thesis-source" style="font-size:0.82rem;color:var(--c-text-light);" data-i18n="lobel.s6.thesis1src">Shanghai Real Estate × Shanghai Millionaire</p>
+                        <blockquote style="margin:1rem 0 0;padding-left:1rem;border-left:3px solid var(--c-accent);font-style:italic;color:var(--c-text);" data-i18n="lobel.s6.thesis1q">
+                            Shanghai Real Estate and Shanghai Millionaire share 11 street names, yet assign them to starkly different price tiers — Peking Road ranges from $120 (SHM, Light Blue) to $240 (SRE, Red), while Avenue Petain moves from $140 (SRE, Pink) to $180 (SHM, Orange). Only Nanking Road and The Bund, the undisputed pinnacles of Shanghai real estate, occupy the same top tier in both games. This divergence confirms that the two editions were independently designed from different proprietary templates (Parker Brothers U.S. vs. Waddington's London), each encoding a distinct mental geography of treaty-port space.
+                        </blockquote>
+                    </div>
+
+                    <div class="thesis-card" style="background:var(--c-card);padding:2rem;border-radius:8px;border:1px solid var(--c-border);">
+                        <h3 style="margin-top:0;color:var(--c-accent);" data-i18n="lobel.s6.thesis2">II. From Colonial Gaze to Refugee Memory</h3>
+                        <p class="thesis-source" style="font-size:0.82rem;color:var(--c-text-light);" data-i18n="lobel.s6.thesis2src">Lobel 1946 × Shanghai Millionaire</p>
+                        <blockquote style="margin:1rem 0 0;padding-left:1rem;border-left:3px solid var(--c-accent);font-style:italic;color:var(--c-text);" data-i18n="lobel.s6.thesis2q">
+                            The Lobel brothers' 1946 handmade board is unambiguously descended from Shanghai Millionaire — it preserves the four railway stations, SHM-exclusive streets such as Avenue Roi Albert and Kiukiang Road, and the financial hierarchy of Nanking Road ($350) and The Bund ($400). Yet the inclusion of Dixwell Road — a street absent from both commercial editions — signals a rupture: the children have inscribed their own geography into the game. Dixwell Road housed the Shanghai Jewish School (1902–1930), and its presence on the board transforms the grid from a colonial abstraction into a mnemonic map of refugee daily life.
+                        </blockquote>
+                    </div>
+
+                    <div class="thesis-card" style="background:var(--c-card);padding:2rem;border-radius:8px;border:1px solid var(--c-border);">
+                        <h3 style="margin-top:0;color:var(--c-accent);" data-i18n="lobel.s6.thesis3">III. The Double Peak: Why Nanking Road and The Bund Never Change</h3>
+                        <p class="thesis-source" style="font-size:0.82rem;color:var(--c-text-light);" data-i18n="lobel.s6.thesis3src">SRE · SHM · Lobel 1946</p>
+                        <blockquote style="margin:1rem 0 0;padding-left:1rem;border-left:3px solid var(--c-accent);font-style:italic;color:var(--c-text);" data-i18n="lobel.s6.thesis3q">
+                            Across three independent versions of Shanghai Monopoly — two commercial editions from different design traditions and one handmade children's copy — Nanking Road and The Bund consistently occupy the highest price tier. This invariant pairing constitutes the most robust evidence that certain spatial landmarks transcended subjective design choices, operating instead as objective constraints on the game's economic model. The Bund and Nanking Road were not merely "placed" on the board; they were the board's gravitational center.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Section 7: Quick Lookup Table ====== -->
+        <section class="content-section" id="lookup">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="lobel.s7">7. Quick Lookup: All Streets in All Three Versions</h2>
+                <div class="source-strip">
+                    <span class="source-chip" data-i18n="lobel.s7.chip1">Bold rows = shared by ≥2 versions</span>
+                    <span class="source-chip" data-i18n="lobel.s7.chip2">Lobel status: ✓ confirmed / ? uncertain / — absent</span>
+                </div>
+
+                <div style="overflow-x:auto;margin-top:1.5rem;">
+                    <table class="evidence-table" style="min-width:680px;">
+                        <thead>
+                            <tr><th data-i18n="lobel.s7.thStreet">Street</th><th data-i18n="lobel.s7.thSRE">SRE</th><th data-i18n="lobel.s7.thSHM">SHM</th><th data-i18n="lobel.s7.thLobel">Lobel</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Nanking Road</td><td>$350 · Dark Blue</td><td>$350 · Dark Blue</td><td>✓</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>The Bund</td><td>$400 · Dark Blue</td><td>$400 · Dark Blue</td><td>✓</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Avenue Petain</td><td>$140 · Pink</td><td>$180 · Orange</td><td>✓</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Avenue Joffre</td><td>$160 · Pink</td><td>$200 · Orange</td><td>?</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Honan Road</td><td>$180 · Orange</td><td>$140 · Pink</td><td>✓ (Honnan)</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Kiangse Road</td><td>$220 · Red</td><td>$300 · Green</td><td>✓</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Szechuen Road</td><td>$300 · Green</td><td>$320 · Green</td><td>?</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Peking Road</td><td>$240 · Red</td><td>$120 · Light Blue</td><td>✓</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Bubbling Well Road</td><td>$260 · Yellow</td><td>$280 · Yellow</td><td>?</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Great Western Road</td><td>$100 · Light Blue</td><td>$220 · Red</td><td>?</td>
+                            </tr>
+                            <tr style="font-weight:700;background:var(--c-bg-alt);">
+                                <td>Yu Yuen Road</td><td>$260 · Yellow</td><td>$220 · Red</td><td>?</td>
+                            </tr>
+                            <tr><td>Avenue Haig</td><td>—</td><td>$60 · Purple</td><td>✓</td></tr>
+                            <tr><td>Hart Road</td><td>—</td><td>$60 · Purple</td><td>✓</td></tr>
+                            <tr><td>Avenue Road</td><td>—</td><td>$100 · Light Blue</td><td>✓</td></tr>
+                            <tr><td>Yu Ya Ching Road</td><td>—</td><td>$100 · Light Blue</td><td>?</td></tr>
+                            <tr><td>Tientsin Road</td><td>—</td><td>$140 · Pink</td><td>?</td></tr>
+                            <tr><td>Ningpo Road</td><td>—</td><td>$160 · Pink</td><td>?</td></tr>
+                            <tr><td>Avenue Roi Albert</td><td>—</td><td>$180 · Orange</td><td>✓</td></tr>
+                            <tr><td>Connaught Road</td><td>—</td><td>$240 · Red</td><td>?</td></tr>
+                            <tr><td>Hardoon Road</td><td>—</td><td>$260 · Yellow</td><td>?</td></tr>
+                            <tr><td>Seymour Road</td><td>—</td><td>$260 · Yellow</td><td>?</td></tr>
+                            <tr><td>Kiukiang Road</td><td>—</td><td>$300 · Green</td><td>✓</td></tr>
+                            <tr><td>Rubicon Road</td><td>$60 · Purple</td><td>—</td><td>—</td></tr>
+                            <tr><td>Mac Leod Road</td><td>$60 · Purple</td><td>—</td><td>—</td></tr>
+                            <tr><td>Columbia Circle</td><td>$100 · Light Blue</td><td>—</td><td>—</td></tr>
+                            <tr><td>Avenue Foch</td><td>$120 · Light Blue</td><td>—</td><td>—</td></tr>
+                            <tr><td>Route de Say-Zoong</td><td>$140 · Pink</td><td>—</td><td>—</td></tr>
+                            <tr><td>Canton Road</td><td>$180 · Orange</td><td>—</td><td>—</td></tr>
+                            <tr><td>Hankow Road</td><td>$200 · Orange</td><td>—</td><td>—</td></tr>
+                            <tr><td>Soochow Road</td><td>$220 · Red</td><td>—</td><td>—</td></tr>
+                            <tr><td>West End Gardens</td><td>$280 · Yellow</td><td>—</td><td>—</td></tr>
+                            <tr><td>Avenue Edward VII</td><td>$300 · Green</td><td>—</td><td>—</td></tr>
+                            <tr><td>Broadway</td><td>$320 · Green</td><td>—</td><td>—</td></tr>
+                            <tr style="background:#fff3e0;font-weight:700;">
+                                <td><strong>Dixwell Road</strong> ★</td><td>—</td><td>—</td><td style="color:#8b2500;">✓ NEW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top:1.5rem;font-size:0.85rem;color:var(--c-text-light);" data-i18n="lobel.s7.foot">★ = Unique to Lobel. Dixwell Road is the only street appearing in none of the commercial editions — a signature of the children's autobiographical geography.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-i18n="footer.text">A research project on a 1930s–1940s Shanghai Monopoly variant.</p>
+            <p style="margin-top:0.5rem;font-size:0.85rem;color:rgba(255,255,255,0.5);">
+                Lobel page compiled 2026-08-03 · USHMM 2001.406.1 · Ian Canva analysis
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    // ── Lobel Annotation Data (annotated by Ian on 2026-08-03) ──────────────
+    const LOBEL_DATA = {
+      markers: [
+        { id:'home',      en:'Lobel Family Home & Shop', zh:'Lobel家/裁缝店', color:'#8b2500', desc:'Broadway (大名路). Gustav\'s custom shirt shop with living quarters.', lat:31.24833,  lng:121.488876 },
+        { id:'first',     en:'First Residence (1940)',   zh:'抵沪首住 (1940)', color:'#8b2500', desc:'Gongping Road (公平路). JDC relief placement upon arrival Sep 1940.', lat:31.252378, lng:121.498425 },
+        { id:'school',    en:'Kadoorie School (SJYA)',   zh:'嘉道理学校',       color:'#2e7d32', desc:'No. 627 Dongyuhang Road (东余杭路). Both brothers attended.', lat:31.253937, lng:121.488962 },
+        { id:'synagogue', en:'Ohel Moishe Synagogue',    zh:'摩西会堂',         color:'#2e7d32', desc:'No. 62 Changyang Road (长阳路). Spiritual center of Hongkew ghetto.', lat:31.256303, lng:121.504734 },
+        { id:'board',     en:'Board Created Here (1946) ★', zh:'棋盘制作地 (1946) ★', color:'#f1c40f', desc:'Approximate spot where Manfred (10) & Siegfried (14) made the game from a US K-rations box.', lat:31.248489, lng:121.489155 }
+      ],
+      line: {
+        en:'Dixwell Road', zh:'溧阳路', color:'#c0392b',
+        coords: [
+          [31.248879, 121.490743], [31.249448, 121.490421], [31.250145, 121.489284],
+          [31.251264, 121.488683], [31.252255, 121.48819],  [31.25286, 121.487439],
+          [31.253557, 121.487439], [31.254566, 121.487696], [31.255281, 121.487803]
+        ]
+      }
+    };
+
+    (function(){
+        var map = L.map('lobel-map', {
+            center: [31.252, 121.494],
+            zoom: 14,
+            zoomControl: true,
+            attributionControl: true
+        });
+
+        var tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+        // Fallback to OSM if CartoCDN fails
+        var cartoErr = 0;
+        tileLayer.on('tileerror', function(){
+            cartoErr++;
+            if (cartoErr > 6 && !window._lobelTileFallback) {
+                window._lobelTileFallback = true;
+                map.removeLayer(tileLayer);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors',
+                    subdomains: 'abc', maxZoom: 19
+                }).addTo(map);
+            }
+        });
+
+        // ── Dixwell Road polyline (溧阳路 — annotated by Ian) ──
+        L.polyline(LOBEL_DATA.line.coords, {
+            color: LOBEL_DATA.line.color, weight: 5, opacity: 0.85
+        }).addTo(map).bindPopup('<div class="lobel-popup"><strong>Dixwell Road</strong> (溧阳路)<br><span class="zh">虹口区南北向道路，Lobel兄弟的日常活动空间。</span></div>');
+
+        // ── Hongkew Ghetto boundary (approx.) ──
+        var ghettoCoords = [
+            [31.250, 121.515], [31.261, 121.515], [31.268, 121.512],
+            [31.271, 121.506], [31.271, 121.496], [31.268, 121.488],
+            [31.261, 121.484], [31.254, 121.482], [31.248, 121.485],
+            [31.244, 121.490], [31.242, 121.500], [31.244, 121.510], [31.250, 121.515]
+        ];
+        L.polygon(ghettoCoords, {
+            color: '#8b2500', weight: 1.5, opacity: 0.35,
+            fillColor: '#8b2500', fillOpacity: 0.04,
+            dashArray: '6,4'
+        }).addTo(map).bindPopup('<div class="lobel-popup"><strong>Hongkew Ghetto</strong> (虹口隔离区)<br><span class="zh">1943–1945年，约1.7万犹太难民聚居于此。边界为示意。</span></div>');
+
+        // ── Markers ──
+        function makeCircle(color, size) {
+            return L.divIcon({
+                className: 'lobel-marker-big',
+                html: '<svg width="'+(size||18)+'" height="'+(size||18)+'" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7" fill="'+color+'" stroke="#fff" stroke-width="2"/></svg>',
+                iconSize: [size||18, size||18],
+                iconAnchor: [(size||18)/2, (size||18)/2],
+                popupAnchor: [0, -((size||18)/2)]
+            });
+        }
+
+        function makeStar(color) {
+            return L.divIcon({
+                className: 'lobel-marker-big',
+                html: '<svg width="32" height="32" viewBox="0 0 32 32"><polygon points="16,2 20,12 30,12 22,19 25,30 16,23 7,30 10,19 2,12 12,12" fill="'+color+'" stroke="#fff" stroke-width="1.5"/></svg>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 16],
+                popupAnchor: [0, -18]
+            });
+        }
+
+        LOBEL_DATA.markers.forEach(function(p){
+            var isStar = p.id === 'board';
+            var icon = isStar ? makeStar(p.color) : makeCircle(p.color, p.id === 'school' ? 20 : 18);
+            var marker = L.marker([p.lat, p.lng], { icon: icon }).addTo(map);
+            marker.bindPopup('<div class="lobel-popup"><strong>'+p.en+'</strong><br><span class="zh">'+p.zh+'</span><div class="desc">'+p.desc+'</div></div>', { maxWidth: 260 });
+            // Permanent label next to marker
+            marker.bindTooltip(p.en, {
+                permanent: true,
+                direction: 'right',
+                offset: [10, 0],
+                className: 'lobel-label'
+            });
+        });
+
+        // Fit bounds to annotated data
+        var allLat = LOBEL_DATA.markers.map(function(m){ return m.lat; }).concat(
+            LOBEL_DATA.line.coords.map(function(c){ return c[0]; }));
+        var allLng = LOBEL_DATA.markers.map(function(m){ return m.lng; }).concat(
+            LOBEL_DATA.line.coords.map(function(c){ return c[1]; }));
+        map.fitBounds([
+            [Math.min.apply(null, allLat) - 0.004, Math.min.apply(null, allLng) - 0.004],
+            [Math.max.apply(null, allLat) + 0.004, Math.max.apply(null, allLng) + 0.004]
+        ]);
+    })();
+    </script>
+</body>
+</html>

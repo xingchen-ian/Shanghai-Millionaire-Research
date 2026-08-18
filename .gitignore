@@ -12,3 +12,31 @@ node_modules
 
 # WorkBuddy
 .workbuddy/
+
+# ===== 私有研究文件（2026-08-18 起不公开；见私有仓库 Shanghai-Millionaire-Private）=====
+# 研究备忘
+research_*.md
+# 论文草稿与产出
+Shanghai Millionaire/
+# 投稿工作台
+digra-2027.html
+docs/digra-2027.html
+# 数据与照片（原始素材）
+/data/
+/photos/
+# 脚本与临时产物
+/scripts/
+docs_0624.zip
+# 邮件与往来
+email_*.md
+virtualshanghai_*.md
+# 其他研究工作文件
+land_value_todo.md
+presentation_script_*.md
+references_*.md
+rulebook_shanghai_millionaire.txt
+shanghai_millionaire_board_streets.md
+shanghai_millionaire_streets.md
+shanghai_real_estate_board_streets.md
+source_matrix_shanghai_millionaire.md
+zotero_shanghai_millionaire_collection_analysis.md
