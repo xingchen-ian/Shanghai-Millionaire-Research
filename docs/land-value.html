@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Land Value Research | Shanghai Millionaire</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <style>
         .research-section { margin: 2rem 0; }
         .research-grid { display: grid; gap: 2rem; }
@@ -192,14 +192,14 @@
             <div class="container">
                 <span class="hero-eyebrow" data-i18n="landValue.eyebrow">Research Track 03</span>
                 <h1 class="hero-title" data-i18n="landValue.title">Land Value & Game Board</h1>
-                <p class="hero-lead" data-i18n="landValue.lead">Does the Shanghai Millionaire game board encode colonial spatial hierarchy rather than empirical land values?</p>
+                <p class="hero-lead" data-i18n="landValue.lead">So far, the board stays close to assessed land values at the financial core, and lifts Western residential and French Concession living space by about 6–8×.</p>
             </div>
         </section>
 
         <!-- Core Hypothesis -->
         <section class="content-section">
             <div class="container">
-                <h2 class="section-heading" data-i18n="landValue.hypothesisTitle">Core Hypothesis</h2>
+                <h2 class="section-heading" data-i18n="landValue.hypothesisTitle">Working finding</h2>
                 <div class="source-strip" aria-label="Sources for land-value hypothesis">
                     <a class="source-chip" href="game.html">Board street list</a>
                     <a class="source-chip" href="map.html">Mapped streets</a>
@@ -207,8 +207,8 @@
                     <a class="source-chip" href="https://migrantknowledge.org/2020/03/18/power-of-play/" target="_blank" rel="noopener">Cheng, Power of Play</a>
                 </div>
                 <div class="hypothesis-box">
-                    <h4 data-i18n="landValue.hypothesisQ">Research Question</h4>
-                    <p data-i18n="landValue.hypothesisText">The Shanghai Millionaire game board reflects colonial spatial hierarchy rather than empirical market land values. Streets in "Chinese commercial areas" may be systematically undervalued compared to their actual rental rates, revealing the "colonial gaze" embedded in the game's design.</p>
+                    <h4 data-i18n="landValue.hypothesisQ">From the comparison so far</h4>
+                    <p data-i18n="landValue.hypothesisText">On the comparison so far, the board stays close to assessment geography at the financial core (Dark Blue about 1.2×, Pink about 1.8×), yet lifts Western residential and French Concession living space by about 6–8×. A Ningpo–Honan–Tientsin corner sale of about 250,000 taels per mu shows the Chinese finance belt was not “cheap land.” This is a working finding from the comparison to date, not a settled historical law.</p>
                 </div>
             </div>
         </section>
@@ -501,6 +501,134 @@
             </div>
         </section>
 
+        <!-- Zhang Hui 1935: assessment vs sale -->
+        <section class="content-section" style="background:var(--c-bg-alt);">
+            <div class="container">
+                <h2 class="section-heading" data-i18n="landValue.zhangTitle">Zhang Hui, 1935: assessment and sale</h2>
+                <p data-i18n="landValue.zhangIntro">Zhang Hui’s <em>A Study of Land Prices in Shanghai</em> (上海市地价研究, Zhengzhong Book Company, 1935) adds two layers the Virtual Shanghai cadastre does not: 1930 district assessment averages, in yuan per mu, and 1931–32 named-street sales, in taels per mu. The ratios below are the project’s existing Bund = 1 figures. They were not recalculated for this table.</p>
+
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap:0.8rem; margin:1.2rem 0;">
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangCentral">IS Central, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">150,879</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangWestern">IS Western, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">28,612</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangEastern">IS Eastern, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">16,594</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangNorthern">IS Northern, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">52,947</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangFcOld">French old district, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">100,524</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                    <div style="background:var(--c-card); padding:0.7rem 0.9rem; border-radius:6px; text-align:center;">
+                        <p style="font-size:0.72rem; color:var(--c-text-light); margin:0 0 0.2rem;" data-i18n="landValue.zhangFcNew">French new district, 1930</p>
+                        <p style="font-size:1.15rem; font-weight:700; color:var(--c-accent); margin:0;">22,321</p>
+                        <p style="font-size:0.68rem; color:var(--c-text-light); margin:0.2rem 0 0;" data-i18n="landValue.zhangYuan">yuan/mu, assessment</p>
+                    </div>
+                </div>
+
+                <div class="data-table-container">
+                    <table class="data-table" style="font-size:0.78rem; line-height:1.4;">
+                        <thead>
+                            <tr>
+                                <th data-i18n="landValue.zhangTblGroup">Color group</th>
+                                <th data-i18n="landValue.zhangTblBoard">Board $</th>
+                                <th data-i18n="landValue.zhangTblVs">VS ratio<br>(Bund = 1)</th>
+                                <th data-i18n="landValue.zhangTblAvg">Zhang district avg<br>yuan/mu, 1930</th>
+                                <th data-i18n="landValue.zhangTblSale">Zhang street sample<br>taels, 1931–32</th>
+                                <th data-i18n="landValue.zhangTblRead">Reading</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="landValue.zhGDb"><strong>Dark Blue</strong><br>Nanking · Bund</td>
+                                <td>$350–400</td>
+                                <td><strong>1.21</strong></td>
+                                <td data-i18n="landValue.zhDDb">Central<br>150,879</td>
+                                <td data-i18n="landValue.zhSDb">Sale: Nanking Rd corner, 325,000 taels/mu (1931.8). Former bank on the Bund: 756,000 taels for 2.5 mu (756,000 ÷ 2.5 = 302,400 taels/mu).</td>
+                                <td><span data-i18n="landValue.zhRDb">Financial core, close to assessed geography.</span> <span class="caption" data-i18n="landValue.zhMClean">Clean</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGPk"><strong>Pink</strong><br>Tientsin · Ningpo · Honan</td>
+                                <td>$140–160</td>
+                                <td><strong>1.76</strong></td>
+                                <td data-i18n="landValue.zhDPk">Central<br>150,879 (same district)</td>
+                                <td data-i18n="landValue.zhSPk">Sale: Ningpo–Honan–Tientsin corner, 250,000 taels/mu (1931.7). SMC tax assessment for that corner: 105,000 taels/mu — an assessment, not a sale.</td>
+                                <td><span data-i18n="landValue.zhRPk">Chinese finance belt, not cheap land.</span> <span class="caption" data-i18n="landValue.zhMClean">Clean</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGGr"><strong>Green</strong><br>Kiukiang · Kiangse · Szechuen</td>
+                                <td>$300–320</td>
+                                <td><strong>2.30</strong></td>
+                                <td data-i18n="landValue.zhDGr">Central<br>150,879</td>
+                                <td data-i18n="landValue.zhSGr">No clean per-mu sale in the extract. SMC tax assessment, Kiukiang Rd: 150,000 taels/mu (1931.6.5) — an assessment, not a sale.</td>
+                                <td><span data-i18n="landValue.zhRGr">Same Central district; street sales are thinner than Pink and Dark Blue.</span> <span class="caption" data-i18n="landValue.zhMThin">Clean district; thin street sales</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGLb"><strong>Light Blue</strong><br>Avenue · Yu Ya Ching · Peking</td>
+                                <td>$100–120</td>
+                                <td><strong>2.15</strong></td>
+                                <td data-i18n="landValue.zhDLb">— no single district</td>
+                                <td data-i18n="landValue.zhSLb">No same-name sale. Peking Rd SMC tax assessment about 75,000 taels/mu; the extract lists it in one cell with Tientsin Rd, so this is not a clean single-street figure. Assessment, not a sale. Weak match.</td>
+                                <td><span data-i18n="landValue.zhRLb">Transition band. Weak Zhang street match.</span> <span class="caption" data-i18n="landValue.zhMWeak">Weak match</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGPu"><strong>Purple</strong><br>Haig · Hart</td>
+                                <td>$60</td>
+                                <td><strong>3.60</strong></td>
+                                <td data-i18n="landValue.zhDPu">Western<br>28,612</td>
+                                <td data-i18n="landValue.zhSPu">Sale: Avenue Haig, 350,000 taels for 22 mu (about 15,900 taels/mu). Hart Rd–Bubbling Well SMC assessment: 22,000 taels/mu — not a sale. Partial match.</td>
+                                <td><span data-i18n="landValue.zhRPu">Western edge. The board still sits above the Haig sale.</span> <span class="caption" data-i18n="landValue.zhMPart">Partial</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGOr"><strong>Orange</strong><br>Petain · Albert · Joffre</td>
+                                <td>$180–200</td>
+                                <td><strong>6.38</strong></td>
+                                <td data-i18n="landValue.zhDOr">French new district 22,321<br>Old district 100,524, for contrast</td>
+                                <td data-i18n="landValue.zhSOr">Sale: Petain Rd corner about 17,000–21,500 taels/mu. Joffre–Elburz corner about 48,000 taels/mu. Joffre–Paul Rd: 525,000 taels for 15 mu; Joffre–Albert corner: 950,000 taels in total (per mu not stated).</td>
+                                <td><span data-i18n="landValue.zhROr">French Concession living space is lifted.</span> <span class="caption" data-i18n="landValue.zhMClean">Clean</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGYe"><strong>Yellow</strong><br>Hardoon · Seymour · Bubbling Well</td>
+                                <td>$260–280</td>
+                                <td><strong>7.20</strong></td>
+                                <td data-i18n="landValue.zhDYe">Western average 28,612<br>not Bubbling Well Rd</td>
+                                <td data-i18n="landValue.zhSYe">Sale: Bubbling Well Rd, 75,000 taels/mu (20 mu); former temple site, 180,000 taels/mu. Bubbling Well–Myburgh corner: 2,200,000 taels for 21 mu (per mu not stated). Do not read the Western average as these street prices.</td>
+                                <td><span data-i18n="landValue.zhRYe">Western average ≠ Bubbling Well Road street prices.</span> <span class="caption" data-i18n="landValue.zhMPart">Partial</span></td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="landValue.zhGRe"><strong>Red</strong><br>Great Western · Yu Yuen · Connaught</td>
+                                <td>$220–240</td>
+                                <td><strong>7.85</strong></td>
+                                <td data-i18n="landValue.zhDRe">Western<br>28,612</td>
+                                <td data-i18n="landValue.zhSRe">No named Yu Yuen or Connaught sale per mu. Yu Yuen Rd SMC assessment about 22,000 taels/mu — not a sale. Far-west sales in the same table: Jiaozhou Rd 15,000 taels/mu; Singapore Rd area 16,000 taels/mu. Partial match.</td>
+                                <td><span data-i18n="landValue.zhRRe">Highest board premium, on mixed Western housing.</span> <span class="caption" data-i18n="landValue.zhMPart">Partial</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout" style="border-left:4px solid var(--c-accent);">
+                    <p style="margin:0;"><strong data-i18n="landValue.zhangCaveatTitle">How to read the columns</strong></p>
+                    <div data-i18n="landValue.zhangCaveat"><ul style="margin:0.4rem 0 0; padding-left:1.2rem;"><li><strong>Yuan ≠ taels.</strong> District averages are in yuan per mu. Street samples are in taels. Do not divide across those columns.</li><li><strong>Assessment ≠ sale.</strong> Zhang estimated market prices about 20–25% above SMC tax assessments. Cells marked as assessments are not sales.</li><li><strong>VS ratios use district-median estimates</strong>, not lot-by-lot polygon matching. Bund = 1.</li><li><strong>The Western district average is pulled down by fringe lots</strong> and is not the same as Bubbling Well Road street prices.</li><li>Digits the extract marks as uncertain are omitted here, not printed as fact.</li></ul></div>
+                </div>
+                <p class="caption" data-i18n="landValue.zhangSource">Zhang Hui, <em>A Study of Land Prices in Shanghai</em> (上海市地价研究), Zhengzhong Book Company, 1935 (Republican year 24). District averages: Table 10 (International Settlement) and Table 13 (French Concession). Sales: Table 2 (Central) and Table 5 (Western); French street samples from the French Concession sale notes. SMC tax assessments, kept separate from sales: Tables 6 and 9. Per-mu figures written as a division are arithmetic from a stated total and area, not a second source.</p>
+            </div>
+        </section>
+
         <!-- Board Overview -->
         <section class="content-section" style="background:var(--c-bg-alt);">
             <div class="container">
@@ -558,11 +686,11 @@
                                         <td data-i18n="landValue.zoneFrench">French Concession</td>
                                         <td data-i18n="landValue.statusExpected">Expected</td>
                                     </tr>
-                                    <tr class="anomaly">
+                                    <tr>
                                         <td>$140-160</td>
                                         <td>Tientsin, Ningpo, Honan</td>
                                         <td data-i18n="landValue.zoneCore">IS Core</td>
-                                        <td><span data-i18n="landValue.statusAnomaly">Anomaly?</span> <span class="anomaly-note" data-i18n="landValue.anomalyTag">Check</span></td>
+                                        <td data-i18n="landValue.statusFinance">Finance belt</td>
                                     </tr>
                                     <tr>
                                         <td>$100-120</td>
@@ -579,7 +707,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="caption" data-i18n="landValue.tierCaption">IS = International Settlement. The pink group (Tientsin/Ningpo/Honan) is geographically central but game-priced low — a potential anomaly worth investigating.</p>
+                        <p class="caption" data-i18n="landValue.tierCaption">IS = International Settlement. The pink group (Tientsin / Ningpo / Honan) is the Chinese finance belt in the Central district, not cheap land. A 1931 corner sale was about 250,000 taels per mu.</p>
                     </div>
                 </div>
             </div>
@@ -617,8 +745,8 @@
                 <h2 class="section-heading" data-i18n="landValue.rqTitle">Research Questions</h2>
                 
                 <div class="research-question">
-                    <h4 data-i18n="landValue.rq1">Q1: Do game prices correlate with empirical land values? <span class="status-badge status-ongoing">Ongoing</span></h4>
-                    <p data-i18n="landValue.rq1Desc">Collect SMC Annual Report property assessments and newspaper rental advertisements to compare with game prices. Focus on the pink group anomaly: were Tientsin/Ningpo/Honan actually lower-value, or are they undervalued in the colonial perspective?</p>
+                    <h4 data-i18n="landValue.rq1">Q1: Where does the lifestyle premium sit? <span class="status-badge status-ongoing">Ongoing</span></h4>
+                    <p data-i18n="landValue.rq1Desc">Whether Tientsin, Ningpo, and Honan were undervalued is no longer the question: that finance belt was not cheap land. The comparison now asks about the premium on Western-district housing and French Concession living space (about 6–8× on Yellow, Red, and Orange). Still ahead is street-to-lot matching; the Virtual Shanghai ratios remain district-median estimates.</p>
                 </div>
                 
                 <div class="research-question">
@@ -719,7 +847,7 @@
         <section class="content-section" style="background:var(--c-bg-alt); text-align:center;">
             <div class="container">
                 <p data-i18n="landValue.ctaText">This research is ongoing. We welcome contributions of historical data, methodological suggestions, or comparative insights from other Monopoly localizations.</p>
-                <p class="caption" data-i18n="landValue.ctaCaption">Last updated: April 2026</p>
+                <p class="caption" data-i18n="landValue.ctaCaption">Last updated: November 2026</p>
             </div>
         </section>
     </main>
@@ -731,7 +859,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/basemap.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -751,9 +880,9 @@
             { id: "petain", en: "Avenue Petain", zh: "贝当路", modern: "衡山路", color: "#e67e22", price: "$180", lat: 31.204175, lng: 121.440125, tier: "mid-low" },
             { id: "albert", en: "Avenue Roi Albert", zh: "亚尔培路", modern: "陕西南路", color: "#e67e22", price: "$180", lat: 31.209989, lng: 121.457226, tier: "mid-low" },
             { id: "joffre", en: "Avenue Joffre", zh: "霞飞路", modern: "淮海中路", color: "#e67e22", price: "$200", lat: 31.215033, lng: 121.44594, tier: "mid-low" },
-            { id: "tientsin", en: "Tientsin Road", zh: "天津路", modern: "天津路", color: "#e91e8c", price: "$140", lat: 31.240895, lng: 121.480958, tier: "low-mid", anomaly: true },
-            { id: "ningpo", en: "Ningpo Road", zh: "宁波路", modern: "宁波路", color: "#e91e8c", price: "$160", lat: 31.241696, lng: 121.481962, tier: "low-mid", anomaly: true },
-            { id: "honan", en: "Honan Road", zh: "河南路", modern: "河南中路", color: "#e91e8c", price: "$140", lat: 31.23661, lng: 121.481248, tier: "low-mid", anomaly: true },
+            { id: "tientsin", en: "Tientsin Road", zh: "天津路", modern: "天津路", color: "#e91e8c", price: "$140", lat: 31.240895, lng: 121.480958, tier: "low-mid" },
+            { id: "ningpo", en: "Ningpo Road", zh: "宁波路", modern: "宁波路", color: "#e91e8c", price: "$160", lat: 31.241696, lng: 121.481962, tier: "low-mid" },
+            { id: "honan", en: "Honan Road", zh: "河南路", modern: "河南中路", color: "#e91e8c", price: "$140", lat: 31.23661, lng: 121.481248, tier: "low-mid" },
             { id: "avenue", en: "Avenue Road", zh: "爱文义路", modern: "北京西路", color: "#3498db", price: "$100", lat: 31.237691, lng: 121.464726, tier: "low" },
             { id: "yuyaching", en: "Yu Ya Ching Road", zh: "虞洽卿路", modern: "西藏中路", color: "#3498db", price: "$100", lat: 31.238377, lng: 121.469414, tier: "low" },
             { id: "peking", en: "Peking Road", zh: "北京路", modern: "北京东路", color: "#3498db", price: "$120", lat: 31.241915, lng: 121.476946, tier: "low" },
@@ -763,12 +892,7 @@
 
         // Initialize map
         const map = L.map('map').setView([31.23, 121.47], 13);
-        
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 19
-        }).addTo(map);
+        installShanghaiBasemap(map);
 
         // Add markers
         STREET_DATA.forEach(street => {
@@ -787,7 +911,6 @@
                     <div style="font-weight:600;margin-top:0.3rem;">${street.en}</div>
                     <div style="color:#666;">${street.zh}</div>
                     <div style="color:#888;font-size:0.85rem;margin-top:0.3rem;">Today: ${street.modern}</div>
-                    ${street.anomaly ? '<div style="background:#e74c3c;color:white;font-size:0.75rem;padding:2px 6px;border-radius:3px;display:inline-block;margin-top:0.5rem;">Potential Anomaly</div>' : ''}
                 </div>
             `;
             

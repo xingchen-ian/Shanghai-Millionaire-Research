@@ -1,0 +1,5 @@
+Basemap tiles for the Shanghai Millionaire research maps.
+Rendered from OpenStreetMap data (Geofabrik Shanghai extract).
+© OpenStreetMap contributors. https://www.openstreetmap.org/copyright
+OpenStreetMap data is licensed under the Open Database License (ODbL).
+These tiles are a Produced Work. The map credits OpenStreetMap contributors.
