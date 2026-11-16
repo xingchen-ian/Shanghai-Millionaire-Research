@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lobel 1946 — Shanghai Millionaire Research</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -522,7 +522,8 @@
 
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/basemap.js"></script>
     <script>
     // ── Lobel Annotation Data (annotated by Ian on 2026-08-03) ──────────────
     const LOBEL_DATA = {
@@ -551,24 +552,7 @@
             attributionControl: true
         });
 
-        var tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-            subdomains: 'abcd',
-            maxZoom: 19
-        }).addTo(map);
-        // Fallback to OSM if CartoCDN fails
-        var cartoErr = 0;
-        tileLayer.on('tileerror', function(){
-            cartoErr++;
-            if (cartoErr > 6 && !window._lobelTileFallback) {
-                window._lobelTileFallback = true;
-                map.removeLayer(tileLayer);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; OpenStreetMap contributors',
-                    subdomains: 'abc', maxZoom: 19
-                }).addTo(map);
-            }
-        });
+        installShanghaiBasemap(map);
 
         // ── Dixwell Road polyline (溧阳路 — annotated by Ian) ──
         L.polyline(LOBEL_DATA.line.coords, {

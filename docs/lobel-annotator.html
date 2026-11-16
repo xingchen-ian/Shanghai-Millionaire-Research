@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lobel Family Annotation Tool — Shanghai Millionaire</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Georgia, 'Noto Serif SC', serif; background: #1a1a1a; color: #f0ead8; height: 100vh; display: flex; flex-direction: column; }
@@ -99,7 +99,8 @@
     <span>Hover coords: <b id="statLatLng">—</b></span>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/basemap.js"></script>
 <script>
 // ── Preset places ────────────────────────────────────────────────────────
 const PLACES = [
@@ -124,35 +125,10 @@ const map = L.map('map', {
     zoom: 15,
     zoomControl: true
 });
-// Primary: Esri World Light Gray Canvas (single-domain, reliable, monochrome light gray)
-const tileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri &mdash; Sources: Esri, HERE, Garmin, FAO, NOAA, USGS',
-    maxZoom: 19
-}).addTo(map);
+installShanghaiBasemap(map);
 
-// Per-tile retry: each tile attempts up to 3 times with backoff
-const tileRetries = new WeakMap();
-tileLayer.on('tileerror', function(e) {
-    const tile = e.tile;
-    let n = tileRetries.get(tile) || 0;
-    if (n >= 3) return;
-    tileRetries.set(tile, n + 1);
-    setTimeout(() => {
-        const src = tile.src;
-        tile.src = '';
-        tile.src = src + (src.includes('?') ? '&' : '?') + 'r=' + Date.now();
-    }, 800 * (n + 1));
-});
-
-// Manual refresh: clear cache and reload
 window.refreshTiles = function() {
     map.eachLayer(function(layer){
-        if (layer._tiles) {
-            Object.keys(layer._tiles).forEach(k => {
-                const t = layer._tiles[k];
-                if (t.el) { t.el.src = ''; t.el.src = t.el.dataset.src || t.el.src; }
-            });
-        }
         if (layer.redraw) layer.redraw();
     });
 };

@@ -1,0 +1,10 @@
+{
+  "south": 31.12,
+  "west": 121.33,
+  "north": 31.31,
+  "east": 121.59,
+  "minZoom": 11,
+  "maxNativeZoom": 16,
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "license": "Map tiles rendered from OpenStreetMap data, available under the Open Database License."
+}

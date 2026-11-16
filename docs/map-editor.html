@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Annotation Editor — Shanghai Millionaire</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -326,7 +326,8 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/basemap.js"></script>
 <script>
 // ── Street data (all 22 streets + 4 stations + 2 utilities) ──────────────────
 const STREETS = [
@@ -382,10 +383,7 @@ const map = L.map('map', {
     zoomControl: true
 });
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors',
-    maxZoom: 19
-}).addTo(map);
+installShanghaiBasemap(map);
 
 // Show lat/lng on mousemove
 map.on('mousemove', e => {

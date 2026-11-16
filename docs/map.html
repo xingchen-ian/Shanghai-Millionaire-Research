@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Map — Shanghai Millionaire</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -523,7 +523,8 @@
 
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script src="js/basemap.js"></script>
     <script src="data/manual_settlement_boundaries.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
@@ -683,24 +684,7 @@
         zoomControl: true
     });
 
-    // Use CartoDB Positron — clean, light, academic feel
-    const tileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '© OpenStreetMap contributors © CARTO',
-        subdomains: 'abcd',
-        maxZoom: 19
-    }).addTo(map);
-    var cartoErr = 0;
-    tileLayer.on('tileerror', function(){
-        cartoErr++;
-        if (cartoErr > 6 && !window._tileFallback) {
-            window._tileFallback = true;
-            map.removeLayer(tileLayer);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors',
-                subdomains: 'abc', maxZoom: 19
-            }).addTo(map);
-        }
-    });
+    installShanghaiBasemap(map);
 
     // Approximate settlement overlays for orientation only.
     const settlementLayer = L.layerGroup();
